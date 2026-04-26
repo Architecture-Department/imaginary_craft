@@ -10,7 +10,7 @@ plugins {
 
 var projectName = [
 				"GoldenBoughsLib",
-				"EGOCurios"
+//				"EGOCurios",
 ]
 
 version = mod_version
