@@ -206,8 +206,11 @@ dependencies {
   // 史诗战斗
   implementation "maven.modrinth:epic-fight:${epicfight_version}"
 
-  // 添加目录的jar文件作为库
-  implementation fileTree(dir: "额外资源/mods", include: ["*.jar"])
+    // 星火
+    implementation "maven.modrinth:spark-core:${sparkcore_version}"
+
+    // 添加目录的jar文件作为库
+    implementation fileTree(dir: "额外资源/mods", include: ["*.jar"])
 
   //======= 非重要依赖 （不装载也可以运行） =======
 
