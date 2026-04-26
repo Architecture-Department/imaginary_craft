@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[1,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "ego_curios"
+version = "1.0.0"
+displayName = "E.G.O.Curios"
+authors = "Architecture"
+description = ''''''
+
+[[mixins]]
+config = "ego_curios.mixins.json"
+
+[[dependencies.ego_curios]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1.228,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.ego_curios]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1]"
+ordering = "NONE"
+side = "BOTH"

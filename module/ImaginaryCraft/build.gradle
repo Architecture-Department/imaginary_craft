@@ -6,7 +6,6 @@ plugins {
 
 	id "org.jetbrains.kotlin.jvm" version "2.3.0"
 	id "org.jetbrains.kotlin.plugin.serialization" version "2.3.0"
-	id 'wrapper'
 }
 
 var projectName = [
@@ -182,6 +181,7 @@ dependencies {
 	projectName.forEach { name -> implementation jarJar(project(":module:" + name)) }
 
 	implementation "net.neoforged:neoforge:${neo_version}"
+	implementation "dev.latvian.mods:rhino-neoforge:${rhino_version}"
 
 	// Kotlin
 	implementation "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
@@ -216,9 +216,8 @@ dependencies {
 	implementation "com.lowdragmc.ldlib2:ldlib2-neoforge-${minecraft_version}:${ldlib2_version}:all"
 
 	// kubejs
-	api "dev.latvian.mods:kubejs-neoforge:${kubejs_version}"
-	interfaceInjectionData "dev.latvian.mods:kubejs-neoforge:${kubejs_version}"
-	implementation "dev.latvian.mods:rhino-neoforge:${rhino_version}"
+//	api "dev.latvian.mods:kubejs-neoforge:${kubejs_version}"
+//	interfaceInjectionData "dev.latvian.mods:kubejs-neoforge:${kubejs_version}"
 
 	// Jade
 	implementation "maven.modrinth:jade:${jade_version}+neoforge"
