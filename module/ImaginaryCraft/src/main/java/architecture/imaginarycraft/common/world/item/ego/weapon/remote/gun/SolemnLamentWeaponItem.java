@@ -4,7 +4,6 @@ import architecture.imaginarycraft.api.LcDamageType;
 import architecture.imaginarycraft.common.world.item.ego.weapon.remote.RemoteEgoWeaponGeoItem;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.init.ModSoundEvents;
-import architecture.imaginarycraft.init.world.ModDamageSources;
 import architecture.imaginarycraft.init.world.ModParticleTypes;
 import architecture.imaginarycraft.util.LcDamageTypeUtil;
 import architecture.imaginarycraft.util.LcLevelUtil;
@@ -77,7 +76,7 @@ public class SolemnLamentWeaponItem extends GunEgoWeaponItem {
 		LcDamageType lcDamageColorDamageType = LcDamageTypeUtil.getLcDamageType(weaponItem);
 		if (hitResult instanceof EntityHitResult entityHitResult) {
 			Entity entity = entityHitResult.getEntity();
-			DamageSource damageSources = ModDamageSources.remoteDamage(shooterEntity);
+			DamageSource damageSources = architecture.goldenboughs_lib.init.LibDamageSources.remoteDamage(shooterEntity);
 			// 一般来说使用物品攻击时这些会自动添加，但是因为原版的机制导致副手攻击物品时可能无法正确识别，所以这里手动添加
 			damageSources.imaginaryCraft$setWeaponItem(weaponItem);
 			damageSources.imaginaryCraft$setDamageLevel(LcLevelUtil.getLevel(weaponItem));

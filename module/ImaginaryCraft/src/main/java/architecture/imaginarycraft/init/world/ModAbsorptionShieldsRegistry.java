@@ -1,5 +1,6 @@
 package architecture.imaginarycraft.init.world;
 
+import architecture.goldenboughs_lib.init.LibDamageTypes;
 import architecture.imaginarycraft.config.ModConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
@@ -34,28 +35,28 @@ public final class ModAbsorptionShieldsRegistry {
 	public static void init() {
 		register(
 			ModMobEffects.PHYSIC_ABSORPTION_SHIELD,
-			ModDamageTypes.PHYSICS.location(),
+			LibDamageTypes.PHYSICS.location(),
 			ModAttachments.PHYSIC_DAMAGE_ABSORPTION_AMOUNT,
 			(amp, old) -> (float) ((amp + 1) * ModConfig.SERVER.shieldAdditionalValuePerLevel.get()),
 			null
 		);
 		register(
 			ModMobEffects.SPIRIT_ABSORPTION_SHIELD,
-			ModDamageTypes.SPIRIT.location(),
+			LibDamageTypes.SPIRIT.location(),
 			ModAttachments.SPIRIT_DAMAGE_ABSORPTION_AMOUNT,
 			(amp, old) -> (float) ((amp + 1) * ModConfig.SERVER.shieldAdditionalValuePerLevel.get()),
 			null
 		);
 		register(
 			ModMobEffects.EROSION_ABSORPTION_SHIELD,
-			ModDamageTypes.EROSION.location(),
+			LibDamageTypes.EROSION.location(),
 			ModAttachments.EROSION_DAMAGE_ABSORPTION_AMOUNT,
 			(amp, old) -> (float) ((amp + 1) * ModConfig.SERVER.shieldAdditionalValuePerLevel.get()),
 			null
 		);
 		register(
 			ModMobEffects.SOUL_ABSORPTION_SHIELD,
-			ModDamageTypes.THE_SOUL.location(),
+			LibDamageTypes.THE_SOUL.location(),
 			ModAttachments.SOUL_DAMAGE_ABSORPTION_AMOUNT,
 			(amp, old) -> (float) ((amp + 1) * ModConfig.SERVER.shieldAdditionalValuePerLevel.get()),
 			null

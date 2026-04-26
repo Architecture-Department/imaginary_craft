@@ -1,7 +1,6 @@
 package architecture.imaginarycraft.common.world.entity.projectile;
 
-import architecture.imaginarycraft.init.world.ModDamageSources;
-import architecture.imaginarycraft.init.world.ModDamageTypes;
+import architecture.goldenboughs_lib.init.LibDamageTypes;
 import architecture.imaginarycraft.init.world.entity.ProjectileEntityTypes;
 import architecture.imaginarycraft.util.PiercingUtil;
 import architecture.imaginarycraft.util.PiercingUtil.PierceData;
@@ -180,9 +179,9 @@ public class MagicBulletEntity extends ModBulletEntity {
 		var owner = this.getOwner();
 
 		// 使用项目自定义的 ModDamageSources 来创建伤害源
-		DamageSource damageSource = ModDamageSources.createDamage(
+		DamageSource damageSource = architecture.goldenboughs_lib.init.LibDamageSources.createDamage(
 			this.level().registryAccess(),
-			ModDamageTypes.REMOTE,
+				LibDamageTypes.REMOTE,
 			this,
 			owner,
 			this.position()

@@ -1,13 +1,12 @@
 package architecture.imaginarycraft.api;
 
+import architecture.goldenboughs_lib.init.LibDamageTypes;
 import architecture.imaginarycraft.client.ModFontIcon;
 import architecture.imaginarycraft.client.util.ColorUtil;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.eventexecute.LcDamageEventExecutes;
 import architecture.imaginarycraft.init.tag.ModDamageTypeTags;
 import architecture.imaginarycraft.init.world.ModAttributes;
-import architecture.imaginarycraft.init.world.ModDamageSources;
-import architecture.imaginarycraft.init.world.ModDamageTypes;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import com.mojang.serialization.Codec;
@@ -46,14 +45,14 @@ public enum LcDamageType implements ColourText, StringRepresentable {
 	PHYSICS(0, "physics",
 		ModFontIcon.PHYSICS, ModFontIcon.PHYSICS_8X,
 		ModAttributes.PHYSICS_VULNERABLE, ModAttributes.PHYSICS_DEFENSE,
-		ModDamageTypes.PHYSICS, "#ff0000"),
+			LibDamageTypes.PHYSICS, "#ff0000"),
 	/**
 	 * 精神
 	 */
 	SPIRIT(1, "spirit",
 		ModFontIcon.SPIRIT, ModFontIcon.SPIRIT_8X,
 		ModAttributes.SPIRIT_VULNERABLE, ModAttributes.SPIRIT_DEFENSE,
-		ModDamageTypes.SPIRIT, "#ffffff"),
+			LibDamageTypes.SPIRIT, "#ffffff"),
 	/**
 	 * 侵蚀
 	 * <p>
@@ -62,7 +61,7 @@ public enum LcDamageType implements ColourText, StringRepresentable {
 	EROSION(2, "erosion",
 		ModFontIcon.EROSION, ModFontIcon.EROSION_8X,
 		ModAttributes.EROSION_VULNERABLE, ModAttributes.EROSION_DEFENSE,
-		ModDamageTypes.EROSION, "#8a2be2"),
+			LibDamageTypes.EROSION, "#8a2be2"),
 	/**
 	 * 灵魂
 	 * <p>
@@ -71,7 +70,7 @@ public enum LcDamageType implements ColourText, StringRepresentable {
 	THE_SOUL(3, "the_soul",
 		ModFontIcon.THE_SOUL, ModFontIcon.THE_SOUL_8X,
 		ModAttributes.THE_SOUL_VULNERABLE, ModAttributes.THE_SOUL_DEFENSE,
-		ModDamageTypes.THE_SOUL, "#00ffff"),
+			LibDamageTypes.THE_SOUL, "#00ffff"),
 	;
 
 	public static final Codec<LcDamageType> CODEC = StringRepresentable
@@ -172,7 +171,7 @@ public enum LcDamageType implements ColourText, StringRepresentable {
 
 	@Contract("_ -> new")
 	public @NotNull DamageSource getDamageSources(Entity causingEntity) {
-		return ModDamageSources.createDamage(getDamageTypeResourceKey(), causingEntity);
+		return architecture.goldenboughs_lib.init.LibDamageSources.createDamage(getDamageTypeResourceKey(), causingEntity);
 	}
 
 	public ResourceKey<DamageType> getDamageTypeResourceKey() {
@@ -181,7 +180,7 @@ public enum LcDamageType implements ColourText, StringRepresentable {
 
 	@Contract("_, _ -> new")
 	public @NotNull DamageSource getDamageSources(@Nullable Entity directEntity, @NotNull Entity causingEntity) {
-		return ModDamageSources.createDamage(getDamageTypeResourceKey(), directEntity, causingEntity);
+		return architecture.goldenboughs_lib.init.LibDamageSources.createDamage(getDamageTypeResourceKey(), directEntity, causingEntity);
 	}
 
 	@Contract("_ -> new")

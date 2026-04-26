@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.datagen.tag;
 
+import architecture.goldenboughs_lib.init.LibDamageTypes;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.init.tag.ModDamageTypeTags;
-import architecture.imaginarycraft.init.world.ModDamageTypes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.DamageTypeTagsProvider;
@@ -46,20 +46,20 @@ public final class DatagenDamageTypeTag extends DamageTypeTagsProvider {
 			DamageTypes.FALL,
 			DamageTypes.FIREBALL,
 			DamageTypes.FLY_INTO_WALL
-		).addOptional(ModDamageTypes.PHYSICS.location());
+		).addOptional(LibDamageTypes.PHYSICS.location());
 		// 精神伤害
 		tag(ModDamageTypeTags.SPIRIT).add(
 			DamageTypes.MOB_PROJECTILE
-		).addOptional(ModDamageTypes.SPIRIT.location());
+		).addOptional(LibDamageTypes.SPIRIT.location());
 		// 侵蚀伤害
 		tag(ModDamageTypeTags.EROSION).add(
 			DamageTypes.WITHER_SKULL,
 			DamageTypes.WITHER
-		).addOptional(ModDamageTypes.EROSION.location());
+		).addOptional(LibDamageTypes.EROSION.location());
 		// 灵魂伤害
 		tag(ModDamageTypeTags.THE_SOUL).add(
 			DamageTypes.SONIC_BOOM
-		).addOptional(ModDamageTypes.THE_SOUL.location());
+		).addOptional(LibDamageTypes.THE_SOUL.location());
 		// 绕过
 		tag(ModDamageTypeTags.BYPASS_LC).add(
 			DamageTypes.IN_WALL,
@@ -76,20 +76,20 @@ public final class DatagenDamageTypeTag extends DamageTypeTagsProvider {
 		).addTag(Tags.DamageTypes.IS_MAGIC);
 
 		tag(DamageTypeTags.ALWAYS_HURTS_ENDER_DRAGONS)
-			.addOptional(ModDamageTypes.PHYSICS.location())
-			.addOptional(ModDamageTypes.SPIRIT.location())
-			.addOptional(ModDamageTypes.EROSION.location())
-			.addOptional(ModDamageTypes.THE_SOUL.location())
-			.addOptional(ModDamageTypes.ABNORMALITIES.location())
-			.addOptional(ModDamageTypes.EGO.location())
-			.addOptional(ModDamageTypes.MELEE.location())
-			.addOptional(ModDamageTypes.REMOTE.location());
+				.addOptional(LibDamageTypes.PHYSICS.location())
+				.addOptional(LibDamageTypes.SPIRIT.location())
+				.addOptional(LibDamageTypes.EROSION.location())
+				.addOptional(LibDamageTypes.THE_SOUL.location())
+				.addOptional(LibDamageTypes.ABNORMALITIES.location())
+				.addOptional(LibDamageTypes.EGO.location())
+				.addOptional(LibDamageTypes.MELEE.location())
+				.addOptional(LibDamageTypes.REMOTE.location());
 
 		tag(DamageTypeTags.IS_PROJECTILE)
-			.addOptional(ModDamageTypes.REMOTE.location());
+				.addOptional(LibDamageTypes.REMOTE.location());
 
 		tag(DamageTypeTags.NO_ANGER)
-			.addOptional(ModDamageTypes.REMOTE.location());
+				.addOptional(LibDamageTypes.REMOTE.location());
 	}
 
 	@Contract(pure = true)

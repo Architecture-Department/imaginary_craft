@@ -1,12 +1,12 @@
 package architecture.imaginarycraft.datagen;
 
+import architecture.goldenboughs_lib.init.LibDamageTypes;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.datagen.i18n.DatagenI18n;
 import architecture.imaginarycraft.datagen.tag.DatagenBlockTag;
 import architecture.imaginarycraft.datagen.tag.DatagenDamageTypeTag;
 import architecture.imaginarycraft.datagen.tag.DatagenEntityTag;
 import architecture.imaginarycraft.datagen.tag.DatagenItemTag;
-import architecture.imaginarycraft.init.world.ModDamageTypes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -35,7 +35,7 @@ public final class ModDatagen {
 		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 		// 服务端数据生成
 		buildServer(event, generator, new DatagenDatapackBuiltinEntries(output, new RegistrySetBuilder()
-			.add(Registries.DAMAGE_TYPE, ModDamageTypes::bootstrap),
+				.add(Registries.DAMAGE_TYPE, LibDamageTypes::bootstrap),
 			completableFuture));
 		DatagenBlockTag blockTag = new DatagenBlockTag(output, completableFuture, existingFileHelper);
 		buildServer(event, generator, blockTag);

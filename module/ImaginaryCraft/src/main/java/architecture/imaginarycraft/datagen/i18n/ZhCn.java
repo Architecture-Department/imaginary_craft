@@ -1,5 +1,6 @@
 package architecture.imaginarycraft.datagen.i18n;
 
+import architecture.goldenboughs_lib.init.LibDamageTypes;
 import architecture.imaginarycraft.api.virtue.VirtueType;
 import architecture.imaginarycraft.common.command.RationalityCommands;
 import architecture.imaginarycraft.common.components.ItemVirtueUsageReq;
@@ -7,7 +8,6 @@ import architecture.imaginarycraft.common.world.item.ego.curio.EgoCurioItem;
 import architecture.imaginarycraft.config.ModConfig;
 import architecture.imaginarycraft.datagen.DatagenCuriosTest;
 import architecture.imaginarycraft.init.tag.ModItemTags;
-import architecture.imaginarycraft.init.world.ModDamageTypes;
 import architecture.imaginarycraft.init.world.item.ego.EgoCurioItems;
 import architecture.imaginarycraft.linkage.jade.LivingEntityVulnerable;
 import architecture.imaginarycraft.linkage.jade.ModJadePlugin;
@@ -138,20 +138,20 @@ public final class ZhCn extends DatagenI18n {
 		//endregion
 
 		//region 伤害类型
-		addPlayerDeathMessage(ModDamageTypes.PHYSICS, "%s死于%s的造成的物理伤害");
-		addDeathMessage(ModDamageTypes.PHYSICS, "%s被剁成肉沫了");
-		addPlayerDeathMessage(ModDamageTypes.SPIRIT, "%s死于%s的造成的精神污染");
-		addDeathMessage(ModDamageTypes.SPIRIT, "%s因精神崩溃而死");
-		addPlayerDeathMessage(ModDamageTypes.EROSION, "%s死于%s的造成的侵蚀伤害");
-		addDeathMessage(ModDamageTypes.EROSION, "%s因腐蚀而亡");
-		addPlayerDeathMessage(ModDamageTypes.THE_SOUL, "%s死于%s的造成的灵魂伤害");
-		addDeathMessage(ModDamageTypes.THE_SOUL, "%s的灵魂被超度了");
-		addPlayerDeathMessage(ModDamageTypes.EGO, "%s死于%s的E.G.O");
-		addDeathMessage(ModDamageTypes.EGO, "%s死于E.G.O");
-		addPlayerDeathMessage(ModDamageTypes.MELEE, "%s死于%s的造成的近战伤害");
-		addDeathMessage(ModDamageTypes.MELEE, "%s死于近战伤害");
-		addPlayerDeathMessage(ModDamageTypes.REMOTE, "%s死于%s的造成的远程伤害");
-		addDeathMessage(ModDamageTypes.REMOTE, "%s死于远程伤害");
+		addPlayerDeathMessage(LibDamageTypes.PHYSICS, "%s死于%s的造成的物理伤害");
+		addDeathMessage(LibDamageTypes.PHYSICS, "%s被剁成肉沫了");
+		addPlayerDeathMessage(LibDamageTypes.SPIRIT, "%s死于%s的造成的精神污染");
+		addDeathMessage(LibDamageTypes.SPIRIT, "%s因精神崩溃而死");
+		addPlayerDeathMessage(LibDamageTypes.EROSION, "%s死于%s的造成的侵蚀伤害");
+		addDeathMessage(LibDamageTypes.EROSION, "%s因腐蚀而亡");
+		addPlayerDeathMessage(LibDamageTypes.THE_SOUL, "%s死于%s的造成的灵魂伤害");
+		addDeathMessage(LibDamageTypes.THE_SOUL, "%s的灵魂被超度了");
+		addPlayerDeathMessage(LibDamageTypes.EGO, "%s死于%s的E.G.O");
+		addDeathMessage(LibDamageTypes.EGO, "%s死于E.G.O");
+		addPlayerDeathMessage(LibDamageTypes.MELEE, "%s死于%s的造成的近战伤害");
+		addDeathMessage(LibDamageTypes.MELEE, "%s死于近战伤害");
+		addPlayerDeathMessage(LibDamageTypes.REMOTE, "%s死于%s的造成的远程伤害");
+		addDeathMessage(LibDamageTypes.REMOTE, "%s死于远程伤害");
 		//endregion
 
 		//region tag标签

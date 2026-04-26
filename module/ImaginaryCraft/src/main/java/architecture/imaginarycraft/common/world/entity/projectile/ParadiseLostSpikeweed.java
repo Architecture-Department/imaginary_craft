@@ -1,9 +1,9 @@
 package architecture.imaginarycraft.common.world.entity.projectile;
 
+import architecture.goldenboughs_lib.init.LibDamageTypes;
 import architecture.imaginarycraft.api.LcDamageType;
 import architecture.imaginarycraft.api.LcLevel;
 import architecture.imaginarycraft.client.model.entity.ModGeoEntityModel;
-import architecture.imaginarycraft.init.world.ModDamageTypes;
 import architecture.imaginarycraft.init.world.entity.ProjectileEntityTypes;
 import architecture.imaginarycraft.mixed.IDamageSource;
 import architecture.imaginarycraft.util.RationalityUtil;
@@ -150,7 +150,7 @@ public class ParadiseLostSpikeweed extends Entity implements TraceableEntity, Ge
 		LivingEntity livingentity = getOwner();
 		float damage = getDamage();
 
-		final ResourceKey<DamageType> theSoul = ModDamageTypes.THE_SOUL;
+		final ResourceKey<DamageType> theSoul = LibDamageTypes.THE_SOUL;
 		if (livingentity == null && !(target.isAlive() && !target.isInvulnerable() && target.getUUID().equals(livingentity.getUUID()))) {
 			return target.hurt(getDamageSource(theSoul, livingentity), damage);
 		}

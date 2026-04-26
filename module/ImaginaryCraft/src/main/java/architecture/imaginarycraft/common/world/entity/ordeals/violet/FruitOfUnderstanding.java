@@ -1,11 +1,10 @@
 package architecture.imaginarycraft.common.world.entity.ordeals.violet;
 
+import architecture.goldenboughs_lib.init.LibDamageTypes;
 import architecture.imaginarycraft.api.world.entity.ISpawnByEgg;
 import architecture.imaginarycraft.common.world.entity.ordeals.IOrdealsEntity;
 import architecture.imaginarycraft.init.ModSoundEvents;
 import architecture.imaginarycraft.init.world.ModAttributes;
-import architecture.imaginarycraft.init.world.ModDamageSources;
-import architecture.imaginarycraft.init.world.ModDamageTypes;
 import architecture.imaginarycraft.init.world.entity.ProjectileEntityTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -258,7 +257,7 @@ public class FruitOfUnderstanding extends PathfinderMob implements IOrdealsViole
 			this.getBoundingBox().inflate(SELF_DESTRUCT_AOE_RADIUS),
 			entity -> entity != this && entity.isAlive() && !isCamp(entity))) {
 
-			livingEntity.hurt(ModDamageSources.erosionDamage(this), SELF_DESTRUCT_DMG);
+			livingEntity.hurt(architecture.goldenboughs_lib.init.LibDamageSources.erosionDamage(this), SELF_DESTRUCT_DMG);
 		}
 
 		this.discard();
@@ -475,7 +474,7 @@ public class FruitOfUnderstanding extends PathfinderMob implements IOrdealsViole
 
 			//noinspection ConstantValue
 			if (shooter instanceof IOrdealsEntity fruit && target != null && !fruit.isCamp(target)) {
-				target.hurt(ModDamageSources.createDamage(ModDamageTypes.EROSION, this, shooter), BULLET_DAMAGE);
+				target.hurt(architecture.goldenboughs_lib.init.LibDamageSources.createDamage(LibDamageTypes.EROSION, this, shooter), BULLET_DAMAGE);
 			}
 
 			discardBullet();
@@ -557,7 +556,7 @@ public class FruitOfUnderstanding extends PathfinderMob implements IOrdealsViole
 				return;
 			}
 
-			DamageSource damageSource = ModDamageSources.erosionDamage(FruitOfUnderstanding.this);
+			DamageSource damageSource = architecture.goldenboughs_lib.init.LibDamageSources.erosionDamage(FruitOfUnderstanding.this);
 			if (!target.hurt(damageSource, NORMAL_ATK_DMG)) {
 				return;
 			}
