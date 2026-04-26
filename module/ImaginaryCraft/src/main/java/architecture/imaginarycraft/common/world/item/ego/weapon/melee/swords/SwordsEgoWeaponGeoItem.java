@@ -1,0 +1,52 @@
+package architecture.imaginarycraft.common.world.item.ego.weapon.melee.swords;
+
+import architecture.imaginarycraft.api.world.item.IMeleeEgoWeaponItem;
+import architecture.imaginarycraft.client.model.item.GuiItemModel;
+import architecture.imaginarycraft.client.model.item.ModGeoItemModel;
+import architecture.imaginarycraft.client.renderer.providers.ModGeoItemRenderProvider;
+import architecture.imaginarycraft.common.world.item.ego.weapon.melee.MeleeEgoWeaponGeoItem;
+import net.minecraft.world.item.Tier;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib.animatable.GeoItem;
+import software.bernie.geckolib.animatable.client.GeoRenderProvider;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.model.GeoModel;
+import software.bernie.geckolib.util.GeckoLibUtil;
+
+import java.util.function.Consumer;
+
+/**
+ * 这玩意就是原版的剑
+ */
+public class SwordsEgoWeaponGeoItem extends SwordsEgoWeaponItem implements GeoItem {
+	protected final GeoModel<MeleeEgoWeaponGeoItem> model;
+	protected final @Nullable GeoModel<MeleeEgoWeaponGeoItem> guiModel;
+	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
+
+	public SwordsEgoWeaponGeoItem(Tier tier, Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, String modPath) {
+		this(tier, itemProperties, egoWeaponBuilder, new ModGeoItemModel<>(modPath), new GuiItemModel<>(modPath));
+	}
+
+	public SwordsEgoWeaponGeoItem(Tier tier, Properties itemProperties, IMeleeEgoWeaponItem.Builder egoWeaponBuilder, GeoModel<MeleeEgoWeaponGeoItem> geoModel, GeoModel<MeleeEgoWeaponGeoItem> guiModel) {
+		super(tier, itemProperties, egoWeaponBuilder);
+		this.model = geoModel;
+		this.guiModel = guiModel;
+	}
+
+	@Override
+	public void registerControllers(AnimatableManager.ControllerRegistrar controllerRegistrar) {
+
+	}
+
+	@Override
+	public void createGeoRenderer(@NotNull Consumer<GeoRenderProvider> rendererConsumer) {
+		rendererConsumer.accept(new ModGeoItemRenderProvider<>(this.model, this.guiModel));
+	}
+
+	@Override
+	public AnimatableInstanceCache getAnimatableInstanceCache() {
+		return cache;
+	}
+}

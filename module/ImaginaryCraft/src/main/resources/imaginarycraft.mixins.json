@@ -1,0 +1,52 @@
+{
+	"required": true,
+	"package": "architecture.imaginarycraft.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"epicfight.AttackAnimationMixin",
+		"epicfight.BattojutsuSkillMixin",
+		"epicfight.ComboAttacksMixin",
+		"epicfight.ConditionalWeaponInnateSkillAccessorMixin",
+		"epicfight.LivingEntityPatchMixin",
+		"epicfight.MoveSet$MoveSetBuilderMixin",
+		"epicfight.MoveSetMixin",
+		"epicfight.StaticAnimationMixin",
+		"epicfight.WeaponCapability$BuilderMixin",
+		"epicfight.WeaponCapabilityMixin",
+		"epicfight.WeaponTypeReloadListenerAccessorMixin",
+		"epicfight.WeaponTypeReloadListenerMixin",
+		"world.CombatRulesMixin",
+		"world.DamageContainerMixin",
+		"world.DamageSourceMixin",
+		"world.entity.LivingDamageEvent$PostMixin",
+		"world.entity.LivingEntityAccessorMixin",
+		"world.entity.LivingEntityMixin",
+		"world.entity.PlayerMixin",
+		"world.item.ItemStackMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	},
+	"client": [
+		"client.FontMixin",
+		"client.GuiMixin",
+		"client.KeyMappingMixin",
+		"client.ModelBuilderMixin",
+		"client.ModelFileAccessorMixin",
+		"client.world.BlockEntityWithoutLevelRendererMixin",
+		"client.world.ItemRendererMixin",
+		"client.world.LocalPlayerPatchMixin",
+		"epicfight.client.AbstractTrailParticleMixin",
+		"epicfight.client.AnimationTrailParticle$Provider",
+		"epicfight.client.ItemsPreferenceScreenMixin",
+		"epicfight.client.PatchedEntityRendererMixin",
+		"epicfight.client.RenderEngineMixin",
+		"epicfight.client.RenderItemBaseMixin"
+	],
+	"mixinextras": {
+		"minVersion": "0.5.0"
+	}
+}

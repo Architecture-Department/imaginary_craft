@@ -5,10 +5,11 @@
 <!-- TOC -->
 
 * [异想工艺](#异想工艺)
-    * [目录](#目录)
-    * [开发人员(不分顺序)](#开发人员不分顺序)
-    * [贡献者](#贡献者)
-    * [本MOD前置](#本mod前置)
+  * [目录](#目录)
+  * [项目构建](#项目构建)
+  * [开发人员(不分顺序)](#开发人员不分顺序)
+  * [贡献者](#贡献者)
+  * [本MOD前置](#本mod前置)
 
 <!-- TOC -->
 
@@ -71,3 +72,20 @@
 | 名称                                      |
 |-----------------------------------------|
 | [玉 🔍](https://github.com/Snownee/Jade) |
+
+## 项目构建
+
+- 项目拉取完成后,确认子项目文件是否有拉取，如空文件夹请按下列指令在终端内顺序执行
+  ~~~cmd
+    git submodule init
+    git submodule update
+  ~~~
+
+- 如果想要添加新的子模块，请使用以下指令
+  ~~~cmd
+    git submodule add -b "仓库的分支名" "仓库的url"
+  ~~~
+  > 还需要在[settings.gradle](settings.gradle)
+  > 以及[ImaginaryCraft](module/ImaginaryCraft)/build.gradle]里加上子模块名
+
+- 全部拉取完成后,在gradle插件中启动ImaginaryCraft本体项目中的runClient命令

@@ -1,0 +1,12 @@
+package architecture.imaginarycraft.linkage.lowdraglib2;
+
+import com.lowdragmc.lowdraglib2.plugin.ILDLibPlugin;
+import com.lowdragmc.lowdraglib2.plugin.LDLibPlugin;
+
+@LDLibPlugin
+public final class ModLowdraglib2Plugin implements ILDLibPlugin {
+
+	@Override
+	public void onLoad() {
+	}
+}
