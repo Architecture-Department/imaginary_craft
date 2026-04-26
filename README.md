@@ -3,15 +3,23 @@
 ## 目录
 
 <!-- TOC -->
-
 * [异想工艺](#异想工艺)
   * [目录](#目录)
-  * [项目构建](#项目构建)
+  * [模块](#模块)
   * [开发人员(不分顺序)](#开发人员不分顺序)
   * [贡献者](#贡献者)
   * [本MOD前置](#本mod前置)
-
+  * [项目构建](#项目构建)
 <!-- TOC -->
+
+## 模块
+
+| 名称                                                          | 用途    | 依赖              |
+|-------------------------------------------------------------|-------|-----------------|
+| [ImaginaryCraft](module/ImaginaryCraft)                     | 主模块   | 全部              |
+| [GoldenBoughsLib](module/GoldenBoughsLib)                   | api   | 无               |
+| [EGOCurios](module/EGOCurios)                               | EGO饰品 | GoldenBoughsLib |
+| [ResonatorCombatFramework](module/ResonatorCombatFramework) | 战斗框架  | 无               |
 
 ## 开发人员(不分顺序)
 
@@ -83,4 +91,8 @@
 
 - 如果想要添加新的子模块，请使用以下指令
   ~~~cmd 
-  git submodule add -b "仓库的分支名" "仓库的url" module/
+  git submodule add -b "仓库的分支名" "仓库的url" module/仓库的名称
+
+- 例如
+  ~~~cmd 
+  git submodule add -b main https://github.com/Architecture-Department/ResonatorCombatFramework module/ResonatorCombatFramework

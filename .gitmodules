@@ -6,3 +6,7 @@
 	path = module/EGOCurios
 	url = https://github.com/Architecture-Department/EGOCurios
 	branch = main
+[submodule "module/ResonatorCombatFramework"]
+	path = module/ResonatorCombatFramework
+	url = https://github.com/Architecture-Department/ResonatorCombatFramework
+	branch = main

@@ -16,6 +16,7 @@ plugins {
 
 var projectName = [
 				"GoldenBoughsLib",
+				"ResonatorCombatFramework",
 				"EGOCurios",
 ]
 
