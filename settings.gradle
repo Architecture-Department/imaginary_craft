@@ -16,7 +16,7 @@ plugins {
 
 var projectName = [
 				"GoldenBoughsLib",
-//				"EGOCurios",
+				"EGOCurios",
 ]
 
 include("module:ImaginaryCraft")
