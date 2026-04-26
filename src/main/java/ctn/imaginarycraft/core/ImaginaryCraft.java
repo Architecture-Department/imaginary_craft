@@ -3,6 +3,7 @@ package ctn.imaginarycraft.core;
 import ctn.imaginarycraft.config.ModConfig;
 import ctn.imaginarycraft.core.registry.CurioRegistry;
 import ctn.imaginarycraft.core.registry.epicfight.EntityTypeRegistry;
+import ctn.imaginarycraft.core.registry.epicfight.EpicFightRegistry;
 import ctn.imaginarycraft.init.ModSoundEvents;
 import ctn.imaginarycraft.init.epicfight.ModArmatures;
 import ctn.imaginarycraft.init.epicfight.ModEntieyConditions;
@@ -54,6 +55,8 @@ public final class ImaginaryCraft {
     ModCreativeModeTabs.REGISTRY.register(eventBus);
     CurioRegistry.registry();
 	  EntityTypeRegistry.register();
+
+	  eventBus.addListener(EpicFightRegistry::register);
   }
 
   @Contract("_ -> new")

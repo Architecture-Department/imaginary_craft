@@ -24,7 +24,7 @@ public class GrantUsLovePatch extends MobPatch<GrantUsLove> {
 		this.original.goalSelector.addGoal(1, new TargetChasingGoal(this, this.original, 1.0D, false));
 
 		this.original.goalSelector.addGoal(5, new AnimatedAttackGoal<>(this, CombatBehaviors.<GrantUsLovePatch>builder()
-			.newBehaviorSeries(CombatBehaviors.BehaviorSeries.<GrantUsLovePatch>builder().weight(8000.0F).canBeInterrupted(true).looping(false)
+			.newBehaviorSeries(CombatBehaviors.BehaviorSeries.<GrantUsLovePatch>builder().weight(25.0F).canBeInterrupted(true).looping(false)
 				.nextBehavior(CombatBehaviors.Behavior.<GrantUsLovePatch>builder().animationBehavior(GrantUsLoveAnimations.SLASH)))
 			.newBehaviorSeries(CombatBehaviors.BehaviorSeries.<GrantUsLovePatch>builder().weight(50.0F).canBeInterrupted(false).looping(false)
 				.nextBehavior(CombatBehaviors.Behavior.<GrantUsLovePatch>builder().animationBehavior(GrantUsLoveAnimations.STAB_L1)))

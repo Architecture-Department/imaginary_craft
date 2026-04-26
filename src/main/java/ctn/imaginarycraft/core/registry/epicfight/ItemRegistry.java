@@ -4,13 +4,10 @@ import ctn.imaginarycraft.api.epicfight.capabilities.MobBuilderEntrys;
 import ctn.imaginarycraft.api.epicfight.capabilities.ModExCapDataSets;
 import ctn.imaginarycraft.api.epicfight.capabilities.ModMovesets;
 import ctn.imaginarycraft.core.ImaginaryCraft;
-import ctn.imaginarycraft.core.ImaginaryCraftConstants;
-import ctn.imaginarycraft.init.world.item.ego.EgoWeaponItems;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
 import yesman.epicfight.api.event.EpicFightEventHooks;
 import yesman.epicfight.api.event.types.registry.WeaponCapabilityPresetRegistryEvent;
-import yesman.epicfight.api.ex_cap.modules.assets.Builders;
 import yesman.epicfight.api.ex_cap.modules.core.data.BuilderEntry;
 import yesman.epicfight.api.ex_cap.modules.core.events.*;
 import yesman.epicfight.api.ex_cap.modules.core.managers.BuilderManager;
@@ -22,20 +19,6 @@ import java.util.Set;
 import java.util.function.Function;
 
 public final class ItemRegistry {
-	/**
-	 * 添加Epic Fight扩展能力的各种注册表事件监听器
-	 * <p>
-	 * 该方法向Epic Fight的事件钩子系统注册多个回调函数，用于处理：
-	 * </p>
-	 * <ul>
-	 *   <li>扩展能力数据创建</li>
-	 *   <li>扩展能力构建器创建</li>
-	 *   <li>条件判断器注册</li>
-	 *   <li>动作集注册</li>
-	 *   <li>扩展能力数据填充</li>
-	 *   <li>武器能力预设注册</li>
-	 * </ul>
-	 */
 	static void register() {
 		EpicFightEventHooks.Registry.EX_CAP_DATA_CREATION.registerEvent(ItemRegistry::registerData, 1);
 		EpicFightEventHooks.Registry.EX_CAP_BUILDER_CREATION.registerEvent(ItemRegistry::registerExCapBuilders, 1);
@@ -45,15 +28,27 @@ public final class ItemRegistry {
 		EpicFightEventHooks.Registry.WEAPON_CAPABILITY_PRESET.registerEvent(ItemRegistry::registerWeaponCapabilities, 1);
 	}
 
-	/**
-	 * 注册扩展能力构建器的数据关联关系
-	 * <p>
-	 * 将各种武器类型的构建器ID与其对应的数据集ID进行绑定，
-	 * 使Epic Fight能够正确识别和处理不同武器类型的能力数据。
-	 * </p>
-	 *
-	 * @param event 扩展能力构建器填充事件对象，用于注册数据关联
-	 */
+	public static void registerWeaponTypes() {
+
+//		register(ImaginaryCraftConstants.GUN, MobBuilderEntrys.GUN);
+//		register(ImaginaryCraftConstants.PISTOL, MobBuilderEntrys.PISTOL);
+//		register(ImaginaryCraftConstants.RIFLE, MobBuilderEntrys.RIFLE);
+//		register(ImaginaryCraftConstants.CANNON, MobBuilderEntrys.CANNON);
+//		register(ImaginaryCraftConstants.CROSSBOW, Builders.CROSSBOW);
+//		register(ImaginaryCraftConstants.BOW, Builders.BOW);
+//		register(ImaginaryCraftConstants.KNIFE, Builders.DAGGER);
+//		register(ImaginaryCraftConstants.HAMMER, MobBuilderEntrys.HAMMER);
+//		register(ImaginaryCraftConstants.FIST, Builders.FIST);
+//		register(ImaginaryCraftConstants.SPEAR, Builders.SPEAR);
+//		register(ImaginaryCraftConstants.AXE, Builders.AXE);
+//		register(ImaginaryCraftConstants.MACE, MobBuilderEntrys.MACE);
+//		register(ImaginaryCraftConstants.SWORDS, Builders.SWORD);
+//		register(EgoWeaponItems.RED_EYES_TACHI, Builders.TACHI);
+//		register(EgoWeaponItems.LIFE_FOR_A_DAREDEVIL, Builders.TACHI);
+//		register(EgoWeaponItems.COMPREHENSION_TETH, Builders.GREATSWORD);
+//		register(EgoWeaponItems.COMPREHENSION_HE, Builders.GREATSWORD);
+	}
+
 	private static void registerExCapMethods(ExCapabilityBuilderPopulationEvent event) {
 		event.registerData(MobBuilderEntrys.HAMMER.id(), ModExCapDataSets.HAMMER.id());
 		event.registerData(MobBuilderEntrys.MACE.id(), ModExCapDataSets.MACE.id());
@@ -63,15 +58,6 @@ public final class ItemRegistry {
 		event.registerData(MobBuilderEntrys.RIFLE.id(), ModExCapDataSets.RIFLE.id());
 	}
 
-	/**
-	 * 注册扩展能力数据集
-	 * <p>
-	 * 向Epic Fight系统注册所有自定义的扩展能力数据集，
-	 * 这些数据集定义了各种武器类型的行为属性和配置。
-	 * </p>
-	 *
-	 * @param event 扩展能力数据注册事件对象，用于批量添加数据集
-	 */
 	private static void registerData(ExCapDataRegistrationEvent event) {
 		event.addData(
 			ModExCapDataSets.HAMMER,
@@ -83,15 +69,6 @@ public final class ItemRegistry {
 		);
 	}
 
-	/**
-	 * 注册扩展能力构建器
-	 * <p>
-	 * 向Epic Fight系统注册所有自定义的扩展能力构建器，
-	 * 这些构建器用于创建和初始化不同武器类型的能力实例。
-	 * </p>
-	 *
-	 * @param event 扩展能力构建器创建事件对象，用于批量添加构建器
-	 */
 	private static void registerExCapBuilders(ExCapBuilderCreationEvent event) {
 		event.addBuilder(
 			MobBuilderEntrys.HAMMER,
@@ -103,30 +80,12 @@ public final class ItemRegistry {
 		);
 	}
 
-	/**
-	 * 注册条件判断器
-	 * <p>
-	 * 用于注册自定义的条件判断逻辑，控制武器能力在特定条件下的激活或禁用。
-	 * 当前未启用任何条件判断器（已注释）。
-	 * </p>
-	 *
-	 * @param event 条件判断器注册事件对象
-	 */
 	private static void registerConditionals(ConditionalRegistryEvent event) {
 		event.addConditional(
 //			ModMainConditionals.HAMMER,
 		);
 	}
 
-	/**
-	 * 注册扩展能力动作集
-	 * <p>
-	 * 向Epic Fight系统注册所有自定义武器的动作集合，
-	 * 包括攻击动画、连击模式等战斗行为定义。
-	 * </p>
-	 *
-	 * @param event 扩展能力动作集注册事件对象，用于批量添加动作集
-	 */
 	private static void registerExCapMovesets(ExCapMovesetRegistryEvent event) {
 		event.addMoveSet(
 			ModMovesets.HAMMER,
@@ -138,46 +97,9 @@ public final class ItemRegistry {
 		);
 	}
 
-	/**
-	 * 按类别注册所有武器类型到Epic Fight系统
-	 * <p>
-	 * 该方法遍历所有定义的武器物品集，将它们与对应的Epic Fight武器构建器关联，
-	 * 使游戏能够正确识别和处理各种武器的战斗特性。
-	 * </p>
-	 */
-	static void registerWeaponTypesByClass() {
-		register(ImaginaryCraftConstants.GUN, MobBuilderEntrys.GUN);
-		register(ImaginaryCraftConstants.PISTOL, MobBuilderEntrys.PISTOL);
-		register(ImaginaryCraftConstants.RIFLE, MobBuilderEntrys.RIFLE);
-		register(ImaginaryCraftConstants.CANNON, MobBuilderEntrys.CANNON);
-		register(ImaginaryCraftConstants.CROSSBOW, Builders.CROSSBOW);
-		register(ImaginaryCraftConstants.BOW, Builders.BOW);
-		register(ImaginaryCraftConstants.KNIFE, Builders.DAGGER);
-		register(ImaginaryCraftConstants.HAMMER, MobBuilderEntrys.HAMMER);
-		register(ImaginaryCraftConstants.FIST, Builders.FIST);
-		register(ImaginaryCraftConstants.SPEAR, Builders.SPEAR);
-		register(ImaginaryCraftConstants.AXE, Builders.AXE);
-		register(ImaginaryCraftConstants.MACE, MobBuilderEntrys.MACE);
-		register(ImaginaryCraftConstants.SWORDS, Builders.SWORD);
-		register(EgoWeaponItems.RED_EYES_TACHI, Builders.TACHI);
-		register(EgoWeaponItems.LIFE_FOR_A_DAREDEVIL, Builders.TACHI);
-		register(EgoWeaponItems.COMPREHENSION_TETH, Builders.GREATSWORD);
-		register(EgoWeaponItems.COMPREHENSION_HE, Builders.GREATSWORD);
-	}
-
-	/**
-	 * 注册武器能力预设
-	 * <p>
-	 * 用于向Epic Fight系统导出和管理武器能力预设。
-	 * 当前未启用任何功能（已注释）。
-	 * </p>
-	 *
-	 * @param event 武器能力预设注册事件对象
-	 */
 	private static void registerWeaponCapabilities(WeaponCapabilityPresetRegistryEvent event) {
 //		BuilderManager.acceptExport(event);
 	}
-
 
 	private static void register(Set<DeferredItem<? extends Item>> items, BuilderEntry builderEntry) {
 		register(items, (item) -> WeaponCapabilityPresets.exCapRegistration(BuilderManager.getEntry(builderEntry.id()), item));

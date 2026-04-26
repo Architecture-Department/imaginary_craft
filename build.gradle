@@ -1,279 +1,278 @@
 plugins {
-  id 'java-library'
-  id 'maven-publish'
-  id 'idea'
-  id 'net.neoforged.moddev' version '2.0.139'
+    id 'java-library'
+    id 'maven-publish'
+    id 'idea'
+    id 'net.neoforged.moddev' version '2.0.141'
 
-  id "org.jetbrains.kotlin.jvm" version "2.3.0"
-  id "org.jetbrains.kotlin.plugin.serialization" version "2.3.0"
+    id "org.jetbrains.kotlin.jvm" version "2.3.0"
+    id "org.jetbrains.kotlin.plugin.serialization" version "2.3.0"
 }
 
 tasks.named('wrapper', Wrapper).configure {
-  distributionType = Wrapper.DistributionType.BIN
+    distributionType = Wrapper.DistributionType.BIN
 }
 
 version = mod_version
 group = mod_group_id
 
 repositories {
-  maven {
-    url = "https://libraries.minecraft.net/"
-  }
-
-  maven {
-    url = "https://neoforged.forgecdn.net/releases"
-  }
-
-  maven {
-    url = "https://neoforged.forgecdn.net/mojang-meta"
-  }
-
-  mavenLocal()
-  mavenCentral()
-
-  maven { url 'https://jitpack.io' }
-
-  maven {
-    name = "NeoForged"
-    url = "https://neoforged.forgecdn.net/releases"
-  }
-
-  // KotlinForForge
-  maven {
-    name = "Kotlin for Forge"
-    url = "https://thedarkcolour.github.io/KotlinForForge/"
-    content { includeGroup "thedarkcolour" }
-  }
-
-  // Jitpack
-  maven {
-    name = "JitPack"
-    url = 'https://jitpack.io'
-  }
-
-  // Modrinth
-  maven {
-    url = uri("https://api.modrinth.com/maven")
-  }
-
-  // BlameJared
-  maven {
-    url = uri("https://maven.blamejared.com/")
-  }
-
-  // CurseForge
-  maven {
-    url = uri("https://www.cursemaven.com")
-    content { includeGroup "curse.maven" }
-  }
-
-  // GeckoLib
-  maven {
-    url = uri("https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/")
-    content { includeGroup("software.bernie.geckolib") }
-  }
-
-  // Kosmx 的个人仓库
-  maven {
-    url = uri("https://maven.kosmx.dev/")
-  }
-
-  // Bernie's 仓库（部分模组依赖）
-  maven {
-    url = uri("https://maven.theillusivec4.top/")
-  }
-
-  maven {
-    name = "RedlanceMinecraft"
-    url = "https://repo.redlance.org/public"
-  }
-
-  maven { url = "https://maven.firstdark.dev/snapshots" }
-
-  maven {
-    url "https://maven.latvian.dev/releases"
-    content {
-      includeGroup "dev.latvian.mods"
-      includeGroup "dev.latvian.apps"
+    maven {
+        url = "https://libraries.minecraft.net/"
     }
-  }
 
-  maven {
-    url 'https://jitpack.io'
-    content {
-      includeGroup "com.github.rtyley"
+    maven {
+        url = "https://neoforged.forgecdn.net/releases"
     }
-  }
+
+    maven {
+        url = "https://neoforged.forgecdn.net/mojang-meta"
+    }
+
+    mavenLocal()
+    mavenCentral()
+
+    maven { url 'https://jitpack.io' }
+
+    maven {
+        name = "NeoForged"
+        url = "https://neoforged.forgecdn.net/releases"
+    }
+
+    // KotlinForForge
+    maven {
+        name = "Kotlin for Forge"
+        url = "https://thedarkcolour.github.io/KotlinForForge/"
+        content { includeGroup "thedarkcolour" }
+    }
+
+    // Jitpack
+    maven {
+        name = "JitPack"
+        url = 'https://jitpack.io'
+    }
+
+    // Modrinth
+    maven {
+        url = uri("https://api.modrinth.com/maven")
+    }
+
+    // BlameJared
+    maven {
+        url = uri("https://maven.blamejared.com/")
+    }
+
+    // CurseForge
+    maven {
+        url = uri("https://www.cursemaven.com")
+        content { includeGroup "curse.maven" }
+    }
+
+    // GeckoLib
+    maven {
+        url = uri("https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/")
+        content { includeGroup("software.bernie.geckolib") }
+    }
+
+    // Kosmx 的个人仓库
+    maven {
+        url = uri("https://maven.kosmx.dev/")
+    }
+
+    // Bernie's 仓库（部分模组依赖）
+    maven {
+        url = uri("https://maven.theillusivec4.top/")
+    }
+
+    maven {
+        name = "RedlanceMinecraft"
+        url = "https://repo.redlance.org/public"
+    }
+
+    maven { url = "https://maven.firstdark.dev/snapshots" }
+
+    maven {
+        url "https://maven.latvian.dev/releases"
+        content {
+            includeGroup "dev.latvian.mods"
+            includeGroup "dev.latvian.apps"
+        }
+    }
+
+    maven {
+        url 'https://jitpack.io'
+        content {
+            includeGroup "com.github.rtyley"
+        }
+    }
 }
 
 base {
-  archivesName = mod_id
+    archivesName = mod_id
 }
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 neoForge {
-  interfaceInjectionData.from "interfaces.json"
+    interfaceInjectionData.from "interfaces.json"
 
-  version = project.neo_version
+    version = project.neo_version
 
-  parchment {
-    mappingsVersion = project.parchment_mappings_version
-    minecraftVersion = project.parchment_minecraft_version
-  }
-
-  runs {
-    client {
-      client()
-      systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
     }
 
-    clientAuth {
-      client()
-      systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-      devLogin = true
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        clientAuth {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            devLogin = true
+        }
+
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            systemProperty 'forge.logging.console.level', 'debug'
+
+            jvmArguments.addAll([
+                    // 忽略无效指令，避免有的人没安装 JetBrain Runtime 无法启动游戏
+                    "-XX:+IgnoreUnrecognizedVMOptions",
+                    // 启用 JetBrain Runtime 热重载功能
+                    "-XX:+AllowEnhancedClassRedefinition"])
+
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
     }
 
-    server {
-      server()
-      programArgument '--nogui'
-      systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
     }
-    gameTestServer {
-      type = "gameTestServer"
-      systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
-    }
-
-    data {
-      data()
-      programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
-    }
-
-    configureEach {
-      systemProperty 'forge.logging.markers', 'REGISTRIES'
-      systemProperty 'forge.logging.console.level', 'debug'
-
-      jvmArguments.addAll([
-        // 忽略无效指令，避免有的人没安装 JetBrain Runtime 无法启动游戏
-        "-XX:+IgnoreUnrecognizedVMOptions",
-        // 启用 JetBrain Runtime 热重载功能
-        "-XX:+AllowEnhancedClassRedefinition"])
-
-      logLevel = org.slf4j.event.Level.DEBUG
-    }
-  }
-
-  mods {
-    "${mod_id}" {
-      sourceSet(sourceSets.main)
-    }
-  }
 }
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 configurations {
-  runtimeClasspath.extendsFrom localRuntime
+    runtimeClasspath.extendsFrom localRuntime
 }
 
 dependencies {
-  implementation "net.neoforged:neoforge:${neo_version}"
-  implementation "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
+    implementation "net.neoforged:neoforge:${neo_version}"
+    implementation "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
 
-  jarJar(implementation(group: "club.snowlyicewolf", name: "amarok-json-for-java")) {
-    version { prefer aj4j_version }
-  }
-  jarJar(implementation(group: "club.snowlyicewolf", name: "amarok-kdl-for-java")) {
-    version { prefer ak4j_version }
-  }
+    jarJar(implementation(group: "club.snowlyicewolf", name: "amarok-json-for-java")) {
+        version { prefer aj4j_version }
+    }
+    jarJar(implementation(group: "club.snowlyicewolf", name: "amarok-kdl-for-java")) {
+        version { prefer ak4j_version }
+    }
 
-  api "club.snowlyicewolf:amarok-json-for-java:${aj4j_version}"
-  api "club.snowlyicewolf:amarok-kdl-for-java:${ak4j_version}"
+    api "club.snowlyicewolf:amarok-json-for-java:${aj4j_version}"
+    api "club.snowlyicewolf:amarok-kdl-for-java:${ak4j_version}"
 
-  compileOnly "org.jetbrains.kotlin:kotlin-stdlib"
-  compileOnly "org.jetbrains.kotlin:kotlin-reflect"
-  compileOnly "org.jetbrains.kotlinx:kotlinx-coroutines-core"
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib"
+    compileOnly "org.jetbrains.kotlin:kotlin-reflect"
+    compileOnly "org.jetbrains.kotlinx:kotlinx-coroutines-core"
 
-  // geckolib
-  implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
+    // geckolib
+    implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
 
-  // 饰品
-  implementation "top.theillusivec4.curios:curios-neoforge:${curios_api_version}"
-  implementation "top.theillusivec4.curios:curios-neoforge:${curios_api_version}:api"
+    // 饰品
+    implementation "top.theillusivec4.curios:curios-neoforge:${curios_api_version}"
+    implementation "top.theillusivec4.curios:curios-neoforge:${curios_api_version}:api"
 
-  localRuntime "org.javassist:javassist:3.30.2-GA"
+    localRuntime "org.javassist:javassist:3.30.2-GA"
 
-  // 史诗战斗
-  implementation "maven.modrinth:epic-fight:${epicfight_version}"
+    // 史诗战斗
+    implementation "maven.modrinth:epic-fight:${epicfight_version}"
 
   // 添加目录的jar文件作为库
   implementation fileTree(dir: "额外资源/mods", include: ["*.jar"])
 
-  //======= 非重要依赖 （不装载也可以运行） =======
+    // ldlib2
+    implementation "com.lowdragmc.ldlib2:ldlib2-neoforge-${minecraft_version}:${ldlib2_version}:all"
 
-  // ldlib2
-  implementation "com.lowdragmc.ldlib2:ldlib2-neoforge-${minecraft_version}:${ldlib2_version}:all"
+    // kubejs
+    api "dev.latvian.mods:kubejs-neoforge:${kubejs_version}"
+    interfaceInjectionData "dev.latvian.mods:kubejs-neoforge:${kubejs_version}"
+    implementation "dev.latvian.mods:rhino-neoforge:${rhino_version}"
 
-  // kubejs
-  api "dev.latvian.mods:kubejs-neoforge:${kubejs_version}"
-  interfaceInjectionData "dev.latvian.mods:kubejs-neoforge:${kubejs_version}"
-  implementation "dev.latvian.mods:rhino-neoforge:${rhino_version}"
+    // Jade
+    implementation "maven.modrinth:jade:${jade_version}+neoforge"
 
-  // Jade
-  implementation "maven.modrinth:jade:${jade_version}+neoforge"
+    // JEI
+    compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
+    compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
+    localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
 
-  // JEI
-  compileOnly "mezz.jei:jei-${minecraft_version}-common-api:${jei_version}"
-  compileOnly "mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}"
-  localRuntime "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
-
-  implementation "maven.modrinth:mmmmmmmmmmmm:${mmmmmmmmmmmm_version}"
-  implementation "maven.modrinth:moonlight:${moonlight_version}"
+    implementation "maven.modrinth:mmmmmmmmmmmm:${mmmmmmmmmmmm_version}"
+    implementation "maven.modrinth:moonlight:${moonlight_version}"
 }
 
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
-  var replaceProperties = [minecraft_version      : minecraft_version,
-                           minecraft_version_range: minecraft_version_range,
-                           neo_version            : neo_version,
-                           loader_version_range   : loader_version_range,
-                           mod_id                 : mod_id,
-                           mod_name               : mod_name,
-                           mod_license            : mod_license,
-                           mod_version            : mod_version,
-                           mod_authors            : mod_authors,
-                           mod_description        : mod_description,
-                           epicfight_version      : epicfight_version,
-                           geckolib_version       : geckolib_version,
-                           curios_api_version     : curios_api_version]
-  inputs.properties replaceProperties
-  expand replaceProperties
-  from "src/main/templates"
-  into "build/generated/sources/modMetadata"
+    var replaceProperties = [minecraft_version      : minecraft_version,
+                             minecraft_version_range: minecraft_version_range,
+                             neo_version            : neo_version,
+                             loader_version_range   : loader_version_range,
+                             mod_id                 : mod_id,
+                             mod_name               : mod_name,
+                             mod_license            : mod_license,
+                             mod_version            : mod_version,
+                             mod_authors            : mod_authors,
+                             mod_description        : mod_description,
+                             epicfight_version      : epicfight_version,
+                             sparkcore_version      : sparkcore_version,
+                             geckolib_version       : geckolib_version,
+                             curios_api_version     : curios_api_version]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
 }
 
 sourceSets.main.resources.srcDir generateModMetadata
 neoForge.ideSyncTask generateModMetadata
 
 publishing {
-  publications {
-    register('mavenJava', MavenPublication) {
-      from components.java
+    publications {
+        register('mavenJava', MavenPublication) {
+            from components.java
+        }
     }
-  }
-  repositories {
-    maven {
-      url "file://${project.projectDir}/repo"
+    repositories {
+        maven {
+            url "file://${project.projectDir}/repo"
+        }
     }
-  }
 }
 
 tasks.withType(JavaCompile).configureEach {
-  options.encoding = 'UTF-8'
+    options.encoding = 'UTF-8'
 }
 
 idea {
-  module {
-    downloadSources = true
-    downloadJavadoc = true
-  }
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
 }

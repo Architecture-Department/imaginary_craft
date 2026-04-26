@@ -6,6 +6,7 @@
     "epicfight.AttackAnimationMixin",
     "epicfight.BattojutsuSkillMixin",
     "epicfight.ComboAttacksMixin",
+    "epicfight.CommonItemCapabilityProviderMixin",
     "epicfight.ConditionalWeaponInnateSkillAccessorMixin",
     "epicfight.LivingEntityPatchMixin",
     "epicfight.MoveSet$MoveSetBuilderMixin",

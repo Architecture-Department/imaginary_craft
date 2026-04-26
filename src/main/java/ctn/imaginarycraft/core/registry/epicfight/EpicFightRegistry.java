@@ -32,9 +32,8 @@ public final class EpicFightRegistry {
 	 *
 	 * @param event FML通用设置事件对象，用于管理初始化任务的执行
 	 */
-	@SubscribeEvent
 	public static void register(FMLCommonSetupEvent event) {
-		event.enqueueWork(ItemRegistry::registerWeaponTypesByClass);
+//		event.enqueueWork(ItemRegistry::registerWeaponTypes);
 		event.enqueueWork(EntityTypeRegistry::registerEntityTypeArmatures);
 		event.enqueueWork(ItemRegistry::register);
 	}
