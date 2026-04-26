@@ -2,7 +2,3 @@
 	path = module/GoldenBoughsLib
 	url = https://github.com/Architecture-Department/GoldenBoughsLib
 	branch = main
-[submodule "module/module/EGOCurios"]
-	path = module/module/EGOCurios
-	url = https://github.com/Architecture-Department/EGOCurios
-	branch = main
