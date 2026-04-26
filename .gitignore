@@ -20,6 +20,8 @@ build
 # other
 eclipse
 run
+run/
+run-data/
 runs
 run-data
 
@@ -31,3 +33,19 @@ repo
 .gitignore
 .history
 .trae
+
+generated/
+build/
+
+# idea
+*.log
+
+# other
+*.hprof
+*.nphd
+*.ref
+*.map
+
+#vscode
+.vscode/
+.history/
