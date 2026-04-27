@@ -1,22 +1,16 @@
 package architecture.imaginarycraft.core;
 
-import architecture.imaginarycraft.core.registry.CurioRegistry;
-import architecture.imaginarycraft.core.registry.epicfight.EntityTypeRegistry;
-import architecture.imaginarycraft.init.MobSoundEvents;
-import architecture.imaginarycraft.init.epicfight.ModArmatures;
-import architecture.imaginarycraft.init.epicfight.ModEntieyConditions;
-import architecture.imaginarycraft.init.epicfight.ModMeshes;
-import architecture.imaginarycraft.init.world.ModColliders;
-import architecture.imaginarycraft.init.world.ModCreativeModeTabs;
-import architecture.imaginarycraft.init.world.entity.ModEntityDataSerializers;
-import architecture.imaginarycraft.init.world.entity.ModEntityTypes;
-import architecture.imaginarycraft.init.world.item.ModItems;
+import architecture.ego_curios.core.registry.CurioRegistry;
+import architecture.imaginarycraft.init.ModSoundEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -30,22 +24,14 @@ public final class ImaginaryCraft {
 	public static final Logger LOGGER = LogManager.getLogger(ID);
 
 	public ImaginaryCraft(IEventBus eventBus, ModContainer container) {
-		ModEpicjightEventHooks.listenerRegister();
-
-		ModArmatures.init();
-		ModMeshes.init();
-		ModColliders.init();
-
-		ModEntityDataSerializers.REGISTRY.register(eventBus);
-		MobSoundEvents.REGISTRY.register(eventBus);
-
-		ModEntieyConditions.REGISTRY.register(eventBus);
-		ModItems.init(eventBus);
-		ModEntityTypes.init(eventBus);
-
-		ModCreativeModeTabs.REGISTRY.register(eventBus);
+		NeoForge.EVENT_BUS.register(this);
+		ModSoundEvents.REGISTRY.register(eventBus);
 		CurioRegistry.registry();
-		EntityTypeRegistry.register();
+	}
+
+	@SubscribeEvent
+	public void onServerStarting(ServerStartingEvent event) {
+		LOGGER.info("HELLO from server starting");
 	}
 
 	@Contract("_ -> new")

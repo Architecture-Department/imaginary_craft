@@ -1,11 +1,11 @@
 package architecture.imaginarycraft.core.registry;
 
-import architecture.imaginarycraft.common.payload.LivingEntityAttackStrengthTickerPayload;
-import architecture.imaginarycraft.common.payload.api.ToClientPayload;
-import architecture.imaginarycraft.common.payload.api.ToServerAndClientPayload;
-import architecture.imaginarycraft.common.payload.api.ToServerPayload;
-import architecture.imaginarycraft.common.payload.toc.PlayerDamagePayload;
-import architecture.imaginarycraft.common.payload.tos.PlayerIGunWeaponPayload;
+import architecture.goldenboughs_lib.common.payload.LivingEntityAttackStrengthTickerPayload;
+import architecture.goldenboughs_lib.common.payload.api.ToClientPayload;
+import architecture.goldenboughs_lib.common.payload.api.ToServerAndClientPayload;
+import architecture.goldenboughs_lib.common.payload.api.ToServerPayload;
+import architecture.goldenboughs_lib.common.payload.toc.PlayerDamagePayload;
+import architecture.goldenboughs_lib.common.payload.tos.PlayerIGunWeaponPayload;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;

@@ -37,13 +37,6 @@ ordering = "NONE"
 side = "BOTH"
 
 [[dependencies.${ mod_id }]]
-modId = "epicfight"
-type = "required"
-versionRange = "${epicfight_version}"
-ordering = "NONE"
-side = "BOTH"
-
-[[dependencies.${ mod_id }]]
 modId = "curios"
 type = "required"
 versionRange = "${curios_api_version}"

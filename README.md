@@ -31,13 +31,13 @@
 | [尘昨喧](https://space.bilibili.com/161342683)               | 程序                                    |
 | [ariwdxau](https://space.bilibili.com/3546886078204705)   | 程序                                    |
 | [小史龙吖Slime_Dragon](https://space.bilibili.com/569400746)  | 主美                                    |
-| [小希 Xiris/是Xiris哦](https://space.bilibili.com/1215603253) | 生物模型                                  |
+| [小希 Xiris/是Xiris哦](https://space.bilibili.com/1215603253) | 生物模型美工                                |
 | [星零大队长](https://space.bilibili.com/489185984)             | 部分物品纹理                                |
-| [原木Log_ym](https://space.bilibili.com/138986403)          | 武器/盔甲/饰品模型                            |
-| “老资历/人体派 学徒”?                                             | gui                                   |
-| [天南野人](https://space.bilibili.com/2145067798)             | 武器/盔甲                                 |
-| [Dashcode](https://space.bilibili.com/51204057)           | 动画                                    |
-| "Macedonia"?                                              | 粒子                                    |
+| [原木Log_ym](https://space.bilibili.com/138986403)          | 武器/盔甲/饰品美工                            |
+| [壹無貳隨](https://b23.tv/OfkSONt)                            | gui美工                                 |
+| [天南野人](https://space.bilibili.com/2145067798)             | 武器/盔甲美工                               |
+| [Dashcode](https://space.bilibili.com/51204057)           | 动画美术                                  | 
+| "Macedonia"?                                              | 粒子美工                                  |
 
 ## 贡献者
 
