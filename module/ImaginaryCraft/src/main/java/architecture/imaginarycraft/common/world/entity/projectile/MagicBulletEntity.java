@@ -1,9 +1,9 @@
 package architecture.imaginarycraft.common.world.entity.projectile;
 
 import architecture.goldenboughs_lib.init.LibDamageTypes;
+import architecture.goldenboughs_lib.util.PiercingUtil;
+import architecture.goldenboughs_lib.util.PiercingUtil.PierceData;
 import architecture.imaginarycraft.init.world.entity.ProjectileEntityTypes;
-import architecture.imaginarycraft.util.PiercingUtil;
-import architecture.imaginarycraft.util.PiercingUtil.PierceData;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;

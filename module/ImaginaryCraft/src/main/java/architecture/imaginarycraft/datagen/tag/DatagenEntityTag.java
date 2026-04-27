@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.datagen.tag;
 
+import architecture.goldenboughs_lib.init.tag.LibEntityTags;
 import architecture.imaginarycraft.common.world.entity.ordeals.IOrdealsEntity;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.init.tag.ModEntityTags;
 import architecture.imaginarycraft.init.world.entity.OrdealsEntityTypes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -30,12 +30,12 @@ public final class DatagenEntityTag extends EntityTypeTagsProvider {
 
 	@Override
 	protected void addTags(final HolderLookup.Provider provider) {
-		tag(ModEntityTags.ORDEALS_VIOLET).add(
+		tag(LibEntityTags.ORDEALS_VIOLET).add(
 			OrdealsEntityTypes.GRANT_US_LOVE.get(),
 			OrdealsEntityTypes.FRUIT_OF_UNDERSTANDING.get());
-		tag(ModEntityTags.ORDEALS_AMBER)/*.add()*/;
-		tag(ModEntityTags.ORDEALS_GREEN)/*.add()*/;
-		tag(ModEntityTags.ORDEALS_CRIMSON)/*.add()*/;
-		tag(ModEntityTags.ORDEALS).addTags(ModEntityTags.ORDEALS_VIOLET, ModEntityTags.ORDEALS_AMBER, ModEntityTags.ORDEALS_GREEN, ModEntityTags.ORDEALS_CRIMSON);
+		tag(LibEntityTags.ORDEALS_AMBER)/*.add()*/;
+		tag(LibEntityTags.ORDEALS_GREEN)/*.add()*/;
+		tag(LibEntityTags.ORDEALS_CRIMSON)/*.add()*/;
+		tag(LibEntityTags.ORDEALS).addTags(LibEntityTags.ORDEALS_VIOLET, LibEntityTags.ORDEALS_AMBER, LibEntityTags.ORDEALS_GREEN, LibEntityTags.ORDEALS_CRIMSON);
 	}
 }

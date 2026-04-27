@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.client.gui.hudlayers;
 
+import architecture.goldenboughs_lib.util.TextUtil;
 import architecture.imaginarycraft.client.gui.widget.HorizontalStatusBar;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.util.TextUtil;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiGraphics;

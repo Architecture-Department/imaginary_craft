@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.melee.axe;
 
-import architecture.imaginarycraft.api.LcDamageType;
-import architecture.imaginarycraft.api.world.item.IEgoWeaponItem;
-import architecture.imaginarycraft.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.api.world.item.IEgoWeaponItem;
+import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Tier;

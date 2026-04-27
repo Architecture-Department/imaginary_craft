@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.common.world.item.ego;
 
-import architecture.imaginarycraft.api.world.item.IEgoItem;
+import architecture.goldenboughs_lib.api.world.item.IEgoItem;
 import net.minecraft.world.item.Item;
 
 // TODO 规范化处理

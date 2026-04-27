@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.remote;
 
-import architecture.imaginarycraft.client.model.item.GuiItemModel;
-import architecture.imaginarycraft.client.model.item.ModGeoItemModel;
+import architecture.goldenboughs_lib.client.model.item.GuiItemModel;
+import architecture.goldenboughs_lib.client.model.item.ModGeoItemModel;
 import architecture.imaginarycraft.client.renderer.providers.ModGeoItemRenderProvider;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

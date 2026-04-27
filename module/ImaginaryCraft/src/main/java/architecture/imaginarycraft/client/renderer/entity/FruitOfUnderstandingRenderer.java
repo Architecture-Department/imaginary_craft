@@ -1,9 +1,9 @@
 package architecture.imaginarycraft.client.renderer.entity;
 
-import architecture.imaginarycraft.client.model.entity.ModGeoEntityModel;
+import architecture.goldenboughs_lib.client.model.entity.ModGeoEntityModel;
+import architecture.goldenboughs_lib.util.LibUtils;
 import architecture.imaginarycraft.client.renderer.renderlayer.AutoGlowingRenderLayer;
 import architecture.imaginarycraft.common.world.entity.ordeals.violet.FruitOfUnderstanding;
-import architecture.imaginarycraft.util.ModUtils;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
@@ -27,7 +27,7 @@ public class FruitOfUnderstandingRenderer extends GeoEntityRenderer<FruitOfUnder
 	@Override
 	public void defaultRender(PoseStack poseStack, FruitOfUnderstanding animatable, MultiBufferSource bufferSource, @Nullable RenderType renderType, @Nullable VertexConsumer buffer, float yaw, float partialTick, int packedLight) {
 		super.defaultRender(poseStack, animatable, bufferSource, renderType, buffer, yaw, partialTick, packedLight);
-		this.glowmaskValue[0] = ModUtils.calculateSineCycle(0.8f, 1.2f, 1f);
+		this.glowmaskValue[0] = LibUtils.calculateSineCycle(0.8f, 1.2f, 1f);
 	}
 
 	public static class FruitBulletRenderer extends GeoEntityRenderer<FruitOfUnderstanding.FruitBullet> {

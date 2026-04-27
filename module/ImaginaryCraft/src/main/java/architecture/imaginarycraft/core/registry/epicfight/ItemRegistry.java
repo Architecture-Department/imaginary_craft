@@ -1,10 +1,10 @@
 package architecture.imaginarycraft.core.registry.epicfight;
 
+import architecture.goldenboughs_lib.core.LibConstants;
 import architecture.imaginarycraft.api.epicfight.capabilities.MobBuilderEntrys;
 import architecture.imaginarycraft.api.epicfight.capabilities.ModExCapDataSets;
 import architecture.imaginarycraft.api.epicfight.capabilities.ModMovesets;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.core.ImaginaryCraftConstants;
 import architecture.imaginarycraft.init.world.item.ego.EgoWeaponItems;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -159,19 +159,19 @@ public final class ItemRegistry {
 	 * </p>
 	 */
 	static void registerWeaponTypesByClass() {
-		register(ImaginaryCraftConstants.GUN, MobBuilderEntrys.GUN);
-		register(ImaginaryCraftConstants.PISTOL, MobBuilderEntrys.PISTOL);
-		register(ImaginaryCraftConstants.RIFLE, MobBuilderEntrys.RIFLE);
-		register(ImaginaryCraftConstants.CANNON, MobBuilderEntrys.CANNON);
-		register(ImaginaryCraftConstants.CROSSBOW, Builders.CROSSBOW);
-		register(ImaginaryCraftConstants.BOW, Builders.BOW);
-		register(ImaginaryCraftConstants.KNIFE, Builders.DAGGER);
-		register(ImaginaryCraftConstants.HAMMER, MobBuilderEntrys.HAMMER);
-		register(ImaginaryCraftConstants.FIST, Builders.FIST);
-		register(ImaginaryCraftConstants.SPEAR, Builders.SPEAR);
-		register(ImaginaryCraftConstants.AXE, Builders.AXE);
-		register(ImaginaryCraftConstants.MACE, MobBuilderEntrys.MACE);
-		register(ImaginaryCraftConstants.SWORDS, Builders.SWORD);
+		register(LibConstants.GUN, MobBuilderEntrys.GUN);
+		register(LibConstants.PISTOL, MobBuilderEntrys.PISTOL);
+		register(LibConstants.RIFLE, MobBuilderEntrys.RIFLE);
+		register(LibConstants.CANNON, MobBuilderEntrys.CANNON);
+		register(LibConstants.CROSSBOW, Builders.CROSSBOW);
+		register(LibConstants.BOW, Builders.BOW);
+		register(LibConstants.KNIFE, Builders.DAGGER);
+		register(LibConstants.HAMMER, MobBuilderEntrys.HAMMER);
+		register(LibConstants.FIST, Builders.FIST);
+		register(LibConstants.SPEAR, Builders.SPEAR);
+		register(LibConstants.AXE, Builders.AXE);
+		register(LibConstants.MACE, MobBuilderEntrys.MACE);
+		register(LibConstants.SWORDS, Builders.SWORD);
 		register(EgoWeaponItems.RED_EYES_TACHI, Builders.TACHI);
 		register(EgoWeaponItems.LIFE_FOR_A_DAREDEVIL, Builders.TACHI);
 		register(EgoWeaponItems.COMPREHENSION_TETH, Builders.GREATSWORD);

@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.init.world.entity;
 
-import architecture.imaginarycraft.api.LcLevel;
+import architecture.goldenboughs_lib.api.LcLevel;
 import architecture.imaginarycraft.common.world.entity.abnormalities.TrainingRabbits;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.datagen.i18n.ZhCn;

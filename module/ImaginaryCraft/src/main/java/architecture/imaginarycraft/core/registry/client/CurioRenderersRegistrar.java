@@ -1,9 +1,9 @@
 package architecture.imaginarycraft.core.registry.client;
 
+import architecture.ego_curios.common.item.EgoCurioItem;
+import architecture.ego_curios.init.EgoCurioItems;
 import architecture.imaginarycraft.client.renderer.curios.BasicCuriosRenderer;
-import architecture.imaginarycraft.common.world.item.ego.curio.EgoCurioItem;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.init.world.item.ego.EgoCurioItems;
 import net.minecraft.world.item.Item;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;

@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.client.gui.hudlayers.screenfilter;
 
-import architecture.imaginarycraft.api.LcDamageType;
+import architecture.goldenboughs_lib.api.LcDamageType;
 import architecture.imaginarycraft.client.gui.hudlayers.BasicHudLayer;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import com.mojang.blaze3d.systems.RenderSystem;

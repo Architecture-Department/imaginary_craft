@@ -1,10 +1,10 @@
 package architecture.imaginarycraft.common.payload.toc;
 
-import architecture.imaginarycraft.api.LcDamageType;
+import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.util.PayloadUtil;
 import architecture.imaginarycraft.client.gui.hudlayers.screenfilter.LcDamageScreenFilterLayer;
 import architecture.imaginarycraft.common.payload.api.ToClientPayload;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.util.PayloadUtil;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;

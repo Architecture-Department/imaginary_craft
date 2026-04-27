@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.client.eventexecute;
 
-import architecture.imaginarycraft.api.world.item.IGunWeapon;
+import architecture.goldenboughs_lib.api.world.item.IGunWeapon;
 import architecture.imaginarycraft.common.payload.tos.PlayerIGunWeaponPayload;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.Options;

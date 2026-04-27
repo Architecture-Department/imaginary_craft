@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.mixed;
 
-import architecture.imaginarycraft.api.NoMixinException;
+import architecture.goldenboughs_lib.api.NoMixinException;
 import net.neoforged.neoforge.common.damagesource.DamageContainer;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 

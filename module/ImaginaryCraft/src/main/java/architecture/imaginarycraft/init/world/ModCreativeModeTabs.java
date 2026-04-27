@@ -1,5 +1,6 @@
 package architecture.imaginarycraft.init.world;
 
+import architecture.ego_curios.init.EgoCurioItems;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.datagen.i18n.ZhCn;
 import architecture.imaginarycraft.init.world.item.ModItems;
@@ -7,7 +8,6 @@ import architecture.imaginarycraft.init.world.item.ModSpawnEggItems;
 import architecture.imaginarycraft.init.world.item.ToolItems;
 import architecture.imaginarycraft.init.world.item.WeaponItems;
 import architecture.imaginarycraft.init.world.item.ego.EgoArmorItems;
-import architecture.imaginarycraft.init.world.item.ego.EgoCurioItems;
 import architecture.imaginarycraft.init.world.item.ego.EgoItems;
 import architecture.imaginarycraft.init.world.item.ego.EgoWeaponItems;
 import net.minecraft.core.registries.BuiltInRegistries;

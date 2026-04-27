@@ -1,18 +1,16 @@
 package architecture.imaginarycraft.events.entity;
 
-import architecture.imaginarycraft.api.DelayTaskHolder;
-import architecture.imaginarycraft.api.LcDamageType;
-import architecture.imaginarycraft.api.LcLevel;
-import architecture.imaginarycraft.client.util.ParticleUtil;
+import architecture.goldenboughs_lib.api.DelayTaskHolder;
+import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.api.LcLevel;
+import architecture.goldenboughs_lib.init.LibAttachments;
+import architecture.goldenboughs_lib.util.GunWeaponUtil;
+import architecture.goldenboughs_lib.util.LcLevelUtil;
+import architecture.goldenboughs_lib.util.ParticleUtil;
+import architecture.goldenboughs_lib.util.RationalityUtil;
 import architecture.imaginarycraft.common.payload.toc.PlayerDamagePayload;
-import architecture.imaginarycraft.config.ModConfig;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.eventexecute.LcDamageEventExecutes;
-import architecture.imaginarycraft.init.world.ModAbsorptionShieldsRegistry;
-import architecture.imaginarycraft.init.world.ModAttachments;
-import architecture.imaginarycraft.util.GunWeaponUtil;
-import architecture.imaginarycraft.util.LcLevelUtil;
-import architecture.imaginarycraft.util.RationalityUtil;
 import net.minecraft.core.Holder;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -61,7 +59,7 @@ public final class LivingEntityEvents {
 		EquipmentSlot slot = event.getSlot();
 
 		if (entity.isAlive()) {
-			DelayTaskHolder delayTaskHolder = entity.getExistingDataOrNull(ModAttachments.DELAY_TASK_HOLDER);
+			DelayTaskHolder delayTaskHolder = entity.getExistingDataOrNull(LibAttachments.DELAY_TASK_HOLDER);
 			if (delayTaskHolder != null && !ItemStack.isSameItem(event.getFrom(), event.getTo())) {
 				delayTaskHolder.removeTask(slot);
 			}
@@ -80,7 +78,7 @@ public final class LivingEntityEvents {
 	public static void tickPre(EntityTickEvent.Pre event) {
 		Entity entity = event.getEntity();
 		if (entity.isAlive()) {
-			DelayTaskHolder timingRun = entity.getExistingDataOrNull(ModAttachments.DELAY_TASK_HOLDER);
+			DelayTaskHolder timingRun = entity.getExistingDataOrNull(LibAttachments.DELAY_TASK_HOLDER);
 			if (timingRun != null) {
 				timingRun.tick();
 			}
@@ -93,7 +91,7 @@ public final class LivingEntityEvents {
 		if (livingEntity.isAlive()) {
 			ItemStack itemSwappedToMainHand = event.getItemSwappedToMainHand();
 			ItemStack itemSwappedToOffHand = event.getItemSwappedToOffHand();
-			DelayTaskHolder delayTaskHolder = livingEntity.getExistingDataOrNull(ModAttachments.DELAY_TASK_HOLDER);
+			DelayTaskHolder delayTaskHolder = livingEntity.getExistingDataOrNull(LibAttachments.DELAY_TASK_HOLDER);
 
 			if (!itemSwappedToMainHand.getItem().shouldCauseBlockBreakReset(itemSwappedToMainHand, itemSwappedToOffHand)) {
 				if (delayTaskHolder != null) {
@@ -287,11 +285,11 @@ public final class LivingEntityEvents {
 		if (entity.level().isClientSide) return;
 
 		MobEffectInstance newEffect = event.getEffectInstance();
-		for (var entry : ModAbsorptionShieldsRegistry.getAll()) {
+		for (var entry : architecture.goldenboughs_lib.init.LibAbsorptionShieldsRegistry.getAll()) {
 			if (newEffect.getEffect().getRegisteredName().equals(entry.effect().getRegisteredName())) {
 
-				if (ModConfig.SERVER.enableMultiShield.isFalse() && entry.isShieldConflict()) {
-					for (var oldEntry : ModAbsorptionShieldsRegistry.getAll()) {
+				if (architecture.goldenboughs_lib.config.LibConfig.SERVER.enableMultiShield.isFalse() && entry.isShieldConflict()) {
+					for (var oldEntry : architecture.goldenboughs_lib.init.LibAbsorptionShieldsRegistry.getAll()) {
 						if (!oldEntry.isShieldConflict() ||
 							oldEntry.effect().getRegisteredName().equals(entry.effect().getRegisteredName()))
 							continue;
@@ -326,7 +324,7 @@ public final class LivingEntityEvents {
 	// 效果移除/过期：清除吸收值
 	private static void clearAmount(LivingEntity entity, MobEffectInstance effect) {
 		if (entity.level().isClientSide) return;
-		for (var entry : ModAbsorptionShieldsRegistry.getAll()) {
+		for (var entry : architecture.goldenboughs_lib.init.LibAbsorptionShieldsRegistry.getAll()) {
 			if (effect.getEffect() == entry.effect()) {
 				entity.setData(entry.attachment().get(), 0.0f);
 				break;

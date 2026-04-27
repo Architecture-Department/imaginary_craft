@@ -1,16 +1,15 @@
 package architecture.imaginarycraft.init.world.item.ego;
 
-import architecture.imaginarycraft.api.LcLevel;
-import architecture.imaginarycraft.client.model.armor.ModGeoArmorModel;
+import architecture.goldenboughs_lib.api.LcLevel;
+import architecture.goldenboughs_lib.client.model.armor.ModGeoArmorModel;
+import architecture.goldenboughs_lib.common.components.ItemVirtueUsageReq;
+import architecture.goldenboughs_lib.init.LibAttributes;
+import architecture.goldenboughs_lib.util.LcLevelUtil;
 import architecture.imaginarycraft.client.renderer.providers.ModGeoArmourRenderProvider;
-import architecture.imaginarycraft.common.components.ItemVirtueUsageReq;
 import architecture.imaginarycraft.common.world.item.ego.armor.EgoArmorItem;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.core.ImaginaryCraftConstants;
 import architecture.imaginarycraft.datagen.i18n.ZhCn;
-import architecture.imaginarycraft.init.world.ModAttributes;
-import architecture.imaginarycraft.init.world.item.ModArmorMaterials;
-import architecture.imaginarycraft.util.LcLevelUtil;
 import com.mojang.datafixers.util.Function5;
 import net.minecraft.core.Holder;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -591,11 +590,11 @@ public final class EgoArmorItems {
 
 	public static Holder<ArmorMaterial> getArmorMaterialHolder(LcLevel lcLevel) {
 		return switch (lcLevel) {
-			case ZAYIN -> ModArmorMaterials.ZAYIN;
-			case TETH -> ModArmorMaterials.TETH;
-			case HE -> ModArmorMaterials.HE;
-			case WAW -> ModArmorMaterials.WAW;
-			case ALEPH -> ModArmorMaterials.ALEPH;
+			case ZAYIN -> architecture.goldenboughs_lib.init.LibArmorMaterials.ZAYIN;
+			case TETH -> architecture.goldenboughs_lib.init.LibArmorMaterials.TETH;
+			case HE -> architecture.goldenboughs_lib.init.LibArmorMaterials.HE;
+			case WAW -> architecture.goldenboughs_lib.init.LibArmorMaterials.WAW;
+			case ALEPH -> architecture.goldenboughs_lib.init.LibArmorMaterials.ALEPH;
 		};
 	}
 
@@ -616,10 +615,10 @@ public final class EgoArmorItems {
 		Function5<Holder<ArmorMaterial>, ArmorItem.Type, Item.Properties, EgoArmorItem.Builder, GeoRenderProvider, ? extends L> leggingsFunction,
 		Function5<Holder<ArmorMaterial>, ArmorItem.Type, Item.Properties, EgoArmorItem.Builder, GeoRenderProvider, ? extends B> bootsFunction
 	) {
-		double[] physicsArray = splitIntoThreeUnequalParts(physics - ModAttributes.PHYSICS_VULNERABLE_DEFAULT_VALUE);
-		double[] spiritArray = splitIntoThreeUnequalParts(spirit - ModAttributes.SPIRIT_VULNERABLE_DEFAULT_VALUE);
-		double[] erosionArray = splitIntoThreeUnequalParts(erosion - ModAttributes.EROSION_VULNERABLE_DEFAULT_VALUE);
-		double[] theSoulArray = splitIntoThreeUnequalParts(theSoul - ModAttributes.THE_SOUL_VULNERABLE_DEFAULT_VALUE);
+		double[] physicsArray = splitIntoThreeUnequalParts(physics - LibAttributes.PHYSICS_VULNERABLE_DEFAULT_VALUE);
+		double[] spiritArray = splitIntoThreeUnequalParts(spirit - LibAttributes.SPIRIT_VULNERABLE_DEFAULT_VALUE);
+		double[] erosionArray = splitIntoThreeUnequalParts(erosion - LibAttributes.EROSION_VULNERABLE_DEFAULT_VALUE);
+		double[] theSoulArray = splitIntoThreeUnequalParts(theSoul - LibAttributes.THE_SOUL_VULNERABLE_DEFAULT_VALUE);
 		return new EgoArmor(
 			register(id + "_" + ArmorItem.Type.CHESTPLATE.getName(), zhName, lcLevel, ArmorItem.Type.CHESTPLATE, material, virtueUsageReqBuilder, builder, properties, renderProvider, physicsArray[2], spiritArray[2], erosionArray[2], theSoulArray[2], chestplateFunction),
 			register(id + "_" + ArmorItem.Type.LEGGINGS.getName(), zhName, lcLevel, ArmorItem.Type.LEGGINGS, material, virtueUsageReqBuilder, builder, properties, renderProvider, physicsArray[1], spiritArray[1], erosionArray[1], theSoulArray[1], leggingsFunction),

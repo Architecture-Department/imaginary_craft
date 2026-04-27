@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.mixin.epicfight;
 
-import architecture.imaginarycraft.api.data.AnimationComboParser;
-import architecture.imaginarycraft.api.data.ConditionalEntryParser;
+import architecture.goldenboughs_lib.api.data.AnimationComboParser;
+import architecture.goldenboughs_lib.api.data.ConditionalEntryParser;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.mixed.IWeaponCapability$Builder;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;

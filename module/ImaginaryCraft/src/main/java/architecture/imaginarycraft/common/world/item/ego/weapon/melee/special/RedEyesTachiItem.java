@@ -1,11 +1,11 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.melee.special;
 
-import architecture.imaginarycraft.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.init.LibMobEffects;
 import architecture.imaginarycraft.client.gui.hudlayers.chop_flavor.ChopFlavorLayer;
 import architecture.imaginarycraft.client.renderer.item.RedEyesTachiItemWeaponRenderer;
 import architecture.imaginarycraft.client.renderer.providers.ModGeoItemRenderProvider;
 import architecture.imaginarycraft.common.world.item.ego.weapon.melee.MeleeEgoWeaponGeoItem;
-import architecture.imaginarycraft.init.world.ModMobEffects;
 import architecture.imaginarycraft.mixin.epicfight.ConditionalWeaponInnateSkillAccessorMixin;
 import architecture.imaginarycraft.mixin.world.entity.LivingEntityAccessorMixin;
 import net.minecraft.server.level.ServerLevel;
@@ -83,7 +83,7 @@ public class RedEyesTachiItem extends MeleeEgoWeaponGeoItem {
 				return;
 			}
 			// TODO EGO共鸣后改成 400
-			original.addEffect(new MobEffectInstance(ModMobEffects.RED_EYES_HUNTING, 200));
+			original.addEffect(new MobEffectInstance(LibMobEffects.RED_EYES_HUNTING, 200));
 		});
 	}
 
@@ -99,7 +99,7 @@ public class RedEyesTachiItem extends MeleeEgoWeaponGeoItem {
 
 	@Override
 	public boolean hurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-		MobEffectInstance effect = attacker.getEffect(ModMobEffects.RED_EYES_HUNTING);
+		MobEffectInstance effect = attacker.getEffect(LibMobEffects.RED_EYES_HUNTING);
 		if (effect != null) {
 			return true;
 		}
@@ -108,7 +108,7 @@ public class RedEyesTachiItem extends MeleeEgoWeaponGeoItem {
 
 	@Override
 	public void postHurtEnemy(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-		MobEffectInstance effect = attacker.getEffect(ModMobEffects.RED_EYES_HUNTING);
+		MobEffectInstance effect = attacker.getEffect(LibMobEffects.RED_EYES_HUNTING);
 		if (effect != null) {
 			int effectDuration = effect.getDuration();
 			// TODO EGO共鸣后改成 20

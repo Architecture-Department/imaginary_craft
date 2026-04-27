@@ -1,11 +1,12 @@
 package architecture.imaginarycraft.init.world.item.ego;
 
-import architecture.imaginarycraft.api.LcDamageType;
-import architecture.imaginarycraft.api.LcLevel;
-import architecture.imaginarycraft.api.virtue.VirtueRating;
-import architecture.imaginarycraft.api.world.item.IEgoItem;
-import architecture.imaginarycraft.api.world.item.IMeleeEgoWeaponItem;
-import architecture.imaginarycraft.api.world.item.IRemoteEgoWeaponItem;
+import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.api.LcLevel;
+import architecture.goldenboughs_lib.api.virtue.VirtueRating;
+import architecture.goldenboughs_lib.api.world.item.IEgoItem;
+import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem;
+import architecture.goldenboughs_lib.util.LcLevelUtil;
 import architecture.imaginarycraft.common.world.item.ego.weapon.melee.axe.AxeEgoWeaponGeoItem;
 import architecture.imaginarycraft.common.world.item.ego.weapon.melee.fist.FistEgoWeaponItem;
 import architecture.imaginarycraft.common.world.item.ego.weapon.melee.hammer.HammerEgoWeaponItem;
@@ -26,7 +27,6 @@ import architecture.imaginarycraft.common.world.item.ego.weapon.remote.special.*
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.core.ImaginaryCraftConstants;
 import architecture.imaginarycraft.datagen.i18n.ZhCn;
-import architecture.imaginarycraft.util.LcLevelUtil;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;

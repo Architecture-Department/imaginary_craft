@@ -1,10 +1,10 @@
 package architecture.imaginarycraft.client.gui.hudlayers;
 
-import architecture.imaginarycraft.api.world.item.IGunWeapon;
+import architecture.goldenboughs_lib.api.world.item.IGunWeapon;
+import architecture.goldenboughs_lib.util.GunWeaponUtil;
 import architecture.imaginarycraft.client.gui.widget.ImageProgressBar;
 import architecture.imaginarycraft.common.world.item.ego.weapon.remote.gun.MagicBulletWeaponItem;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.util.GunWeaponUtil;
 import net.minecraft.client.AttackIndicatorStatus;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphics;

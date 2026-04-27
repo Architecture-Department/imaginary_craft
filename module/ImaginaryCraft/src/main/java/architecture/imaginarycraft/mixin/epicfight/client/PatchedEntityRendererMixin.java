@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.mixin.epicfight.client;
 
-import architecture.imaginarycraft.api.event.client.PatchedEntityRendererEvent;
+import architecture.goldenboughs_lib.api.event.client.PatchedEntityRendererEvent;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.mojang.blaze3d.vertex.PoseStack;

@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.client.events;
 
-import architecture.imaginarycraft.api.event.client.PatchedEntityRendererEvent;
+import architecture.goldenboughs_lib.api.event.client.PatchedEntityRendererEvent;
 import architecture.imaginarycraft.client.eventexecute.EntityRenderEventExecute;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import com.mojang.blaze3d.vertex.PoseStack;

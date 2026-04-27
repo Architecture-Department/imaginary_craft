@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.melee;
 
-import architecture.imaginarycraft.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
 import architecture.imaginarycraft.common.world.item.ego.weapon.EgoWeaponItem;
 
 public abstract class MeleeEgoWeaponItem extends EgoWeaponItem implements IMeleeEgoWeaponItem {

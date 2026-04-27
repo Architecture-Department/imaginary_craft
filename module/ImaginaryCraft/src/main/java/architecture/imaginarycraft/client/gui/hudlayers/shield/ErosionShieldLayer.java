@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.client.gui.hudlayers.shield;
 
+import architecture.goldenboughs_lib.init.LibMobEffects;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.init.world.ModMobEffects;
 import net.minecraft.resources.ResourceLocation;
 
 public class ErosionShieldLayer extends ShieldBarLayer {
@@ -10,6 +10,6 @@ public class ErosionShieldLayer extends ShieldBarLayer {
 	protected static final ResourceLocation LIGHT_TEXTURE = ImaginaryCraft.modRl("hud_bar/shield/erosion_shield_bar_light");
 
 	public ErosionShieldLayer() {
-		super(TEXTURE, BOTTOM_TEXTURE, LIGHT_TEXTURE, ModMobEffects.EROSION_ABSORPTION_SHIELD);
+		super(TEXTURE, BOTTOM_TEXTURE, LIGHT_TEXTURE, LibMobEffects.EROSION_ABSORPTION_SHIELD);
 	}
 }

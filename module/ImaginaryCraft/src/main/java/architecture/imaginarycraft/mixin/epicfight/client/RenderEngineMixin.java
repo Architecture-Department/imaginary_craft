@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.mixin.epicfight.client;
 
-import architecture.imaginarycraft.api.world.entity.INoRender;
+import architecture.goldenboughs_lib.api.world.entity.INoRender;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderer;

@@ -12,6 +12,8 @@ var projectName = [
 				"GoldenBoughsLib",
 				"ResonatorCombatFramework",
 				"EGOCurios",
+				"EGOEquipment",
+				"Abnormalities",
 ]
 
 version = mod_version
@@ -208,7 +210,7 @@ dependencies {
 	implementation "maven.modrinth:epic-fight:${epicfight_version}"
 
 	// sparkcore 星火
-	implementation "maven.modrinth:spark-core:${sparkcore_version}"
+	implementation jarJar("curse.maven:spark-core-${sparkcore_version}")
 
 	// 添加目录的jar文件作为库
 	implementation fileTree(dir: "额外资源/mods", include: ["*.jar"])

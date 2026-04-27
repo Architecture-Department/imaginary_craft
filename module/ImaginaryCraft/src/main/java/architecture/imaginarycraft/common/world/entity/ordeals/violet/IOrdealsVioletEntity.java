@@ -1,14 +1,14 @@
 package architecture.imaginarycraft.common.world.entity.ordeals.violet;
 
-import architecture.imaginarycraft.api.world.entity.ai.CampHurtByTargetGoal;
+import architecture.goldenboughs_lib.api.world.entity.ai.CampHurtByTargetGoal;
+import architecture.goldenboughs_lib.init.tag.LibEntityTags;
 import architecture.imaginarycraft.common.world.entity.ordeals.IOrdealsEntity;
-import architecture.imaginarycraft.init.tag.ModEntityTags;
 import net.minecraft.world.entity.Entity;
 
 public interface IOrdealsVioletEntity extends IOrdealsEntity {
 	@Override
 	default boolean isCamp(Entity entity) {
-		return IOrdealsEntity.super.isCamp(entity) || entity.getType().is(ModEntityTags.ORDEALS_VIOLET);
+		return IOrdealsEntity.super.isCamp(entity) || entity.getType().is(LibEntityTags.ORDEALS_VIOLET);
 	}
 
 	@Override

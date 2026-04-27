@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.client.gui.widget;
 
-import architecture.imaginarycraft.client.util.GuiUtil;
+import architecture.goldenboughs_lib.util.GuiUtil;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.narration.NarrationElementOutput;

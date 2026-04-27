@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.init.world.entity;
 
-import architecture.imaginarycraft.api.ModByteBufCodecs;
+import architecture.goldenboughs_lib.api.ModByteBufCodecs;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import io.netty.buffer.ByteBuf;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;

@@ -1,6 +1,5 @@
-package architecture.imaginarycraft.client;
+package architecture.imaginarycraft.core;
 
-import architecture.imaginarycraft.core.ImaginaryCraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;

@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.events.entity;
 
+import architecture.goldenboughs_lib.util.PiercingUtil;
+import architecture.goldenboughs_lib.util.PiercingUtil.PierceData;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.util.PiercingUtil;
-import architecture.imaginarycraft.util.PiercingUtil.PierceData;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;

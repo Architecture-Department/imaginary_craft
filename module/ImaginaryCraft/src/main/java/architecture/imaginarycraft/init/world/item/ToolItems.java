@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.init.world.item;
 
-import architecture.imaginarycraft.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
 import architecture.imaginarycraft.common.world.item.CreativeRationalityToolItem;
 import architecture.imaginarycraft.common.world.item.ego.weapon.melee.swords.ChaosKnifeItem;
 import architecture.imaginarycraft.core.ImaginaryCraft;

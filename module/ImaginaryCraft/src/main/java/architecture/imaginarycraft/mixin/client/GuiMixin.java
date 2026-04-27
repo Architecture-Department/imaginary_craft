@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.mixin.client;
 
-import architecture.imaginarycraft.util.GunWeaponUtil;
+import architecture.goldenboughs_lib.util.GunWeaponUtil;
 import com.llamalad7.mixinextras.expression.Definition;
 import com.llamalad7.mixinextras.expression.Expression;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;

@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.linkage.jade;
 
-import architecture.imaginarycraft.api.LcDamageType;
+import architecture.goldenboughs_lib.api.LcDamageType;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import net.minecraft.core.Holder;
 import net.minecraft.network.chat.Component;

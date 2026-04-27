@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.mixin.epicfight;
 
-import architecture.imaginarycraft.api.data.ConditionalProviderFactory;
+import architecture.goldenboughs_lib.api.data.ConditionalProviderFactory;
 import architecture.imaginarycraft.mixed.IMoveSet$MoveSetBuilder;
 import com.mojang.datafixers.util.Pair;
 import org.jetbrains.annotations.Nullable;

@@ -1,11 +1,11 @@
 package architecture.imaginarycraft.common.world.item.ego.armor;
 
-import architecture.imaginarycraft.api.world.item.IEgoItem;
-import architecture.imaginarycraft.common.components.ItemVirtueUsageReq;
-import architecture.imaginarycraft.core.capability.item.IItemUsageReq;
-import architecture.imaginarycraft.init.world.ModAttributes;
-import architecture.imaginarycraft.init.world.ModDataComponents;
-import architecture.imaginarycraft.util.ItemBuilderUtil;
+import architecture.goldenboughs_lib.api.world.item.IEgoItem;
+import architecture.goldenboughs_lib.common.components.ItemVirtueUsageReq;
+import architecture.goldenboughs_lib.core.capability.item.IItemUsageReq;
+import architecture.goldenboughs_lib.init.LibAttributes;
+import architecture.goldenboughs_lib.init.LibDataComponents;
+import architecture.goldenboughs_lib.util.ItemBuilderUtil;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -32,8 +32,8 @@ public class EgoArmorItem extends ArmorItem implements GeoItem, IItemUsageReq, I
 		super(armorMaterial, armorType, itemProperties
 			.stacksTo(1)
 			.attributes(egoArmorBuilder.getItemAttributeModifiers(armorType, armorMaterial))
-			.component(ModDataComponents.IS_RESTRAIN, false)
-			.component(ModDataComponents.ITEM_VIRTUE_USAGE_REQ, egoArmorBuilder.virtueUsageReqBuilder.build()));
+			.component(LibDataComponents.IS_RESTRAIN, false)
+			.component(LibDataComponents.ITEM_VIRTUE_USAGE_REQ, egoArmorBuilder.virtueUsageReqBuilder.build()));
 		this.renderProvider = geoRendererProvider;
 	}
 
@@ -67,10 +67,10 @@ public class EgoArmorItem extends ArmorItem implements GeoItem, IItemUsageReq, I
 			ArmorMaterial armorMaterial = material.value();
 			EquipmentSlotGroup equipmentSlotGroup = EquipmentSlotGroup.bySlot(armorType.getSlot());
 			ResourceLocation id = getArmorModifierId(armorType);
-			ItemBuilderUtil.addAttributeModifier(attributeBuilder, ModAttributes.PHYSICS_VULNERABLE, id, this.physicsVulnerable, AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);
-			ItemBuilderUtil.addAttributeModifier(attributeBuilder, ModAttributes.SPIRIT_VULNERABLE, id, this.spiritVulnerable, AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);
-			ItemBuilderUtil.addAttributeModifier(attributeBuilder, ModAttributes.EROSION_VULNERABLE, id, this.erosionVulnerable, AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);
-			ItemBuilderUtil.addAttributeModifier(attributeBuilder, ModAttributes.THE_SOUL_VULNERABLE, id, this.theSoulVulnerable, AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);
+			ItemBuilderUtil.addAttributeModifier(attributeBuilder, LibAttributes.PHYSICS_VULNERABLE, id, this.physicsVulnerable, AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);
+			ItemBuilderUtil.addAttributeModifier(attributeBuilder, LibAttributes.SPIRIT_VULNERABLE, id, this.spiritVulnerable, AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);
+			ItemBuilderUtil.addAttributeModifier(attributeBuilder, LibAttributes.EROSION_VULNERABLE, id, this.erosionVulnerable, AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);
+			ItemBuilderUtil.addAttributeModifier(attributeBuilder, LibAttributes.THE_SOUL_VULNERABLE, id, this.theSoulVulnerable, AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);
 
 			ItemBuilderUtil.addAttributeModifier(attributeBuilder, Attributes.ARMOR, id, armorMaterial.getDefense(armorType), AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);
 			ItemBuilderUtil.addAttributeModifier(attributeBuilder, Attributes.ARMOR_TOUGHNESS, id, armorMaterial.toughness(), AttributeModifier.Operation.ADD_VALUE, equipmentSlotGroup);

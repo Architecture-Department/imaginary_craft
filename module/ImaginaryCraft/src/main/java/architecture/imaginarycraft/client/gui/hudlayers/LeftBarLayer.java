@@ -1,11 +1,10 @@
 package architecture.imaginarycraft.client.gui.hudlayers;
 
+import architecture.goldenboughs_lib.init.LibMobEffects;
 import architecture.imaginarycraft.client.gui.hudlayers.shield.ErosionShieldLayer;
 import architecture.imaginarycraft.client.gui.hudlayers.shield.PhysicShieldLayer;
 import architecture.imaginarycraft.client.gui.hudlayers.shield.SoulShieldLayer;
 import architecture.imaginarycraft.client.gui.hudlayers.shield.SpiritShieldLayer;
-import architecture.imaginarycraft.config.ModConfig;
-import architecture.imaginarycraft.init.world.ModMobEffects;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphics;
@@ -22,7 +21,7 @@ public class LeftBarLayer extends CompositeHudLayer {
 	public LeftBarLayer() {
 		addLayer(this.newHealthBarLayer,
 			() -> !this.minecraft.options.hideGui &&
-				ModConfig.CLIENT.enableNewHealthBar.get() &&
+				architecture.goldenboughs_lib.config.LibConfig.CLIENT.enableNewHealthBar.get() &&
 				this.player != null &&
 				!player.isSpectator() &&
 				!this.player.isCreative());
@@ -35,25 +34,25 @@ public class LeftBarLayer extends CompositeHudLayer {
 				this.player != null &&
 				!player.isSpectator() &&
 				!player.isCreative() &&
-				player.hasEffect(ModMobEffects.PHYSIC_ABSORPTION_SHIELD));
+				player.hasEffect(LibMobEffects.PHYSIC_ABSORPTION_SHIELD));
 		addLayer(this.spiritShieldLayer,
 			() -> !this.minecraft.options.hideGui &&
 				this.player != null &&
 				!player.isSpectator() &&
 				!player.isCreative() &&
-				player.hasEffect(ModMobEffects.SPIRIT_ABSORPTION_SHIELD));
+				player.hasEffect(LibMobEffects.SPIRIT_ABSORPTION_SHIELD));
 		addLayer(this.erosionShieldLayer,
 			() -> !this.minecraft.options.hideGui &&
 				this.player != null &&
 				!player.isSpectator() &&
 				!player.isCreative() &&
-				player.hasEffect(ModMobEffects.EROSION_ABSORPTION_SHIELD));
+				player.hasEffect(LibMobEffects.EROSION_ABSORPTION_SHIELD));
 		addLayer(this.soulShieldLayer,
 			() -> !this.minecraft.options.hideGui &&
 				this.player != null &&
 				!player.isSpectator() &&
 				!player.isCreative() &&
-				player.hasEffect(ModMobEffects.SOUL_ABSORPTION_SHIELD));
+				player.hasEffect(LibMobEffects.SOUL_ABSORPTION_SHIELD));
 	}
 
 	@Override
@@ -73,7 +72,7 @@ public class LeftBarLayer extends CompositeHudLayer {
 		pose.pushPose();
 		if (this.player.isCreative()) {
 			pose.translate(0, 5, 0);
-		} else if (!ModConfig.CLIENT.enableNewHealthBar.get()) {
+		} else if (!architecture.goldenboughs_lib.config.LibConfig.CLIENT.enableNewHealthBar.get()) {
 			pose.translate(0, -10, 0);
 		}
 		super.renderSubLayer(guiGraphics, deltaTracker);

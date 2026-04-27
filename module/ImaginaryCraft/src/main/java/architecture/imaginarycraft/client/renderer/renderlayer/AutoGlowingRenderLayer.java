@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.client.renderer.renderlayer;
 
+import architecture.goldenboughs_lib.util.LibUtils;
 import architecture.imaginarycraft.client.ModRenderTypes;
-import architecture.imaginarycraft.util.ModUtils;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.renderer.LightTexture;
@@ -42,6 +42,6 @@ public class AutoGlowingRenderLayer<T extends GeoAnimatable> extends AutoGlowing
 
 	@Override
 	protected ResourceLocation getTextureResource(T animatable) {
-		return ModUtils.getTextureLight(super.getTextureResource(animatable));
+		return LibUtils.getTextureLight(super.getTextureResource(animatable));
 	}
 }

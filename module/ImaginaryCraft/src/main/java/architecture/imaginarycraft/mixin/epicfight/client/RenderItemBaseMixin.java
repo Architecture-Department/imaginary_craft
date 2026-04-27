@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.mixin.epicfight.client;
 
-import architecture.imaginarycraft.api.data.ConditionalEntryParser;
-import architecture.imaginarycraft.api.data.ConditionalProviderFactory;
+import architecture.goldenboughs_lib.api.data.ConditionalEntryParser;
+import architecture.goldenboughs_lib.api.data.ConditionalProviderFactory;
 import architecture.imaginarycraft.mixed.client.IRenderItemBase;
 import com.google.common.collect.Lists;
 import com.google.gson.JsonElement;

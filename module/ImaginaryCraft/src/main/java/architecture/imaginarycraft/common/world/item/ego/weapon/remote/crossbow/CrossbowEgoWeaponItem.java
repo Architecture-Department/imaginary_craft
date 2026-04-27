@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.remote.crossbow;
 
-import architecture.imaginarycraft.api.LcDamageType;
-import architecture.imaginarycraft.api.world.item.IEgoWeaponItem;
-import architecture.imaginarycraft.api.world.item.IRemoteEgoWeaponItem;
+import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.api.world.item.IEgoWeaponItem;
+import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.LivingEntity;

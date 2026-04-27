@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.mixin.world.item;
 
+import architecture.goldenboughs_lib.init.LibDataComponents;
 import architecture.imaginarycraft.client.event.AddItemDataComponentTooltipEvent;
-import architecture.imaginarycraft.init.world.ModDataComponents;
 import com.llamalad7.mixinextras.expression.Definition;
 import com.llamalad7.mixinextras.expression.Expression;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
@@ -63,7 +63,7 @@ public abstract class ItemStackMixin implements DataComponentHolder, MutableData
 		@Local(argsOnly = true) TooltipFlag tooltipFlag
 	) {
 		// 添加物品使用要求
-		addToTooltip(ModDataComponents.ITEM_VIRTUE_USAGE_REQ, tooltipContext, instance, tooltipFlag);
+		addToTooltip(LibDataComponents.ITEM_VIRTUE_USAGE_REQ, tooltipContext, instance, tooltipFlag);
 		return original;
 	}
 }

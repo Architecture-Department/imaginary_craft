@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.client.gui.hudlayers.screenfilter;
 
+import architecture.goldenboughs_lib.util.RationalityUtil;
 import architecture.imaginarycraft.client.gui.hudlayers.BasicHudLayer;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.util.RationalityUtil;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.DeltaTracker;

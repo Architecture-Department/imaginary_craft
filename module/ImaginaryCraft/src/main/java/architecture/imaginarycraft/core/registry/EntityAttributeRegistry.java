@@ -1,11 +1,11 @@
 package architecture.imaginarycraft.core.registry;
 
-import architecture.imaginarycraft.api.LcLevel;
+import architecture.goldenboughs_lib.api.LcLevel;
+import architecture.goldenboughs_lib.init.LibAttributes;
 import architecture.imaginarycraft.common.world.entity.abnormalities.TrainingRabbits;
 import architecture.imaginarycraft.common.world.entity.ordeals.violet.FruitOfUnderstanding;
 import architecture.imaginarycraft.common.world.entity.ordeals.violet.GrantUsLove;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.init.world.ModAttributes;
 import architecture.imaginarycraft.init.world.entity.AbnormalitiesEntityTypes;
 import architecture.imaginarycraft.init.world.entity.OrdealsEntityTypes;
 import net.minecraft.core.Holder;
@@ -370,17 +370,17 @@ public final class EntityAttributeRegistry {
 	 * 脑叶属性抗性
 	 */
 	private static void lcAttributesVulnerable(EntityAttributeModificationEvent event, EntityType<? extends LivingEntity> entityType) {
-		if (!event.has(entityType, ModAttributes.PHYSICS_VULNERABLE)) {
-			event.add(entityType, ModAttributes.PHYSICS_VULNERABLE);
+		if (!event.has(entityType, LibAttributes.PHYSICS_VULNERABLE)) {
+			event.add(entityType, LibAttributes.PHYSICS_VULNERABLE);
 		}
-		if (!event.has(entityType, ModAttributes.SPIRIT_VULNERABLE)) {
-			event.add(entityType, ModAttributes.SPIRIT_VULNERABLE);
+		if (!event.has(entityType, LibAttributes.SPIRIT_VULNERABLE)) {
+			event.add(entityType, LibAttributes.SPIRIT_VULNERABLE);
 		}
-		if (!event.has(entityType, ModAttributes.EROSION_VULNERABLE)) {
-			event.add(entityType, ModAttributes.EROSION_VULNERABLE);
+		if (!event.has(entityType, LibAttributes.EROSION_VULNERABLE)) {
+			event.add(entityType, LibAttributes.EROSION_VULNERABLE);
 		}
-		if (!event.has(entityType, ModAttributes.THE_SOUL_VULNERABLE)) {
-			event.add(entityType, ModAttributes.THE_SOUL_VULNERABLE);
+		if (!event.has(entityType, LibAttributes.THE_SOUL_VULNERABLE)) {
+			event.add(entityType, LibAttributes.THE_SOUL_VULNERABLE);
 		}
 	}
 
@@ -388,24 +388,24 @@ public final class EntityAttributeRegistry {
 	 * 添加玩家属性
 	 */
 	private static void addPlayerAttributes(EntityAttributeModificationEvent event, EntityType<? extends Player> entityType) {
-		event.add(entityType, ModAttributes.MAX_RATIONALITY);
-		event.add(entityType, ModAttributes.RATIONALITY_NATURAL_RECOVERY_WAIT_TIME);
-		event.add(entityType, ModAttributes.RATIONALITY_RECOVERY_AMOUNT);
+		event.add(entityType, LibAttributes.MAX_RATIONALITY);
+		event.add(entityType, LibAttributes.RATIONALITY_NATURAL_RECOVERY_WAIT_TIME);
+		event.add(entityType, LibAttributes.RATIONALITY_RECOVERY_AMOUNT);
 
-		event.add(entityType, ModAttributes.INTELLIGENCE_DEPARTMENT_ACTIVATION);
+		event.add(entityType, LibAttributes.INTELLIGENCE_DEPARTMENT_ACTIVATION);
 
-		event.add(entityType, ModAttributes.PHYSICS_VULNERABLE);
-		event.add(entityType, ModAttributes.SPIRIT_VULNERABLE);
-		event.add(entityType, ModAttributes.EROSION_VULNERABLE);
-		event.add(entityType, ModAttributes.THE_SOUL_VULNERABLE);
+		event.add(entityType, LibAttributes.PHYSICS_VULNERABLE);
+		event.add(entityType, LibAttributes.SPIRIT_VULNERABLE);
+		event.add(entityType, LibAttributes.EROSION_VULNERABLE);
+		event.add(entityType, LibAttributes.THE_SOUL_VULNERABLE);
 
-		event.add(entityType, ModAttributes.FORTITUDE_POINTS);
-		event.add(entityType, ModAttributes.PRUDENCE_POINTS);
-		event.add(entityType, ModAttributes.TEMPERANCE_POINTS);
-		event.add(entityType, ModAttributes.JUSTICE_POINTS);
+		event.add(entityType, LibAttributes.FORTITUDE_POINTS);
+		event.add(entityType, LibAttributes.PRUDENCE_POINTS);
+		event.add(entityType, LibAttributes.TEMPERANCE_POINTS);
+		event.add(entityType, LibAttributes.JUSTICE_POINTS);
 
-		event.add(entityType, ModAttributes.ATTACK_SPEED_MAIN_HAND);
-		event.add(entityType, ModAttributes.ATTACK_SPEED_OFF_HAND);
+		event.add(entityType, LibAttributes.ATTACK_SPEED_MAIN_HAND);
+		event.add(entityType, LibAttributes.ATTACK_SPEED_OFF_HAND);
 	}
 
 	/**
@@ -445,7 +445,7 @@ public final class EntityAttributeRegistry {
 		 * 物理易伤
 		 */
 		public Builder physicsVulnerable(double value) {
-			return addAttributes(ModAttributes.PHYSICS_VULNERABLE, value);
+			return addAttributes(LibAttributes.PHYSICS_VULNERABLE, value);
 		}
 
 		public Builder addAttributes(Holder<Attribute> attributeHolder, double value) {
@@ -460,21 +460,21 @@ public final class EntityAttributeRegistry {
 		 * 精神易伤
 		 */
 		public Builder spiritVulnerable(double value) {
-			return addAttributes(ModAttributes.SPIRIT_VULNERABLE, value);
+			return addAttributes(LibAttributes.SPIRIT_VULNERABLE, value);
 		}
 
 		/**
 		 * 侵蚀易伤
 		 */
 		public Builder erosionVulnerable(double value) {
-			return addAttributes(ModAttributes.EROSION_VULNERABLE, value);
+			return addAttributes(LibAttributes.EROSION_VULNERABLE, value);
 		}
 
 		/**
 		 * 灵魂易伤
 		 */
 		public Builder theSoulVulnerable(double value) {
-			return addAttributes(ModAttributes.THE_SOUL_VULNERABLE, value);
+			return addAttributes(LibAttributes.THE_SOUL_VULNERABLE, value);
 		}
 
 		/**

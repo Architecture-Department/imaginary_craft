@@ -1,4 +1,4 @@
-package architecture.imaginarycraft.api.world.entity;
+package architecture.imaginarycraft.api.epicfight;
 
 import yesman.epicfight.world.capabilities.entitypatch.EntityPatch;
 

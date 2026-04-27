@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.init.world.item.ego;
 
-import architecture.imaginarycraft.api.world.item.IEgoItem;
+import architecture.goldenboughs_lib.api.world.item.IEgoItem;
 import architecture.imaginarycraft.common.world.item.ego.EgoItem;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.datagen.i18n.ZhCn;
@@ -17,7 +17,7 @@ public final class EgoItems {
 
 	public static void init(IEventBus bus) {
 		REGISTRY.register(bus);
-		EgoCurioItems.init(bus);
+		architecture.ego_curios.init.EgoCurioItems.init(bus);
 		EgoWeaponItems.init(bus);
 		EgoArmorItems.init(bus);
 	}

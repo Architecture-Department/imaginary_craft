@@ -1,12 +1,12 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.remote.gun;
 
-import architecture.imaginarycraft.api.LcDamageType;
+import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.init.LibParticleTypes;
+import architecture.goldenboughs_lib.util.LcDamageTypeUtil;
+import architecture.goldenboughs_lib.util.LcLevelUtil;
 import architecture.imaginarycraft.common.world.item.ego.weapon.remote.RemoteEgoWeaponGeoItem;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.init.ModSoundEvents;
-import architecture.imaginarycraft.init.world.ModParticleTypes;
-import architecture.imaginarycraft.util.LcDamageTypeUtil;
-import architecture.imaginarycraft.util.LcLevelUtil;
+import architecture.imaginarycraft.init.MobSoundEvents;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -88,12 +88,12 @@ public class SolemnLamentWeaponItem extends GunEgoWeaponItem {
 			isBlack = true;
 		}
 
-		SimpleParticleType particleType = (isBlack ? ModParticleTypes.SOLEMN_LAMENT_BUTTERFLY_BLACK : ModParticleTypes.SOLEMN_LAMENT_BUTTERFLY_WHITE).get();
+		SimpleParticleType particleType = (isBlack ? LibParticleTypes.SOLEMN_LAMENT_BUTTERFLY_BLACK : LibParticleTypes.SOLEMN_LAMENT_BUTTERFLY_WHITE).get();
 		Vec3 hitResultLocationPos = hitResult.getLocation();
 		RandomSource random = shooterEntity.getRandom();
 
 		Vec3 position = shooterEntity.position();
-		SoundEvent soundEvent = (isBlack ? ModSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_BLACK : ModSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_WHITE).value();
+		SoundEvent soundEvent = (isBlack ? MobSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_BLACK : MobSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_WHITE).value();
 		world.playSound(null,
 			position.x,
 			position.y,

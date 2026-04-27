@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.mixed.client;
 
-import architecture.imaginarycraft.api.NoMixinException;
+import architecture.goldenboughs_lib.api.NoMixinException;
 import net.neoforged.neoforge.client.model.generators.ModelBuilder;
 
 import java.util.Map;

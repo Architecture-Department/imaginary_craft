@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.common.world.entity.abnormalities;
 
-import architecture.imaginarycraft.client.model.entity.ModGeoEntityModel;
-import architecture.imaginarycraft.init.world.ModAttributes;
+import architecture.goldenboughs_lib.client.model.entity.ModGeoEntityModel;
+import architecture.goldenboughs_lib.init.LibAttributes;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -24,8 +24,8 @@ public class TrainingRabbits extends Mob implements GeoEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		return createMobAttributes()
-			.add(ModAttributes.THE_SOUL_VULNERABLE, 1.0)
-			.add(ModAttributes.EROSION_VULNERABLE, 1.0);
+			.add(LibAttributes.THE_SOUL_VULNERABLE, 1.0)
+			.add(LibAttributes.EROSION_VULNERABLE, 1.0);
 	}
 
 	@Override

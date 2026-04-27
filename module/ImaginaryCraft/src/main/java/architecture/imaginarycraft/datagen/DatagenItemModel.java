@@ -1,11 +1,11 @@
 package architecture.imaginarycraft.datagen;
 
+import architecture.ego_curios.init.EgoCurioItems;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.core.registry.client.ItemPropertyRenderersRegistrar;
 import architecture.imaginarycraft.init.world.item.ModSpawnEggItems;
 import architecture.imaginarycraft.init.world.item.ToolItems;
 import architecture.imaginarycraft.init.world.item.ego.EgoArmorItems;
-import architecture.imaginarycraft.init.world.item.ego.EgoCurioItems;
 import architecture.imaginarycraft.init.world.item.ego.EgoWeaponItems;
 import architecture.imaginarycraft.mixed.client.IModelBuilder;
 import net.minecraft.core.registries.BuiltInRegistries;

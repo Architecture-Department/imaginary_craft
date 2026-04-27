@@ -1,10 +1,8 @@
 package architecture.imaginarycraft.eventexecute;
 
-import architecture.imaginarycraft.api.LcDamageType;
-import architecture.imaginarycraft.api.LcLevel;
-import architecture.imaginarycraft.config.ModConfig;
-import architecture.imaginarycraft.init.world.ModAbsorptionShieldsRegistry;
-import architecture.imaginarycraft.util.LcLevelUtil;
+import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.api.LcLevel;
+import architecture.goldenboughs_lib.util.LcLevelUtil;
 import net.minecraft.core.Holder;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -130,7 +128,7 @@ public final class LcDamageEventExecutes {
 			return;
 		}
 
-		for (var entry : ModAbsorptionShieldsRegistry.getAll()) {
+		for (var entry : architecture.goldenboughs_lib.init.LibAbsorptionShieldsRegistry.getAll()) {
 			MobEffectInstance effect = attackedEntity.getEffect(entry.effect());
 
 			if (effect == null) continue;
@@ -154,7 +152,7 @@ public final class LcDamageEventExecutes {
 				if (attackedEntity instanceof Player player) {
 					entry.playShieldBreakSound(player);      // 只对该玩家播放
 				}
-				if (ModConfig.SERVER.enableShieldDamageImmunity.isTrue()) {
+				if (architecture.goldenboughs_lib.config.LibConfig.SERVER.enableShieldDamageImmunity.isTrue()) {
 					event.setNewDamage(0);
 					continue;//碎盾抗一下(只抗对应伤害)
 				}

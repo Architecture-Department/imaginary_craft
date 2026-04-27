@@ -1,10 +1,10 @@
 package architecture.imaginarycraft.common.world.entity.ordeals.violet;
 
+import architecture.goldenboughs_lib.api.world.entity.ISpawnByEgg;
+import architecture.goldenboughs_lib.init.LibAttributes;
 import architecture.goldenboughs_lib.init.LibDamageTypes;
-import architecture.imaginarycraft.api.world.entity.ISpawnByEgg;
 import architecture.imaginarycraft.common.world.entity.ordeals.IOrdealsEntity;
-import architecture.imaginarycraft.init.ModSoundEvents;
-import architecture.imaginarycraft.init.world.ModAttributes;
+import architecture.imaginarycraft.init.MobSoundEvents;
 import architecture.imaginarycraft.init.world.entity.ProjectileEntityTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -87,10 +87,10 @@ public class FruitOfUnderstanding extends PathfinderMob implements IOrdealsViole
 			.add(Attributes.MOVEMENT_SPEED, 0.3)
 			.add(Attributes.ATTACK_KNOCKBACK, 0.0)
 			.add(Attributes.GRAVITY, 0.08)
-			.add(ModAttributes.PHYSICS_VULNERABLE, 1.0)
-			.add(ModAttributes.SPIRIT_VULNERABLE, 1.5)
-			.add(ModAttributes.EROSION_VULNERABLE, 1.0)
-			.add(ModAttributes.THE_SOUL_VULNERABLE, 1.0);
+				.add(LibAttributes.PHYSICS_VULNERABLE, 1.0)
+				.add(LibAttributes.SPIRIT_VULNERABLE, 1.5)
+				.add(LibAttributes.EROSION_VULNERABLE, 1.0)
+				.add(LibAttributes.THE_SOUL_VULNERABLE, 1.0);
 	}
 
 	@Override
@@ -269,7 +269,7 @@ public class FruitOfUnderstanding extends PathfinderMob implements IOrdealsViole
 	}
 
 	private void selfDestructSound() {
-		playSound(ModSoundEvents.VIOLET_DAWN_SUICIDE.value(), 2.0F, 1.0F);
+		playSound(MobSoundEvents.VIOLET_DAWN_SUICIDE.value(), 2.0F, 1.0F);
 	}
 
 	private void tryPlayWalkSound() {
@@ -279,7 +279,7 @@ public class FruitOfUnderstanding extends PathfinderMob implements IOrdealsViole
 		}
 
 		if (this.onGround() && this.getDeltaMovement().horizontalDistanceSqr() > 0.01) {
-			playSound(ModSoundEvents.VIOLET_DAWN_WALK.value(), 0.5F, 1.0F);
+			playSound(MobSoundEvents.VIOLET_DAWN_WALK.value(), 0.5F, 1.0F);
 			walkSoundCooldown = 60;
 		}
 	}

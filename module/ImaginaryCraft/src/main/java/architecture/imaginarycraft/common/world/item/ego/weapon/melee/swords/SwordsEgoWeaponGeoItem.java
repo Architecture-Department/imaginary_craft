@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.melee.swords;
 
-import architecture.imaginarycraft.api.world.item.IMeleeEgoWeaponItem;
-import architecture.imaginarycraft.client.model.item.GuiItemModel;
-import architecture.imaginarycraft.client.model.item.ModGeoItemModel;
+import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.client.model.item.GuiItemModel;
+import architecture.goldenboughs_lib.client.model.item.ModGeoItemModel;
 import architecture.imaginarycraft.client.renderer.providers.ModGeoItemRenderProvider;
 import architecture.imaginarycraft.common.world.item.ego.weapon.melee.MeleeEgoWeaponGeoItem;
 import net.minecraft.world.item.Tier;

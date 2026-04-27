@@ -1,7 +1,6 @@
 package architecture.imaginarycraft.eventexecute;
 
-import architecture.imaginarycraft.config.ModConfig;
-import architecture.imaginarycraft.util.RationalityUtil;
+import architecture.goldenboughs_lib.util.RationalityUtil;
 import net.minecraft.server.level.ServerPlayer;
 
 public final class RationalityEventExecutes {
@@ -9,7 +8,7 @@ public final class RationalityEventExecutes {
 	 * 自然恢复理智值
 	 */
 	public static void refreshRationalityValue(ServerPlayer player) {
-		if (!ModConfig.SERVER.enableNaturalRationalityRationality.get()) {
+		if (!architecture.goldenboughs_lib.config.LibConfig.SERVER.enableNaturalRationalityRationality.get()) {
 			return;
 		}
 

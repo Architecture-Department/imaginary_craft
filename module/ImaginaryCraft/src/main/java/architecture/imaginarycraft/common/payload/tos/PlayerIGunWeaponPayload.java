@@ -1,9 +1,9 @@
 package architecture.imaginarycraft.common.payload.tos;
 
-import architecture.imaginarycraft.api.world.item.IGunWeapon;
+import architecture.goldenboughs_lib.api.world.item.IGunWeapon;
+import architecture.goldenboughs_lib.util.PayloadUtil;
 import architecture.imaginarycraft.common.payload.api.ToServerPayload;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.util.PayloadUtil;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;

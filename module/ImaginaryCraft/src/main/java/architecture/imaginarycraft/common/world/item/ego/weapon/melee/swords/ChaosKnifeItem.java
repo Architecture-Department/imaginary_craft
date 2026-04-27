@@ -1,10 +1,10 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.melee.swords;
 
-import architecture.imaginarycraft.api.LcDamageType;
-import architecture.imaginarycraft.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.core.capability.item.IItemLcDamageType;
+import architecture.goldenboughs_lib.init.LibDataComponents;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.core.capability.item.IItemLcDamageType;
-import architecture.imaginarycraft.init.world.ModDataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
@@ -27,14 +27,14 @@ public class ChaosKnifeItem extends SwordsEgoWeaponItem implements IItemLcDamage
 	private static final LcDamageType.Component DEFAULT_COMPONENT = new LcDamageType.Component(LcDamageType.PHYSICS, LcDamageType.values());
 
 	public ChaosKnifeItem(Properties itemProperties, IMeleeEgoWeaponItem.Builder builder) {
-		super(new SimpleTier(BlockTags.INCORRECT_FOR_IRON_TOOL, 0, builder.attackSpeed, builder.weaponDamage, 5, Ingredient::of), itemProperties.component(ModDataComponents.LC_DAMAGE_TYPE.get(), new LcDamageType.Component(LcDamageType.PHYSICS, LcDamageType.values())), builder);
+		super(new SimpleTier(BlockTags.INCORRECT_FOR_IRON_TOOL, 0, builder.attackSpeed, builder.weaponDamage, 5, Ingredient::of), itemProperties.component(LibDataComponents.LC_DAMAGE_TYPE.get(), new LcDamageType.Component(LcDamageType.PHYSICS, LcDamageType.values())), builder);
 	}
 
 	@Override
 	@NotNull
 	public InteractionResultHolder<ItemStack> use(@NotNull Level world, @NotNull Player playerEntity, @NotNull InteractionHand handUsed) {
 		ItemStack itemStackInHand = playerEntity.getItemInHand(handUsed);
-		itemStackInHand.update(ModDataComponents.LC_DAMAGE_TYPE, DEFAULT_COMPONENT,
+		itemStackInHand.update(LibDataComponents.LC_DAMAGE_TYPE, DEFAULT_COMPONENT,
 			(damageType) -> {
 				LcDamageType[] values = LcDamageType.values();
 				int i = damageType.lcDamageType().getIndex() + 1;
@@ -54,7 +54,7 @@ public class ChaosKnifeItem extends SwordsEgoWeaponItem implements IItemLcDamage
 	}
 
 	private static LcDamageType.Component getComponent(ItemStack stack) {
-		return stack.getOrDefault(ModDataComponents.LC_DAMAGE_TYPE, DEFAULT_COMPONENT);
+		return stack.getOrDefault(LibDataComponents.LC_DAMAGE_TYPE, DEFAULT_COMPONENT);
 	}
 
 	@Override

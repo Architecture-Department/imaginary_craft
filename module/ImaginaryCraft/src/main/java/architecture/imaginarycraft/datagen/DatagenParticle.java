@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.datagen;
 
-import architecture.imaginarycraft.client.particle.LcDamageIconParticle;
+import architecture.goldenboughs_lib.api.client.particle.LcDamageIconParticle;
+import architecture.goldenboughs_lib.init.LibParticleTypes;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.init.world.ModParticleTypes;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -21,13 +21,13 @@ public final class DatagenParticle extends ParticleDescriptionProvider {
 
 	@Override
 	protected void addDescriptions() {
-		sprite(ModParticleTypes.LC_DAMAGE_ICON, Arrays.stream(LcDamageIconParticle.Type.values())
+		sprite(LibParticleTypes.LC_DAMAGE_ICON, Arrays.stream(LcDamageIconParticle.Type.values())
 			.map(LcDamageIconParticle.Type::getTexturePl)
 			.toArray(String[]::new));
-		sprite(ModParticleTypes.DYEING_MAGIC_CIRCLE, "magic_circle/magic_circle16x", "magic_circle/magic_circle32x", "magic_circle/magic_circle128x");
-		sprite(ModParticleTypes.MAGIC_BULLET_MAGIC_CIRCLE, "magic_bullet/magic_circle16x", "magic_bullet/magic_circle32x", "magic_bullet/magic_circle128x");
-		sprite(ModParticleTypes.SOLEMN_LAMENT_BUTTERFLY_BLACK, "solemn_lament/butterfly_black");
-		sprite(ModParticleTypes.SOLEMN_LAMENT_BUTTERFLY_WHITE, "solemn_lament/butterfly_white");
+		sprite(LibParticleTypes.DYEING_MAGIC_CIRCLE, "magic_circle/magic_circle16x", "magic_circle/magic_circle32x", "magic_circle/magic_circle128x");
+		sprite(LibParticleTypes.MAGIC_BULLET_MAGIC_CIRCLE, "magic_bullet/magic_circle16x", "magic_bullet/magic_circle32x", "magic_bullet/magic_circle128x");
+		sprite(LibParticleTypes.SOLEMN_LAMENT_BUTTERFLY_BLACK, "solemn_lament/butterfly_black");
+		sprite(LibParticleTypes.SOLEMN_LAMENT_BUTTERFLY_WHITE, "solemn_lament/butterfly_white");
 	}
 
 	private <T extends ParticleType<?>> void sprite(Supplier<T> type, String name) {

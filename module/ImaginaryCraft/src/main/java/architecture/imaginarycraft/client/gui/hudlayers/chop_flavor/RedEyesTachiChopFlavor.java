@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.client.gui.hudlayers.chop_flavor;
 
+import architecture.goldenboughs_lib.init.LibMobEffects;
 import architecture.imaginarycraft.client.gui.widget.ImageProgressBar;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.init.world.ModMobEffects;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphics;
@@ -29,7 +29,7 @@ public class RedEyesTachiChopFlavor extends ChopFlavorLayer.ChopFlavorBar {
 		pose.translate(-WIDTH / 2, 0, 0);
 
 		LocalPlayer player = ChopFlavorLayer.INSTANCE.getPlayer();
-		MobEffectInstance effect = player.getEffect(ModMobEffects.RED_EYES_HUNTING);
+		MobEffectInstance effect = player.getEffect(LibMobEffects.RED_EYES_HUNTING);
 		guiGraphics.blitSprite(BOTTOM, 0, 0, WIDTH, HEIGHT);
 		// TODO EGO共鸣后
 		if (false) {
@@ -73,7 +73,7 @@ public class RedEyesTachiChopFlavor extends ChopFlavorLayer.ChopFlavorBar {
 	@Override
 	public void castSkill() {
 		LocalPlayer player = ChopFlavorLayer.INSTANCE.getPlayer();
-		MobEffectInstance effect = player.getEffect(ModMobEffects.RED_EYES_HUNTING);
+		MobEffectInstance effect = player.getEffect(LibMobEffects.RED_EYES_HUNTING);
 		if (effect == null) {
 			castSkill = 1;
 		}

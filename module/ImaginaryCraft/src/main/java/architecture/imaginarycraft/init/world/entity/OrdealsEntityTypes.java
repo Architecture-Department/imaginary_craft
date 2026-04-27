@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.init.world.entity;
 
-import architecture.imaginarycraft.api.LcLevel;
+import architecture.goldenboughs_lib.api.LcLevel;
 import architecture.imaginarycraft.common.world.entity.ordeals.violet.FruitOfUnderstanding;
 import architecture.imaginarycraft.common.world.entity.ordeals.violet.GrantUsLove;
 import architecture.imaginarycraft.core.ImaginaryCraft;

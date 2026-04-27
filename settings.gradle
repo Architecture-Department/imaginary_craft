@@ -18,6 +18,8 @@ var projectName = [
 				"GoldenBoughsLib",
 				"ResonatorCombatFramework",
 				"EGOCurios",
+				"EGOEquipment",
+				"Abnormalities",
 ]
 
 include("module:ImaginaryCraft")

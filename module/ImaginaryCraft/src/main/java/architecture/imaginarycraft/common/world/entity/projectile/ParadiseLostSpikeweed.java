@@ -1,12 +1,12 @@
 package architecture.imaginarycraft.common.world.entity.projectile;
 
+import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.api.LcLevel;
+import architecture.goldenboughs_lib.client.model.entity.ModGeoEntityModel;
 import architecture.goldenboughs_lib.init.LibDamageTypes;
-import architecture.imaginarycraft.api.LcDamageType;
-import architecture.imaginarycraft.api.LcLevel;
-import architecture.imaginarycraft.client.model.entity.ModGeoEntityModel;
+import architecture.goldenboughs_lib.util.RationalityUtil;
 import architecture.imaginarycraft.init.world.entity.ProjectileEntityTypes;
 import architecture.imaginarycraft.mixed.IDamageSource;
-import architecture.imaginarycraft.util.RationalityUtil;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.SynchedEntityData;

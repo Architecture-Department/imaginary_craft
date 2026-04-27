@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.datagen.i18n;
 
-import architecture.imaginarycraft.config.ConfigUtil;
+import architecture.goldenboughs_lib.config.ConfigUtil;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.datagen.DatagenSoundDefinitionsProvider;
 import net.minecraft.core.Holder;

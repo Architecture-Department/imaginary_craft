@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.mixin.epicfight.client;
 
-import architecture.imaginarycraft.api.world.item.IMeleeEgoWeaponItem;
-import architecture.imaginarycraft.api.world.item.IRemoteEgoWeaponItem;
+import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem;
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.world.item.Item;

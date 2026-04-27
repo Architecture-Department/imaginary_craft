@@ -2,7 +2,6 @@ package architecture.imaginarycraft.client.events;
 
 import architecture.imaginarycraft.client.renderer.effect.shield.ShieldSphereMesh;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.init.world.ModAbsorptionShieldsRegistry;
 import com.mojang.blaze3d.vertex.DefaultVertexFormat;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -38,7 +37,7 @@ public class ShieldRenderer {
 	                                         PoseStack poseStack,
 	                                         MultiBufferSource buffer,
 	                                         int packedLight) {
-		final var list = ModAbsorptionShieldsRegistry.getAll();
+		final var list = architecture.goldenboughs_lib.init.LibAbsorptionShieldsRegistry.getAll();
 		final var livingEffects = entity.getActiveEffectsMap().keySet();
 
 		list.parallelStream()
@@ -47,7 +46,7 @@ public class ShieldRenderer {
 			.ifPresent(it -> renderShield(entity, poseStack, buffer, packedLight, it));
 	}
 
-	private static void renderShield(LivingEntity entity, PoseStack poseStack, MultiBufferSource buffer, int packedLight, ModAbsorptionShieldsRegistry.ShieldEntry entry) {
+	private static void renderShield(LivingEntity entity, PoseStack poseStack, MultiBufferSource buffer, int packedLight, architecture.goldenboughs_lib.init.LibAbsorptionShieldsRegistry.ShieldEntry entry) {
 		float radius = Math.max(entity.getBbWidth(), entity.getBbHeight()) * 1.2f;
 		int color = entry.effect().value().getColor();
 		float r = ((color >> 16) & 0xFF) / 255f;

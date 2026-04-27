@@ -1,16 +1,15 @@
 package architecture.imaginarycraft.core;
 
-import architecture.imaginarycraft.config.ModConfig;
 import architecture.imaginarycraft.core.registry.CurioRegistry;
 import architecture.imaginarycraft.core.registry.epicfight.EntityTypeRegistry;
-import architecture.imaginarycraft.init.ModSoundEvents;
+import architecture.imaginarycraft.init.MobSoundEvents;
 import architecture.imaginarycraft.init.epicfight.ModArmatures;
 import architecture.imaginarycraft.init.epicfight.ModEntieyConditions;
 import architecture.imaginarycraft.init.epicfight.ModMeshes;
-import architecture.imaginarycraft.init.world.*;
+import architecture.imaginarycraft.init.world.ModColliders;
+import architecture.imaginarycraft.init.world.ModCreativeModeTabs;
 import architecture.imaginarycraft.init.world.entity.ModEntityDataSerializers;
 import architecture.imaginarycraft.init.world.entity.ModEntityTypes;
-import architecture.imaginarycraft.init.world.item.ModArmorMaterials;
 import architecture.imaginarycraft.init.world.item.ModItems;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -32,24 +31,17 @@ public final class ImaginaryCraft {
 
 	public ImaginaryCraft(IEventBus eventBus, ModContainer container) {
 		ModEpicjightEventHooks.listenerRegister();
-		ModConfig.init(container);
 
 		ModArmatures.init();
 		ModMeshes.init();
 		ModColliders.init();
 
 		ModEntityDataSerializers.REGISTRY.register(eventBus);
-		ModSoundEvents.REGISTRY.register(eventBus);
-		ModMobEffects.REGISTRY.register(eventBus);
-		ModAttributes.REGISTRY.register(eventBus);
-		ModAttachments.REGISTRY.register(eventBus);
-		ModParticleTypes.REGISTRY.register(eventBus);
-		ModDataComponents.REGISTRY.register(eventBus);
-		ModArmorMaterials.REGISTRY.register(eventBus);
+		MobSoundEvents.REGISTRY.register(eventBus);
+
 		ModEntieyConditions.REGISTRY.register(eventBus);
 		ModItems.init(eventBus);
 		ModEntityTypes.init(eventBus);
-		ModAbsorptionShieldsRegistry.init();
 
 		ModCreativeModeTabs.REGISTRY.register(eventBus);
 		CurioRegistry.registry();

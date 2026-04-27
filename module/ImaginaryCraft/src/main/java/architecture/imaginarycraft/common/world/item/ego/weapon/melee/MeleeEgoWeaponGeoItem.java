@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.melee;
 
-import architecture.imaginarycraft.api.world.item.IMeleeEgoWeaponItem;
-import architecture.imaginarycraft.client.model.item.GuiItemModel;
-import architecture.imaginarycraft.client.model.item.ModGeoItemModel;
+import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.client.model.item.GuiItemModel;
+import architecture.goldenboughs_lib.client.model.item.ModGeoItemModel;
 import architecture.imaginarycraft.client.renderer.providers.ModGeoItemRenderProvider;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;

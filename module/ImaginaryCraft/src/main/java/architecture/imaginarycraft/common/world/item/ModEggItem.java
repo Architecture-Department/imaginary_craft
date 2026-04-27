@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.common.world.item;
 
-import architecture.imaginarycraft.api.world.entity.ISpawnByEgg;
+import architecture.goldenboughs_lib.api.world.entity.ISpawnByEgg;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;

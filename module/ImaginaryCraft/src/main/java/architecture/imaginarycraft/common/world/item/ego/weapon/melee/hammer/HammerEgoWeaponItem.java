@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.melee.hammer;
 
-import architecture.imaginarycraft.api.world.item.IMeleeEgoWeaponItem;
+import architecture.goldenboughs_lib.api.world.item.IMeleeEgoWeaponItem;
 import architecture.imaginarycraft.common.world.item.ego.weapon.melee.MeleeEgoWeaponGeoItem;
 import software.bernie.geckolib.model.GeoModel;
 

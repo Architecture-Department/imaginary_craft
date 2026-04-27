@@ -1,11 +1,11 @@
 package architecture.imaginarycraft.init;
 
+import architecture.goldenboughs_lib.core.capability.block.IBlockLcLevel;
+import architecture.goldenboughs_lib.core.capability.entity.IEntityLcLevel;
+import architecture.goldenboughs_lib.core.capability.item.IItemLcDamageType;
+import architecture.goldenboughs_lib.core.capability.item.IItemLcLevel;
+import architecture.goldenboughs_lib.core.capability.item.IItemUsageReq;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.core.capability.block.IBlockLcLevel;
-import architecture.imaginarycraft.core.capability.entity.IEntityLcLevel;
-import architecture.imaginarycraft.core.capability.item.IItemLcDamageType;
-import architecture.imaginarycraft.core.capability.item.IItemLcLevel;
-import architecture.imaginarycraft.core.capability.item.IItemUsageReq;
 import net.neoforged.neoforge.capabilities.BlockCapability;
 import net.neoforged.neoforge.capabilities.EntityCapability;
 import net.neoforged.neoforge.capabilities.ItemCapability;

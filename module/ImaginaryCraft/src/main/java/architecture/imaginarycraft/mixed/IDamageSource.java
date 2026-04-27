@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.mixed;
 
-import architecture.imaginarycraft.api.LcDamageType;
-import architecture.imaginarycraft.api.LcLevel;
-import architecture.imaginarycraft.api.NoMixinException;
+import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.api.LcLevel;
+import architecture.goldenboughs_lib.api.NoMixinException;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.item.ItemStack;
 

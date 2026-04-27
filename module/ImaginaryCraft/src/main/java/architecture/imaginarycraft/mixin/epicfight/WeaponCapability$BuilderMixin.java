@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.mixin.epicfight;
 
-import architecture.imaginarycraft.api.data.ConditionalProviderFactory;
+import architecture.goldenboughs_lib.api.data.ConditionalProviderFactory;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.mixed.IWeaponCapability$Builder;
 import com.google.common.collect.Maps;

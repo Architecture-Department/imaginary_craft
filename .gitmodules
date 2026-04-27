@@ -10,3 +10,11 @@
 	path = module/ResonatorCombatFramework
 	url = https://github.com/Architecture-Department/ResonatorCombatFramework
 	branch = main
+[submodule "module/Abnormalities"]
+	path = module/Abnormalities
+	url = https://github.com/Architecture-Department/Abnormalities
+	branch = main
+[submodule "module/EGOEquipment"]
+	path = module/EGOEquipment
+	url = https://github.com/Architecture-Department/EGOEquipment
+	branch = main

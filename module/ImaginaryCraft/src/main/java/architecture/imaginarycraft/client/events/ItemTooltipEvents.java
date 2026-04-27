@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.client.events;
 
-import architecture.imaginarycraft.api.LcLevel;
+import architecture.goldenboughs_lib.api.LcLevel;
+import architecture.goldenboughs_lib.util.LcLevelUtil;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.util.LcLevelUtil;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.item.ItemStack;

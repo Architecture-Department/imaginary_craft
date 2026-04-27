@@ -1,10 +1,10 @@
 package architecture.imaginarycraft.mixin.world;
 
-import architecture.imaginarycraft.api.LcDamageType;
-import architecture.imaginarycraft.api.LcLevel;
+import architecture.goldenboughs_lib.api.LcDamageType;
+import architecture.goldenboughs_lib.api.LcLevel;
+import architecture.goldenboughs_lib.util.LcDamageTypeUtil;
+import architecture.goldenboughs_lib.util.LcLevelUtil;
 import architecture.imaginarycraft.mixed.IDamageSource;
-import architecture.imaginarycraft.util.LcDamageTypeUtil;
-import architecture.imaginarycraft.util.LcLevelUtil;
 import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import net.minecraft.core.Holder;

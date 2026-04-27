@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.client.gui.hudlayers.chop_flavor;
 
 
-import architecture.imaginarycraft.api.data.ConditionalProviderFactory;
+import architecture.goldenboughs_lib.api.data.ConditionalProviderFactory;
 import architecture.imaginarycraft.client.gui.hudlayers.BasicHudLayer;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.init.world.item.ego.EgoWeaponItems;

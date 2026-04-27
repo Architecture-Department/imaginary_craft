@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.client.renderer.curios;
 
-import architecture.imaginarycraft.common.world.item.ego.curio.EgoCurioItem;
+import architecture.ego_curios.common.item.EgoCurioItem;
 import architecture.imaginarycraft.datagen.DatagenCuriosTest;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.model.EntityModel;

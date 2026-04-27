@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.core;
 
-import architecture.imaginarycraft.api.event.rationality.RationalityModifyEvent;
+import architecture.goldenboughs_lib.api.event.rationality.RationalityModifyEvent;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.fml.ModLoader;
 

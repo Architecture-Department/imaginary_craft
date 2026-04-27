@@ -1,22 +1,22 @@
 package architecture.imaginarycraft.common.world.entity.ordeals.violet;
 
-import architecture.imaginarycraft.api.DelayTaskHolder;
-import architecture.imaginarycraft.api.world.entity.IBehaviorTreeMob;
-import architecture.imaginarycraft.api.world.entity.IPatch;
-import architecture.imaginarycraft.api.world.entity.ISkillExpand;
-import architecture.imaginarycraft.api.world.entity.ISpawnByEgg;
-import architecture.imaginarycraft.api.world.entity.ai.behavior.BTFactory;
-import architecture.imaginarycraft.api.world.entity.ai.behavior.BTNode;
-import architecture.imaginarycraft.api.world.entity.ai.behavior.BTRoot;
-import architecture.imaginarycraft.api.world.entity.ai.behavior.composite.ParallelNode;
-import architecture.imaginarycraft.api.world.entity.ai.behavior.condition.ConditionBT;
-import architecture.imaginarycraft.api.world.entity.ai.behavior.condition.TargetExistCondition;
-import architecture.imaginarycraft.api.world.entity.ai.behavior.leaf.LookAtTargetAction;
-import architecture.imaginarycraft.api.world.entity.skill.MobSkill;
+import architecture.goldenboughs_lib.api.DelayTaskHolder;
+import architecture.goldenboughs_lib.api.world.entity.IBehaviorTreeMob;
+import architecture.goldenboughs_lib.api.world.entity.ISkillExpand;
+import architecture.goldenboughs_lib.api.world.entity.ISpawnByEgg;
+import architecture.goldenboughs_lib.api.world.entity.ai.behavior.BTFactory;
+import architecture.goldenboughs_lib.api.world.entity.ai.behavior.BTNode;
+import architecture.goldenboughs_lib.api.world.entity.ai.behavior.BTRoot;
+import architecture.goldenboughs_lib.api.world.entity.ai.behavior.composite.ParallelNode;
+import architecture.goldenboughs_lib.api.world.entity.ai.behavior.condition.ConditionBT;
+import architecture.goldenboughs_lib.api.world.entity.ai.behavior.condition.TargetExistCondition;
+import architecture.goldenboughs_lib.api.world.entity.ai.behavior.leaf.LookAtTargetAction;
+import architecture.goldenboughs_lib.api.world.entity.skill.MobSkill;
+import architecture.goldenboughs_lib.init.LibAttributes;
+import architecture.imaginarycraft.api.epicfight.IPatch;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.init.ModSoundEvents;
+import architecture.imaginarycraft.init.MobSoundEvents;
 import architecture.imaginarycraft.init.epicfight.animations.GrantUsLoveAnimations;
-import architecture.imaginarycraft.init.world.ModAttributes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -134,10 +134,10 @@ public class GrantUsLove extends AbstractGolem implements IOrdealsVioletEntity, 
 			.add(Attributes.ATTACK_DAMAGE, 7)
 			.add(Attributes.ATTACK_KNOCKBACK, 1)
 			.add(Attributes.GRAVITY, 0.1)
-			.add(ModAttributes.PHYSICS_VULNERABLE, 0.8)
-			.add(ModAttributes.SPIRIT_VULNERABLE, 2.0)
-			.add(ModAttributes.EROSION_VULNERABLE, 0.8)
-			.add(ModAttributes.THE_SOUL_VULNERABLE, 1)
+			.add(LibAttributes.PHYSICS_VULNERABLE, 0.8)
+			.add(LibAttributes.SPIRIT_VULNERABLE, 2.0)
+			.add(LibAttributes.EROSION_VULNERABLE, 0.8)
+			.add(LibAttributes.THE_SOUL_VULNERABLE, 1)
 			.add(EpicFightAttributes.IMPACT, 8)
 			.add(EpicFightAttributes.MAX_STRIKES, 8);
 	}
@@ -202,7 +202,7 @@ public class GrantUsLove extends AbstractGolem implements IOrdealsVioletEntity, 
 
 	//region 声音（音效集合）
 	private void crashAtkSound() {
-		playSound(ModSoundEvents.VIOLET_NOON_DOWN.value(), 2.0F, 1.0F);
+		playSound(MobSoundEvents.VIOLET_NOON_DOWN.value(), 2.0F, 1.0F);
 	}
 
 	@Override

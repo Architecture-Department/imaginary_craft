@@ -2,8 +2,6 @@ package architecture.imaginarycraft.client.gui.hudlayers.shield;
 
 import architecture.imaginarycraft.client.gui.hudlayers.StatusBarLayer;
 import architecture.imaginarycraft.client.gui.widget.HorizontalStatusBar;
-import architecture.imaginarycraft.config.ModConfig;
-import architecture.imaginarycraft.init.world.ModAbsorptionShieldsRegistry;
 import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.core.Holder;
@@ -39,7 +37,7 @@ public abstract class ShieldBarLayer extends StatusBarLayer {
 	@Override
 	protected float getMaxValueFromSource() {
 		final MobEffectInstance effect = this.player.getEffect(absorptionEffect);
-		final float level = ModConfig.SERVER.shieldAdditionalValuePerLevel.get().floatValue();
+		final float level = architecture.goldenboughs_lib.config.LibConfig.SERVER.shieldAdditionalValuePerLevel.get().floatValue();
 		if (Objects.isNull(effect)) {
 			return 0;
 		}
@@ -61,7 +59,7 @@ public abstract class ShieldBarLayer extends StatusBarLayer {
 	@Override
 	protected float getCurrentValueFromSource() {
 		float shieldAmount = 0.0f;
-		for (var entry : ModAbsorptionShieldsRegistry.getAll()) {
+		for (var entry : architecture.goldenboughs_lib.init.LibAbsorptionShieldsRegistry.getAll()) {
 			if (entry.effect().equals(absorptionEffect))
 				shieldAmount = player.getData(entry.attachment().get());
 		}

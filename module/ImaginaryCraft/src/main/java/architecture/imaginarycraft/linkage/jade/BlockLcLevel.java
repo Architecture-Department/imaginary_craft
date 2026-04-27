@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.linkage.jade;
 
-import architecture.imaginarycraft.api.LcLevel;
-import architecture.imaginarycraft.util.LcLevelUtil;
+import architecture.goldenboughs_lib.api.LcLevel;
+import architecture.goldenboughs_lib.util.LcLevelUtil;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.Nullable;

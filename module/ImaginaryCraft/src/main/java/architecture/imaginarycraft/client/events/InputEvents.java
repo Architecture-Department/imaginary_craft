@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.client.events;
 
-import architecture.imaginarycraft.api.world.item.IGunWeapon;
-import architecture.imaginarycraft.api.world.item.IPlayerItemAttackClick;
+import architecture.goldenboughs_lib.api.world.item.IGunWeapon;
+import architecture.goldenboughs_lib.api.world.item.IPlayerItemAttackClick;
 import architecture.imaginarycraft.client.eventexecute.InputEventExecute;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import net.minecraft.client.Minecraft;

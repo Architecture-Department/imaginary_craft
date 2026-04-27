@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.common.command;
 
-import architecture.imaginarycraft.init.world.ModAttributes;
-import architecture.imaginarycraft.util.RationalityUtil;
+import architecture.goldenboughs_lib.init.LibAttributes;
+import architecture.goldenboughs_lib.util.RationalityUtil;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.FloatArgumentType;
@@ -43,9 +43,9 @@ public class RationalityCommands {
 					.executes(context -> {
 						ServerPlayer player = EntityArgument.getPlayer(context, "target");
 						RationalityUtil.setValue(player, 0, false);
-						RationalityUtil.setBaseMaxValue(player, (float) ModAttributes.MAX_RATIONALITY.value().getDefaultValue());
-						RationalityUtil.setBaseNaturalRecoveryRate(player, (float) ModAttributes.RATIONALITY_NATURAL_RECOVERY_WAIT_TIME.value().getDefaultValue());
-						RationalityUtil.setBaseRationalityRecoveryAmount(player, (float) ModAttributes.RATIONALITY_RECOVERY_AMOUNT.value().getDefaultValue());
+						RationalityUtil.setBaseMaxValue(player, (float) LibAttributes.MAX_RATIONALITY.value().getDefaultValue());
+						RationalityUtil.setBaseNaturalRecoveryRate(player, (float) LibAttributes.RATIONALITY_NATURAL_RECOVERY_WAIT_TIME.value().getDefaultValue());
+						RationalityUtil.setBaseRationalityRecoveryAmount(player, (float) LibAttributes.RATIONALITY_RECOVERY_AMOUNT.value().getDefaultValue());
 						context.getSource().sendSuccess(() ->
 							Component.translatable(getFormattedKey(RESET_KEY), player.getName()), true);
 						return 1;
@@ -68,11 +68,11 @@ public class RationalityCommands {
 			switch (processType) {
 				case VALUE -> RationalityUtil.setValue(player, 0, false);
 				case MAX_VALUE ->
-					RationalityUtil.setBaseMaxValue(player, value = (float) ModAttributes.MAX_RATIONALITY.value().getDefaultValue());
+					RationalityUtil.setBaseMaxValue(player, value = (float) LibAttributes.MAX_RATIONALITY.value().getDefaultValue());
 				case NATURAL_RECOVERY_RATE ->
-					RationalityUtil.setBaseNaturalRecoveryRate(player, value = (float) ModAttributes.RATIONALITY_NATURAL_RECOVERY_WAIT_TIME.value().getDefaultValue());
+					RationalityUtil.setBaseNaturalRecoveryRate(player, value = (float) LibAttributes.RATIONALITY_NATURAL_RECOVERY_WAIT_TIME.value().getDefaultValue());
 				case RATIONALITY_RECOVERY_AMOUNT ->
-					RationalityUtil.setBaseRationalityRecoveryAmount(player, value = (float) ModAttributes.RATIONALITY_RECOVERY_AMOUNT.value().getDefaultValue());
+					RationalityUtil.setBaseRationalityRecoveryAmount(player, value = (float) LibAttributes.RATIONALITY_RECOVERY_AMOUNT.value().getDefaultValue());
 			}
 			final float finalValue = value;
 			context.getSource().sendSuccess(() ->

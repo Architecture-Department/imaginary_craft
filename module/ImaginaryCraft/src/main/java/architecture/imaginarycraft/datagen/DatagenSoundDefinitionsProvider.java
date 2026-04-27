@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.datagen;
 
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.init.ModSoundEvents;
+import architecture.imaginarycraft.init.MobSoundEvents;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
@@ -25,17 +25,17 @@ public class DatagenSoundDefinitionsProvider extends SoundDefinitionsProvider {
 
 	@Override
 	public void registerSounds() {
-		add(ModSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_BLACK.value(), 0.5f, 0.5f, 1, 8);
-		add(ModSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_WHITE.value(), 0.5f, 0.5f, 1, 8);
-		add(ModSoundEvents.SOLEMN_LAMENT_WEAPON_STONGATTACK_BLACK.value(), 0.5f, 0.5f, 1, 8);
-		add(ModSoundEvents.SOLEMN_LAMENT_WEAPON_STONGATTACK_WHITE.value(), 0.5f, 0.5f, 1, 8);
-		add(ModSoundEvents.VIOLET_NOON_DOWN.value(), 0.5f, 0.5f, 1, 8);
-		add(ModSoundEvents.VIOLET_NOON_ATK.value(), 0.5f, 0.5f, 1, 8);
-		add(ModSoundEvents.VIOLET_NOON_idle.value(), 0.5f, 0.5f, 1, 8);
-		add(ModSoundEvents.VIOLET_NOON_DEATH.value(), 0.5f, 0.5f, 1, 8);
-		add(ModSoundEvents.VIOLET_DAWN_WALK.value(), 0.5f, 0.5f, 1, 8);
-		add(ModSoundEvents.VIOLET_DAWN_SUICIDE.value(), 0.5f, 0.5f, 1, 8);
-		add(ModSoundEvents.VIOLET_DAWN_DEAD.value(), 0.5f, 0.5f, 1, 8);
+		add(MobSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_BLACK.value(), 0.5f, 0.5f, 1, 8);
+		add(MobSoundEvents.SOLEMN_LAMENT_WEAPON_ATTACK_WHITE.value(), 0.5f, 0.5f, 1, 8);
+		add(MobSoundEvents.SOLEMN_LAMENT_WEAPON_STONGATTACK_BLACK.value(), 0.5f, 0.5f, 1, 8);
+		add(MobSoundEvents.SOLEMN_LAMENT_WEAPON_STONGATTACK_WHITE.value(), 0.5f, 0.5f, 1, 8);
+		add(MobSoundEvents.VIOLET_NOON_DOWN.value(), 0.5f, 0.5f, 1, 8);
+		add(MobSoundEvents.VIOLET_NOON_ATK.value(), 0.5f, 0.5f, 1, 8);
+		add(MobSoundEvents.VIOLET_NOON_idle.value(), 0.5f, 0.5f, 1, 8);
+		add(MobSoundEvents.VIOLET_NOON_DEATH.value(), 0.5f, 0.5f, 1, 8);
+		add(MobSoundEvents.VIOLET_DAWN_WALK.value(), 0.5f, 0.5f, 1, 8);
+		add(MobSoundEvents.VIOLET_DAWN_SUICIDE.value(), 0.5f, 0.5f, 1, 8);
+		add(MobSoundEvents.VIOLET_DAWN_DEAD.value(), 0.5f, 0.5f, 1, 8);
 	}
 
 	private void add(SoundEvent soundEvent, float volume, float pitch, int weight, int attenuationDistance) {

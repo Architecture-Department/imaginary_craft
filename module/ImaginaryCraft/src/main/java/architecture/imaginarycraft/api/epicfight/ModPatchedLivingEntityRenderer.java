@@ -1,4 +1,4 @@
-package architecture.imaginarycraft.api.client.renderer.entity;
+package architecture.imaginarycraft.api.epicfight;
 
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

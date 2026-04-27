@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.mixed.client;
 
-import architecture.imaginarycraft.api.NoMixinException;
+import architecture.goldenboughs_lib.api.NoMixinException;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.renderer.BlockEntityWithoutLevelRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;

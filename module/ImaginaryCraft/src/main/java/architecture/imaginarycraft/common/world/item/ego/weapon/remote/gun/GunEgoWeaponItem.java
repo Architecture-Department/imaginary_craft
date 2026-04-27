@@ -1,9 +1,9 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.remote.gun;
 
-import architecture.imaginarycraft.api.DelayTaskHolder;
-import architecture.imaginarycraft.api.world.item.IGunWeapon;
+import architecture.goldenboughs_lib.api.DelayTaskHolder;
+import architecture.goldenboughs_lib.api.world.item.IGunWeapon;
+import architecture.goldenboughs_lib.util.GunWeaponUtil;
 import architecture.imaginarycraft.common.world.item.ego.weapon.remote.RemoteEgoWeaponGeoItem;
-import architecture.imaginarycraft.util.GunWeaponUtil;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;

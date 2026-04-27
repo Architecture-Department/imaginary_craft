@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.core.registry.client;
 
-import architecture.imaginarycraft.api.client.renderer.entity.EmptyLivingEntityRenderer;
-import architecture.imaginarycraft.api.client.renderer.entity.EmptyMobRenderer;
-import architecture.imaginarycraft.client.model.entity.ModGeoEntityModel;
+import architecture.goldenboughs_lib.api.client.renderer.entity.EmptyLivingEntityRenderer;
+import architecture.goldenboughs_lib.api.client.renderer.entity.EmptyMobRenderer;
+import architecture.goldenboughs_lib.client.model.entity.ModGeoEntityModel;
 import architecture.imaginarycraft.client.renderer.entity.FruitOfUnderstandingRenderer;
 import architecture.imaginarycraft.client.renderer.entity.MagicBulletRenderer;
 import architecture.imaginarycraft.core.ImaginaryCraft;

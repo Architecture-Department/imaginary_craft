@@ -1,14 +1,13 @@
 package architecture.imaginarycraft.datagen.i18n;
 
+import architecture.ego_curios.common.item.EgoCurioItem;
+import architecture.ego_curios.init.EgoCurioItems;
+import architecture.goldenboughs_lib.api.virtue.VirtueType;
+import architecture.goldenboughs_lib.common.components.ItemVirtueUsageReq;
 import architecture.goldenboughs_lib.init.LibDamageTypes;
-import architecture.imaginarycraft.api.virtue.VirtueType;
+import architecture.goldenboughs_lib.init.tag.LibItemTags;
 import architecture.imaginarycraft.common.command.RationalityCommands;
-import architecture.imaginarycraft.common.components.ItemVirtueUsageReq;
-import architecture.imaginarycraft.common.world.item.ego.curio.EgoCurioItem;
-import architecture.imaginarycraft.config.ModConfig;
 import architecture.imaginarycraft.datagen.DatagenCuriosTest;
-import architecture.imaginarycraft.init.tag.ModItemTags;
-import architecture.imaginarycraft.init.world.item.ego.EgoCurioItems;
 import architecture.imaginarycraft.linkage.jade.LivingEntityVulnerable;
 import architecture.imaginarycraft.linkage.jade.ModJadePlugin;
 import net.minecraft.data.PackOutput;
@@ -108,10 +107,10 @@ public final class ZhCn extends DatagenI18n {
 		//endregion
 
 		//region 配置
-		add(ModConfig.CLIENT.enableNewHealthBar, "是否开启新玩家生命条");
-		add(ModConfig.CLIENT.enableLcColorDamageFilter, "是否开启玩家遭受四色伤害滤镜");
-		add(ModConfig.CLIENT.enableLowRationalityFilter, "是否开启玩家低理智滤镜");
-		add(ModConfig.SERVER.enableNaturalRationalityRationality, "是否开启自然恢复理智值");
+		add(architecture.goldenboughs_lib.config.LibConfig.CLIENT.enableNewHealthBar, "是否开启新玩家生命条");
+		add(architecture.goldenboughs_lib.config.LibConfig.CLIENT.enableLcColorDamageFilter, "是否开启玩家遭受四色伤害滤镜");
+		add(architecture.goldenboughs_lib.config.LibConfig.CLIENT.enableLowRationalityFilter, "是否开启玩家低理智滤镜");
+		add(architecture.goldenboughs_lib.config.LibConfig.SERVER.enableNaturalRationalityRationality, "是否开启自然恢复理智值");
 		//endregion
 
 		//region 饰品
@@ -155,24 +154,24 @@ public final class ZhCn extends DatagenI18n {
 		//endregion
 
 		//region tag标签
-		add(ModItemTags.EGO, "E.G.O");
-		add(ModItemTags.EGO_ARMOUR, "E.G.O盔甲");
-		add(ModItemTags.EGO_WEAPON, "E.G.O武器");
-		add(ModItemTags.EGO_TOOL, "E.G.O工具");
-		add(ModItemTags.EGO_CURIOS, "E.G.O饰品");
-		add(ModItemTags.EGO_CURIOS_HEADWEAR, "E.G.O饰品-头饰");
-		add(ModItemTags.EGO_CURIOS_HEAD, "E.G.O饰品-头部");
-		add(ModItemTags.EGO_CURIOS_HINDBRAIN, "E.G.O饰品-后脑");
-		add(ModItemTags.EGO_CURIOS_EYE, "E.G.O饰品-眼部");
-		add(ModItemTags.EGO_CURIOS_FACE, "E.G.O饰品-面部");
-		add(ModItemTags.EGO_CURIOS_CHEEK, "E.G.O饰品-脸颊");
-		add(ModItemTags.EGO_CURIOS_MASK, "E.G.O饰品-口罩");
-		add(ModItemTags.EGO_CURIOS_MOUTH, "E.G.O饰品-口部");
-		add(ModItemTags.EGO_CURIOS_NECK, "E.G.O饰品-颈部");
-		add(ModItemTags.EGO_CURIOS_BROOCH, "E.G.O饰品-胸针");
-		add(ModItemTags.EGO_CURIOS_HAND, "E.G.O饰品-手部");
-		add(ModItemTags.EGO_CURIOS_GLOVE, "E.G.O饰品-手套");
-		add(ModItemTags.EGO_CURIOS_BACK, "E.G.O饰品-背后");
+		add(LibItemTags.EGO, "E.G.O");
+		add(LibItemTags.EGO_ARMOUR, "E.G.O盔甲");
+		add(LibItemTags.EGO_WEAPON, "E.G.O武器");
+		add(LibItemTags.EGO_TOOL, "E.G.O工具");
+		add(LibItemTags.EGO_CURIOS, "E.G.O饰品");
+		add(LibItemTags.EGO_CURIOS_HEADWEAR, "E.G.O饰品-头饰");
+		add(LibItemTags.EGO_CURIOS_HEAD, "E.G.O饰品-头部");
+		add(LibItemTags.EGO_CURIOS_HINDBRAIN, "E.G.O饰品-后脑");
+		add(LibItemTags.EGO_CURIOS_EYE, "E.G.O饰品-眼部");
+		add(LibItemTags.EGO_CURIOS_FACE, "E.G.O饰品-面部");
+		add(LibItemTags.EGO_CURIOS_CHEEK, "E.G.O饰品-脸颊");
+		add(LibItemTags.EGO_CURIOS_MASK, "E.G.O饰品-口罩");
+		add(LibItemTags.EGO_CURIOS_MOUTH, "E.G.O饰品-口部");
+		add(LibItemTags.EGO_CURIOS_NECK, "E.G.O饰品-颈部");
+		add(LibItemTags.EGO_CURIOS_BROOCH, "E.G.O饰品-胸针");
+		add(LibItemTags.EGO_CURIOS_HAND, "E.G.O饰品-手部");
+		add(LibItemTags.EGO_CURIOS_GLOVE, "E.G.O饰品-手套");
+		add(LibItemTags.EGO_CURIOS_BACK, "E.G.O饰品-背后");
 		//endregion
 
 		//region tooltip

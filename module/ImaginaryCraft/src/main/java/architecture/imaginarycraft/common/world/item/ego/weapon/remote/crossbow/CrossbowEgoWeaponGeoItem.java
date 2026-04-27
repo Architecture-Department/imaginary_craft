@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.remote.crossbow;
 
-import architecture.imaginarycraft.api.world.item.IRemoteEgoWeaponItem;
-import architecture.imaginarycraft.client.model.item.GuiItemModel;
-import architecture.imaginarycraft.client.model.item.ModGeoItemModel;
+import architecture.goldenboughs_lib.api.world.item.IRemoteEgoWeaponItem;
+import architecture.goldenboughs_lib.client.model.item.GuiItemModel;
+import architecture.goldenboughs_lib.client.model.item.ModGeoItemModel;
 import architecture.imaginarycraft.client.renderer.providers.ModGeoItemRenderProvider;
 import architecture.imaginarycraft.common.world.item.ego.weapon.remote.RemoteEgoWeaponGeoItem;
 import org.jetbrains.annotations.NotNull;

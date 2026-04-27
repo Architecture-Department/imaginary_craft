@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.mixed;
 
-import architecture.imaginarycraft.api.NoMixinException;
+import architecture.goldenboughs_lib.api.NoMixinException;
 import com.mojang.datafixers.util.Pair;
 import org.jetbrains.annotations.Nullable;
 import yesman.epicfight.api.animation.AnimationManager;

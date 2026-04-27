@@ -1,7 +1,7 @@
 package architecture.imaginarycraft.mixin.epicfight.client;
 
+import architecture.goldenboughs_lib.util.LibUtils;
 import architecture.imaginarycraft.mixed.client.IAbstractTrailParticle;
-import architecture.imaginarycraft.util.ModUtils;
 import com.llamalad7.mixinextras.sugar.Local;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -51,7 +51,7 @@ public abstract class AbstractTrailParticleMixin extends TextureSheetParticle im
 
 	@Unique
 	private void imaginarycraft$init(TrailInfo trailInfo) {
-		ResourceLocation textureLight = ModUtils.getTextureLight(trailInfo.texturePath());
+		ResourceLocation textureLight = LibUtils.getTextureLight(trailInfo.texturePath());
 		Minecraft minecraft = Minecraft.getInstance();
 		if (minecraft.getResourceManager().getResource(textureLight).isPresent()) {
 			TextureManager texturemanager = Minecraft.getInstance().getTextureManager();

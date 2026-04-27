@@ -1,8 +1,8 @@
 package architecture.imaginarycraft.client.renderer.item;
 
+import architecture.goldenboughs_lib.init.LibMobEffects;
 import architecture.imaginarycraft.common.world.item.ego.weapon.melee.special.RedEyesTachiItem;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.init.world.ModMobEffects;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.Minecraft;
@@ -69,7 +69,7 @@ public class RedEyesTachiItemWeaponRenderer extends ModGeoItemRenderer<RedEyesTa
 			this.livingEntity = Minecraft.getInstance().player;
 		}
 
-		if (this.livingEntity != null && this.livingEntity.hasEffect(ModMobEffects.RED_EYES_HUNTING)) {
+		if (this.livingEntity != null && this.livingEntity.hasEffect(LibMobEffects.RED_EYES_HUNTING)) {
 			isHunting = true;
 		}
 	}

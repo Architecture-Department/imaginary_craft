@@ -1,9 +1,8 @@
 package architecture.imaginarycraft.client.events;
 
+import architecture.goldenboughs_lib.util.GunWeaponUtil;
 import architecture.imaginarycraft.client.ModGuiLayers;
-import architecture.imaginarycraft.config.ModConfig;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.util.GunWeaponUtil;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
@@ -21,21 +20,21 @@ public final class GuiLayersEvents {
 
 		// 关闭原版的血条
 		if (name.equals(VanillaGuiLayers.PLAYER_HEALTH)) {
-			if (ModConfig.CLIENT.enableNewHealthBar.get()) {
+			if (architecture.goldenboughs_lib.config.LibConfig.CLIENT.enableNewHealthBar.get()) {
 				event.setCanceled(true);
 			}
 			return;
 		}
 
 		if (name.equals(ModGuiLayers.SCREEN_FILTER)) {
-			if (!ModConfig.CLIENT.enableLowRationalityFilter.get()) {
+			if (!architecture.goldenboughs_lib.config.LibConfig.CLIENT.enableLowRationalityFilter.get()) {
 				event.setCanceled(true);
 			}
 			return;
 		}
 
 		if (name.equals(ModGuiLayers.LC_DAMAGE_SCREEN_FILTER)) {
-			if (!ModConfig.CLIENT.enableLcColorDamageFilter.get()) {
+			if (!architecture.goldenboughs_lib.config.LibConfig.CLIENT.enableLcColorDamageFilter.get()) {
 				event.setCanceled(true);
 			}
 			return;

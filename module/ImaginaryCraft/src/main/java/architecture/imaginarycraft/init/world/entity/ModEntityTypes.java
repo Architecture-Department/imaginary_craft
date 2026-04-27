@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.init.world.entity;
 
-import architecture.imaginarycraft.api.LcLevel;
+import architecture.goldenboughs_lib.api.LcLevel;
 import architecture.imaginarycraft.core.ImaginaryCraft;
 import architecture.imaginarycraft.core.registry.CapabilityRegistry;
 import net.minecraft.core.registries.BuiltInRegistries;

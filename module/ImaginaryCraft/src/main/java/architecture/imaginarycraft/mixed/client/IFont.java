@@ -1,6 +1,6 @@
 package architecture.imaginarycraft.mixed.client;
 
-import architecture.imaginarycraft.api.NoMixinException;
+import architecture.goldenboughs_lib.api.NoMixinException;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import net.minecraft.client.gui.Font;
 import net.minecraft.network.chat.Component;

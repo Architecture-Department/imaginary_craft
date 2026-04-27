@@ -1,10 +1,10 @@
 package architecture.imaginarycraft.common.world.item.ego.weapon.remote.gun;
 
+import architecture.goldenboughs_lib.util.GunWeaponUtil;
+import architecture.goldenboughs_lib.util.PiercingUtil;
 import architecture.imaginarycraft.common.world.entity.projectile.MagicBulletEntity;
 import architecture.imaginarycraft.common.world.item.ego.weapon.remote.RemoteEgoWeaponGeoItem;
 import architecture.imaginarycraft.core.ImaginaryCraft;
-import architecture.imaginarycraft.util.GunWeaponUtil;
-import architecture.imaginarycraft.util.PiercingUtil;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
