@@ -8,6 +8,13 @@ plugins {
 	id "org.jetbrains.kotlin.plugin.serialization" version "2.3.0"
 }
 
+sourceSets.main.resources {
+	srcDir('src/generated/resources')
+
+	exclude("**/*.bbmodel")
+	exclude("src/generated/**/.cache")
+}
+
 var projectName = [
 				"GoldenBoughsLib",
 				"ResonatorCombatFramework",
@@ -177,8 +184,6 @@ neoForge {
 		}
 	}
 }
-
-sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 configurations {
 	runtimeClasspath.extendsFrom localRuntime

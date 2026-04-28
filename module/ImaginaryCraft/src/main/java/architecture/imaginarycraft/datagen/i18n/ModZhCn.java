@@ -25,7 +25,7 @@ public final class ModZhCn extends DatagenI18n {
 	private static final Map<String, String> MAP = new HashMap<>();
 
 	public ModZhCn(final PackOutput output) {
-		super(output, "zh_cn");
+		super(output, ImaginaryCraft.ID, "zh_cn");
 	}
 
 	public static void addI18nText(String zhCn, String key) {
