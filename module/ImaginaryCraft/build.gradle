@@ -208,8 +208,8 @@ dependencies {
 	implementation "top.theillusivec4.curios:curios-neoforge:${curios_api_version}:api"
 
 	// MixinSquared
-	compileOnly(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:${mixinsquared_version}"))
-	implementation(jarJar(group: 'com.github.bawnorton.mixinsquared', name: 'mixinsquared-neoforge', version: '[' + { mixinsquared_version } + ',)'))
+	compileOnly(jarJar(annotationProcessor("com.github.bawnorton.mixinsquared:mixinsquared-common:${mixinsquared_version}")))
+	implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:[${mixinsquared_version},)"))
 
 	// sparkcore 星火
 	implementation jarJar("curse.maven:spark-core-${sparkcore_version}")
