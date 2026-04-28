@@ -1,6 +1,5 @@
 package architecture.imaginarycraft.core;
 
-import architecture.ego_curios.core.registry.CurioRegistry;
 import architecture.imaginarycraft.init.ModSoundEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
@@ -26,7 +25,6 @@ public final class ImaginaryCraft {
 	public ImaginaryCraft(IEventBus eventBus, ModContainer container) {
 		NeoForge.EVENT_BUS.register(this);
 		ModSoundEvents.REGISTRY.register(eventBus);
-		CurioRegistry.registry();
 	}
 
 	@SubscribeEvent
