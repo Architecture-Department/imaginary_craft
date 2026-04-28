@@ -80,3 +80,4 @@ generated/
 #vscode
 .history/
 /.continue/
+/.kotlin/sessions/kotlin-compiler-355775599759573623.salive
