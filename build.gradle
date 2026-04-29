@@ -14,3 +14,15 @@ idea {
 		downloadJavadoc = true
 	}
 }
+
+allprojects {
+	repositories {
+		maven {
+			url = "https://maven.pkg.github.com/SolarMoonQAQ/Spark-Core"
+			credentials {
+				username = System.getenv("GITHUB_USERNAME")
+				password = System.getenv("GITHUB_TOKEN")
+			}
+		}
+	}
+}
