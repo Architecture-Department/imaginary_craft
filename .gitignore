@@ -3,6 +3,9 @@
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/**/build/
+gradle.properties
+**/gradle.properties
+!**/gradle.properties.example
 
 ### IntelliJ IDEA ###
 .idea/
@@ -81,3 +84,5 @@ generated/
 .history/
 /.continue/
 /.kotlin/sessions/kotlin-compiler-355775599759573623.salive
+
+.lingma/

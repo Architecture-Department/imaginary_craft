@@ -17,6 +17,10 @@ public final class ModDatagenParticle extends ParticleDescriptionProvider {
 		super(output, fileHelper);
 	}
 
+	private static @NotNull ResourceLocation getPath(String name) {
+		return ResourceLocation.fromNamespaceAndPath(ImaginaryCraft.ID, name);
+	}
+
 	@Override
 	protected void addDescriptions() {
 	}
@@ -29,9 +33,5 @@ public final class ModDatagenParticle extends ParticleDescriptionProvider {
 		spriteSet(type.get(), Arrays.stream(names)
 			.map(ModDatagenParticle::getPath)
 			.collect(Collectors.toList()));
-	}
-
-	private static @NotNull ResourceLocation getPath(String name) {
-		return ResourceLocation.fromNamespaceAndPath(ImaginaryCraft.ID, name);
 	}
 }

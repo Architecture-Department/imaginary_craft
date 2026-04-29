@@ -27,11 +27,6 @@ public final class ImaginaryCraft {
 		ModSoundEvents.REGISTRY.register(eventBus);
 	}
 
-	@SubscribeEvent
-	public void onServerStarting(ServerStartingEvent event) {
-		LOGGER.info("HELLO from server starting");
-	}
-
 	@Contract("_ -> new")
 	public static @NotNull ResourceLocation modRl(final String name) {
 		return ResourceLocation.fromNamespaceAndPath(ID, name);
@@ -48,5 +43,10 @@ public final class ImaginaryCraft {
 
 	public static <T> @NotNull DeferredRegister<T> modRegister(ResourceKey<Registry<T>> registry) {
 		return DeferredRegister.create(registry, ID);
+	}
+
+	@SubscribeEvent
+	public void onServerStarting(ServerStartingEvent event) {
+		LOGGER.info("HELLO from server starting");
 	}
 }
