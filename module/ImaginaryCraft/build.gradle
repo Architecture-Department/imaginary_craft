@@ -26,94 +26,8 @@ version = mod_version
 group = mod_group_id
 
 repositories {
-	// Minecraft 官方库 - 提供 Minecraft 相关依赖
-	maven { url = "https://libraries.minecraft.net/" }
-
-	// NeoForge 官方发布仓库 - NeoForge 核心依赖和元数据
-	maven { url = "https://neoforged.forgecdn.net/releases" }
-	maven { url = "https://neoforged.forgecdn.net/mojang-meta" }
-
-	// 本地 Maven 仓库和中央仓库 - 基础依赖源
 	mavenLocal()
 	mavenCentral()
-
-	// Bawnorton 仓库 - MixinSquared 等工具库
-	maven { url = "https://maven.bawnorton.com/releases" }
-
-	// Enjarai 镜像仓库 - 部分模组依赖镜像
-	maven { url = "https://maven.enjarai.dev/mirrors" }
-
-	// JitPack - GitHub 项目构建仓库（通用）
-	maven { url = 'https://jitpack.io' }
-
-	// NeoForged 命名仓库 - NeoForge 相关依赖（重复声明，可考虑合并）
-	maven {
-		name = "NeoForged"
-		url = "https://neoforged.forgecdn.net/releases"
-	}
-
-	// KotlinForForge 仓库 - Kotlin 在 NeoForge 上的支持库
-	maven {
-		name = "Kotlin for Forge"
-		url = "https://thedarkcolour.github.io/KotlinForForge/"
-		content { includeGroup "thedarkcolour" }
-	}
-
-	// JitPack 命名仓库 - GitHub 项目构建（特定组过滤）
-	maven {
-		name = "JitPack"
-		url = 'https://jitpack.io'
-	}
-
-	// Modrinth 仓库 - Modrinth 平台发布的模组（如 EpicFight、Spark、Jade 等）
-	maven { url = uri("https://api.modrinth.com/maven") }
-
-	// BlameJared 仓库 - CraftTweaker、JEI 等相关工具库
-	maven { url = uri("https://maven.blamejared.com/") }
-
-	// CurseForge 仓库 - CurseForge 平台发布的模组（通过 cursemaven 代理）
-	maven {
-		url = uri("https://www.cursemaven.com")
-		content { includeGroup "curse.maven" }
-	}
-
-	// GeckoLib 仓库 - GeckoLib 动画库（用于实体动画渲染）
-	maven {
-		url = uri("https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/")
-		content { includeGroup("software.bernie.geckolib") }
-	}
-
-	// Kosmx 仓库 - PlayerAnimator 等玩家动画库
-	maven { url = uri("https://maven.kosmx.dev/") }
-
-	// TheIllusiveC4 仓库 - Curios 饰品栏 API 等模组依赖
-	maven { url = uri("https://maven.theillusivec4.top/") }
-
-	// RedlanceMinecraft 仓库 - Redlance 组织的 Minecraft 模组
-	maven {
-		name = "RedlanceMinecraft"
-		url = "https://repo.redlance.org/public"
-	}
-
-	// FirstDark 快照仓库 - 开发中的快照版本依赖
-	maven { url = "https://maven.firstdark.dev/snapshots" }
-
-	// LatvianDev 仓库 - KubeJS、Rhino 等脚本模组（LatvianModder 组织）
-	maven {
-		url "https://maven.latvian.dev/releases"
-		content {
-			includeGroup "dev.latvian.mods"
-			includeGroup "dev.latvian.apps"
-		}
-	}
-
-	// JitPack - rtyley 相关库（特定组过滤，可能与上方 JitPack 重复）
-	maven {
-		url 'https://jitpack.io'
-		content {
-			includeGroup "com.github.rtyley"
-		}
-	}
 }
 
 base {
@@ -199,9 +113,6 @@ dependencies {
 	implementation "net.neoforged:neoforge:${neo_version}"
 	localRuntime "org.javassist:javassist:3.30.2-GA"
 
-	// Kotlin
-	implementation "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
-
 	// geckolib
 	implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
 
@@ -214,7 +125,9 @@ dependencies {
 	implementation(jarJar("com.github.bawnorton.mixinsquared:mixinsquared-neoforge:${mixinsquared_version}"))
 
 	// sparkcore 星火
-	implementation jarJar("curse.maven:spark-core-${sparkcore_version}")
+	implementation jarJar("io.github.solarmoonqaq:spark-core:${spark_core_version}")
+	// Kotlin
+	implementation "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
 
 	// 添加目录的jar文件作为库
 	implementation fileTree(dir: "额外资源/mods", include: ["*.jar"])

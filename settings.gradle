@@ -22,5 +22,5 @@ var projectName = [
 				"Abnormalities",
 ]
 
-include("module:ImaginaryCraft")
 projectName.forEach { name -> include "module:" + name }
+include("module:ImaginaryCraft")

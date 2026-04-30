@@ -17,12 +17,141 @@ idea {
 
 allprojects {
 	repositories {
+		// 本地仓库
+		mavenLocal()
+
+		// 国内镜像仓库（优先使用，提升下载速度）
+		// Solarmoon 镜像 - Spark-Core 中国镜像
 		maven {
-			url = "https://maven.pkg.github.com/SolarMoonQAQ/Spark-Core"
-			credentials {
-				username = System.getenv("GITHUB_USERNAME")
-				password = System.getenv("GITHUB_TOKEN")
+			name = 'Solarmoon Maven (China Mirror)'
+			url = 'https://maven.bawnorton.com/releases'
+			content { includeGroup "cn.solarmoon" }
+		}
+
+		// Bawnorton - MixinSquared 等
+		maven { url = "https://maven.bawnorton.com/releases" }
+
+		// Enjarai 镜像仓库
+		maven { url = "https://maven.enjarai.dev/mirrors" }
+
+		// RedlanceMinecraft 公共仓库
+		maven {
+			name = "RedlanceMinecraft"
+			url = "https://repo.redlance.org/public"
+		}
+
+		// BlameJared - CraftTweaker、JEI 等
+		maven {
+			name = "Jared's maven"
+			url = uri("https://maven.blamejared.com/")
+		}
+
+		// tterrag - Create 等模组
+		maven {
+			name = "tterrag maven"
+			url = uri("https://maven.tterrag.com/")
+		}
+
+		// Kosmx - PlayerAnimator
+		maven {
+			name = "KosmX's maven"
+			url = uri("https://maven.kosmx.dev/")
+		}
+
+		// TheIllusiveC4 - Curios 饰品栏
+		maven { url = uri("https://maven.theillusivec4.top/") }
+
+		// RyanLiptak 仓库
+		maven { url = uri("https://maven.ryanliptak.com/") }
+
+		// LatvianDev - KubeJS、Rhino
+		maven {
+			url "https://maven.latvian.dev/releases"
+			content {
+				includeGroup "dev.latvian.mods"
+				includeGroup "dev.latvian.apps"
 			}
 		}
+
+		// Maven Central
+		mavenCentral()
+
+		// NeoForge 官方仓库
+		maven {
+			name = "NeoForged"
+			url = "https://neoforged.forgecdn.net/releases"
+		}
+		maven { url = "https://neoforged.forgecdn.net/mojang-meta" }
+
+		// Minecraft 官方库
+		maven { url = "https://libraries.minecraft.net/" }
+
+		// Modrinth 模组平台
+		maven { url = uri("https://api.modrinth.com/maven") }
+
+		// CurseForge 模组平台
+		maven {
+			url = uri("https://www.cursemaven.com")
+			content { includeGroup "curse.maven" }
+		}
+
+		exclusiveContent {
+			forRepository {
+				maven { url "https://cursemaven.com" }
+			}
+			filter { includeGroup "curse.maven" }
+		}
+
+		// JitPack - GitHub 项目打包
+		maven { url = 'https://jitpack.io' }
+		maven {
+			url 'https://jitpack.io'
+			content { includeGroup "com.github.rtyley" }
+		}
+
+		// Kotlin for Forge
+		maven {
+			name = "Kotlin for Forge"
+			url = "https://thedarkcolour.github.io/KotlinForForge/"
+			content { includeGroup "thedarkcolour" }
+		}
+
+		// GeckoLib 动画库
+		maven {
+			name = "GeckoLib"
+			url = uri("https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/")
+			content { includeGroup("software.bernie.geckolib") }
+		}
+
+		// AzureLib 动画库
+		maven { url = uri("https://maven.azuredoom.com/mods") }
+
+		// JEI 相关仓库
+		maven {
+			name = "Progwml6 maven"
+			url = uri("https://dvs1.progwml6.com/files/maven/")
+		}
+		maven {
+			name = "ModMaven"
+			url = uri("https://modmaven.dev")
+		}
+
+		// Create 模组专用
+		maven {
+			name = "Create Maven"
+			url = uri("https://maven.createmod.net")
+		}
+
+		// IThundxr 快照
+		maven {
+			name = "IThundxr Snapshots"
+			url = uri("https://maven.ithundxr.dev/snapshots")
+		}
+
+		// FirstDark 快照
+		maven { url = "https://maven.firstdark.dev/snapshots" }
+
+		// 本地 libs 目录
+		flatDir { dirs("libs") }
 	}
 }

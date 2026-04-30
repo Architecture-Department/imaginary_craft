@@ -16,14 +16,14 @@
 
 ## 模块
 
-| 名称                                                          | 用途       | 依赖              |
-|-------------------------------------------------------------|----------|-----------------|
-| [ImaginaryCraft](module/ImaginaryCraft)                     | 主模块      | 全部              |
-| [GoldenBoughsLib](module/GoldenBoughsLib)                   | api      | 无               |
-| [EGOCurios](module/EGOCurios)                               | EGO饰品    | GoldenBoughsLib |
-| [ResonatorCombatFramework](module/ResonatorCombatFramework) | 战斗框架     | 无               |
-| [EGOEquipment](module/EGOEquipment)                         | 武器、盔甲、工具 | GoldenBoughsLib |
-| [Abnormalities](module/Abnormalities)                       | 异想体\生物   | GoldenBoughsLib |
+| 名称                                                          | 用途       | 依赖                       |
+|-------------------------------------------------------------|----------|--------------------------|
+| [ImaginaryCraft](module/ImaginaryCraft)                     | 主模块      | 全部                       |
+| [GoldenBoughsLib](module/GoldenBoughsLib)                   | api      | 无                        |
+| [ResonatorCombatFramework](module/ResonatorCombatFramework) | 战斗框架     | GoldenBoughsLib          |
+| [EGOCurios](module/EGOCurios)                               | EGO饰品    | ResonatorCombatFramework |
+| [EGOEquipment](module/EGOEquipment)                         | 武器、盔甲、工具 | ResonatorCombatFramework |
+| [Abnormalities](module/Abnormalities)                       | 异想体\生物   | ResonatorCombatFramework |
 
 ## 开发人员(不分顺序)
 
