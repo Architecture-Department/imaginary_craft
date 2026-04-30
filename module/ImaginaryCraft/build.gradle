@@ -1,10 +1,4 @@
 plugins {
-	id 'java-library'
-	id 'maven-publish'
-	id 'idea'
-	id 'net.neoforged.moddev' version '2.0.141'
-
-	id 'org.jetbrains.kotlin.jvm' version '2.2.20'
 }
 
 sourceSets.main.resources {
@@ -111,7 +105,7 @@ dependencies {
 	}
 
 	implementation "net.neoforged:neoforge:${neo_version}"
-	localRuntime "org.javassist:javassist:3.30.2-GA"
+	localRuntime "org.javassist:javassist:${javassist_version}"
 
 	// geckolib
 	implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
@@ -127,7 +121,7 @@ dependencies {
 	// sparkcore 星火
 	implementation jarJar("io.github.solarmoonqaq:spark-core:${spark_core_version}")
 	// Kotlin
-	implementation "thedarkcolour:kotlinforforge-neoforge:${kff_version}"
+	implementation "thedarkcolour:kotlinforforge-neoforge:${kotlinforforge_version}"
 
 	// 添加目录的jar文件作为库
 	implementation fileTree(dir: "额外资源/mods", include: ["*.jar"])
