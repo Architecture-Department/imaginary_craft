@@ -88,7 +88,6 @@
 ## 项目构建
 
 - 项目拉取完成后
-- 创建GITHUB_USERNAME和GITHUB_TOKEN俩个系统参数，分别是你github的账号名称和访问令牌(token)，
 - 确认子项目文件是否有拉取，如空文件夹请按下列指令在终端内顺序执行
   ~~~cmd
     git submodule init
