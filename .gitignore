@@ -86,3 +86,8 @@ generated/
 /.kotlin/sessions/kotlin-compiler-355775599759573623.salive
 
 .lingma/
+.proxyai/
+.kotlin/
+.lingma
+.proxyai
+.kotlin
