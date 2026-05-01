@@ -17,15 +17,17 @@ idea {
 }
 
 subprojects {
+	if (project.name == "module") {
+		return
+	}
+
 	apply plugin: 'java-library'
 	apply plugin: 'maven-publish'
 	apply plugin: 'eclipse'
 	apply plugin: 'idea'
 	apply plugin: 'net.neoforged.moddev'
 	apply plugin: 'org.jetbrains.kotlin.jvm'
-}
 
-allprojects {
 	repositories {
 		// 本地仓库
 		mavenLocal()
@@ -169,4 +171,7 @@ allprojects {
 		// 本地 libs 目录
 		flatDir { dirs("libs") }
 	}
+}
+
+allprojects {
 }
