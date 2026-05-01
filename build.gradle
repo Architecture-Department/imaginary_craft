@@ -83,6 +83,12 @@ allprojects {
 			}
 		}
 
+		maven {
+			name = "Modrinth"
+			url = "https://api.modrinth.com/maven"
+			content { includeGroup "maven.modrinth" }
+		}
+
 		// Maven Central
 		mavenCentral()
 
@@ -104,7 +110,6 @@ allprojects {
 			url = uri("https://www.cursemaven.com")
 			content { includeGroup "curse.maven" }
 		}
-
 		exclusiveContent {
 			forRepository {
 				maven { url "https://cursemaven.com" }
