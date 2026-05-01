@@ -80,11 +80,6 @@ neoForge {
 							"-XX:+IgnoreUnrecognizedVMOptions",
 							// 启用 JetBrain Runtime 热重载功能
 							"-XX:+AllowEnhancedClassRedefinition",
-							// 以下是修复 Kotlin 模块访问权限的参数
-							"--add-reads", "kotlin.stdlib=kotlinx.coroutines.core",
-							"--add-opens", "kotlin.stdlib/kotlin.coroutines.jvm.internal=ALL-UNNAMED",
-							"--add-opens", "kotlinx.coroutines.core/kotlinx.coroutines.debug.internal=ALL-UNNAMED",
-							"-Dkotlinx.coroutines.debug=off" // 关闭 Kotlin 协程调试,
 			])
 
 			logLevel = org.slf4j.event.Level.DEBUG
