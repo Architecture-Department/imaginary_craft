@@ -40,12 +40,13 @@
 
 ### 2.1 目录结构
 
-SparkCore采用**四层目录结构**来组织资源，格式为：`run/sparkcore/{modId}/{moduleName}/{resourceType}/`
+SparkCore采用**四层目录结构**来组织资源，格式为：`run/spark_modules/{modId}/{moduleName}/{resourceType}/`
+或开发中的：`resources/spark_modules/{modId}/{moduleName}/{resourceType}/`
 
 **标准目录结构**:
 
 ```
-run/sparkcore/
+run/spark_modules/
 ├── my_mod/                        # modId: my_mod
 │   ├── my_mod/                    # moduleName: my_mod (主模块)
 │   │   ├── animations/            # 动画资源
@@ -87,14 +88,14 @@ run/sparkcore/
 
 **四层结构示例**:
 
-| 文件物理路径                                                                   | 生成的资源ID                                       |
-|--------------------------------------------------------------------------|-----------------------------------------------|
-| `run/sparkcore/my_mod/my_mod/animations/player/combat/sword_attack.json` |                                               |
-| `my_mod:my_mod/animations/player/combat/sword_attack`                    |                                               |
-| `run/sparkcore/my_mod/combat_system/animations/sword/combo.json`         | `my_mod:combat_system/animations/sword/combo` |
-| `run/sparkcore/spark_core/sparkcore/models/player.json`                  | `spark_core:sparkcore/models/player`          |
-| `run/sparkcore/spark_core/sparkcore/textures/gui/icons.png`              | `spark_core:sparkcore/textures/gui/icons`     |
-| `run/sparkcore/another_mod/magic_system/scripts/fireball.js`             | `another_mod:magic_system/scripts/fireball`   |
+| 文件物理路径                                                                       | 生成的资源ID                                       |
+|------------------------------------------------------------------------------|-----------------------------------------------|
+| `run/spark_modules/my_mod/my_mod/animations/player/combat/sword_attack.json` |                                               |
+| `my_mod:my_mod/animations/player/combat/sword_attack`                        |                                               |
+| `run/spark_modules/my_mod/combat_system/animations/sword/combo.json`         | `my_mod:combat_system/animations/sword/combo` |
+| `run/spark_modules/spark_core/sparkcore/models/player.json`                  | `spark_core:sparkcore/models/player`          |
+| `run/spark_modules/spark_core/sparkcore/textures/gui/icons.png`              | `spark_core:sparkcore/textures/gui/icons`     |
+| `run/spark_modules/another_mod/magic_system/scripts/fireball.js`             | `another_mod:magic_system/scripts/fireball`   |
 
 > **重要**: 在元数据文件中引用其他资源时，**必须**使用这个由系统生成的完整资源ID。
 
@@ -124,14 +125,14 @@ ResourceID: `my_mod:player`
 **新格式** (四层):
 
 ```
-run/sparkcore/my_mod/my_mod/animations/player.json
+run/spark_modules/my_mod/my_mod/animations/player.json
 ```
 
 ResourceID: `my_mod:my_mod/animations/player`
 
 **迁移步骤**:
 
-1. 在`run/sparkcore/`下创建您的`{modId}/`目录
+1. 在`run/spark_modules/`下创建您的`{modId}/`目录
 2. 在`{modId}/`下创建`{moduleName}/`目录（通常与modId相同）
 3. 将原有的资源类型目录移动到新的模块目录下
 4. 更新所有资源引用以使用新的ResourceLocation格式
@@ -200,7 +201,7 @@ ResourceID: `my_mod:my_mod/animations/player`
 
 ### 4.1 动画 (`animations`)
 
-**文件**: `run/sparkcore/my_mod/my_mod/animations/player/jump.json`
+**文件**: `run/spark_modules/my_mod/my_mod/animations/player/jump.json`
 
 ```json
 {
@@ -234,7 +235,7 @@ ResourceID: `my_mod:my_mod/animations/player`
 }
 ```
 
-**元数据**: `run/sparkcore/my_mod/my_mod/animations/player/jump.meta.json`
+**元数据**: `run/spark_modules/my_mod/my_mod/animations/player/jump.meta.json`
 
 ```json
 {
@@ -259,7 +260,7 @@ ResourceID: `my_mod:my_mod/animations/player`
 
 ### 4.2 模型 (`models`)
 
-**文件**: `run/sparkcore/my_mod/my_mod/models/items/magic_sword.json`
+**文件**: `run/spark_modules/my_mod/my_mod/models/items/magic_sword.json`
 
 ```json
 {
@@ -310,7 +311,7 @@ ResourceID: `my_mod:my_mod/animations/player`
 }
 ```
 
-**元数据**: `run/sparkcore/my_mod/my_mod/models/items/magic_sword.meta.json`
+**元数据**: `run/spark_modules/my_mod/my_mod/models/items/magic_sword.meta.json`
 
 ```json
 {
@@ -337,7 +338,7 @@ ResourceID: `my_mod:my_mod/animations/player`
 
 ### 4.3 JavaScript 脚本 (`scripts`)
 
-**文件**: `run/sparkcore/my_mod/my_mod/scripts/skills/fireball.js`
+**文件**: `run/spark_modules/my_mod/my_mod/scripts/skills/fireball.js`
 
 ```javascript
 // ResourceID: my_mod:my_mod/scripts/skills/fireball
@@ -346,7 +347,7 @@ Skill.create("my_mod:fireball_skill", builder => {
 });
 ```
 
-**元数据**: `run/sparkcore/my_mod/my_mod/scripts/skills/fireball.meta.json`
+**元数据**: `run/spark_modules/my_mod/my_mod/scripts/skills/fireball.meta.json`
 
 ```json
 {
@@ -411,7 +412,7 @@ Skill.create("my_mod:fireball_skill", builder => {
 
 新的资源创建流程更加结构化和强大：
 
-1. **组织文件**: 将资源文件按`run/sparkcore/{modId}/{moduleName}/{resourceType}/`四层结构放置。
+1. **组织文件**: 将资源文件按`run/spark_modules/{modId}/{moduleName}/{resourceType}/`四层结构放置。
 2. **创建资源**: 编写你的模型、动画、脚本等文件。
 3. **定义元数据**: 创建对应的`.meta.json`文件，在`requires`中声明所有依赖。
 4. **验证**: 使用`/spark deps check`等命令确保一切正常。

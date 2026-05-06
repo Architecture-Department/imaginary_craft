@@ -35,13 +35,14 @@ dependencies {
 	implementation "software.bernie.geckolib:geckolib-neoforge-${minecraft_version}:${geckolib_version}"
 
 	// sparkcore 星火
-	compileOnly "io.github.solarmoonqaq:spark-core:${spark_core_version}"
+//	compileOnly "io.github.solarmoonqaq:spark-core:${spark_core_version}"
 //	implementation "curse.maven:spark-core-${maven_spark_core_version}"
-	runtimeOnly "maven.modrinth:spark-core:${modrinth_spark_core_version}"
+//	runtimeOnly "maven.modrinth:spark-core:${modrinth_spark_core_version}"
 
 	// Kotlin
 	implementation "thedarkcolour:kotlinforforge-neoforge:${kotlinforforge_version}"
 
+	implementation jarJar(fileTree(dir: "../../libs", include: ["*.jar"]))
 }
 
 base {

@@ -2,7 +2,9 @@
 	"required": true,
 	"package": "architecture.resonator_combat_framework.mixin",
 	"compatibilityLevel": "JAVA_21",
-	"mixins": [],
+	"mixins": [
+		"GeckoLibCacheMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	},
