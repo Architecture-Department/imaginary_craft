@@ -23,8 +23,8 @@ repositories {
 dependencies {
 	projectName.forEach { name ->
 		{
-			implementation jarJar(project(":module:" + name))
-			interfaceInjectionData jarJar(project(":module:" + name))
+			implementation project(":module:" + name)
+			interfaceInjectionData project(":module:" + name)
 		}
 	}
 
