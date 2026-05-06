@@ -1,9 +1,11 @@
 # Resonator战斗框架(ResonatorCombatFramework)
 
 <!-- TOC -->
+
 * [Resonator战斗框架(ResonatorCombatFramework)](#resonator战斗框架resonatorcombatframework)
   * [文档](#文档)
   * [资源类型](#资源类型)
+
 <!-- TOC -->
 
 ## 文档
@@ -16,7 +18,7 @@
 - [注册新的资源类型.md](docs/资源/register_new_resource_type.md)
 
 ## 资源类型
- 
+
 - SparkCore
 
 | 目录名             | 描述           | Handler             | 注册表                               | 数据类              | 支持格式                      |

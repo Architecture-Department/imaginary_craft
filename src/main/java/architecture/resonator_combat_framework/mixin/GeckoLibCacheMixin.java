@@ -1,7 +1,6 @@
 package architecture.resonator_combat_framework.mixin;
 
 import architecture.resonator_combat_framework.api.event.AddGeckoLibCachePathEvent;
-import cn.solarmoon.spark_core.pack.SparkPackLoader;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
@@ -35,9 +34,6 @@ import java.util.function.Function;
 
 @Mixin(GeckoLibCache.class)
 public abstract class GeckoLibCacheMixin {
-
-	@Unique
-	private static final SparkPackLoader resonator_combat_framework$INSTANCE = SparkPackLoader.INSTANCE;
 
 	@Shadow
 	private static <T> CompletableFuture<Void> loadResources(Executor executor, ResourceManager resourceManager, String path, Function<ResourceLocation, T> loader, BiConsumer<ResourceLocation, T> map) {
