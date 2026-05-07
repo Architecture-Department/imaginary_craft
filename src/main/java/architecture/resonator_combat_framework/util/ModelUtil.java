@@ -12,26 +12,10 @@ public final class ModelUtil {
 	 * 模型构建器 - 使用建造者模式创建 GeoModel
 	 */
 	public static class ModelBuilder<T extends GeoAnimatable> {
-		private final String id;
-		private final String moduleName;
 		private final String namespace;
 		private String path;
 
-		public ModelBuilder(String id) {
-			this.id = id;
-			this.moduleName = id;
-			this.namespace = id;
-		}
-
-		public ModelBuilder(String id, String moduleName) {
-			this.id = id;
-			this.moduleName = moduleName;
-			this.namespace = id;
-		}
-
-		public ModelBuilder(String id, String moduleName, String namespace) {
-			this.id = id;
-			this.moduleName = moduleName;
+		public ModelBuilder(String namespace) {
 			this.namespace = namespace;
 		}
 
@@ -90,15 +74,15 @@ public final class ModelUtil {
 		}
 
 		public ResourceLocation getTexturePath() {
-			return GeoModelExpand.texturePath(ResourceLocation.fromNamespaceAndPath(id, path));
+			return GeoModelExpand.texturePath(ResourceLocation.fromNamespaceAndPath(namespace, path));
 		}
 
 		public ResourceLocation getModelsRl() {
-			return Rcf.getSparkModuleRl(id, moduleName, namespace, RcfConstants.MODELS, path);
+			return Rcf.getSparkModuleRl(namespace, RcfConstants.MODELS, path);
 		}
 
 		public ResourceLocation getAnimationsRl() {
-			return Rcf.getSparkModuleRl(id, moduleName, namespace, RcfConstants.ANIMATIONS, path);
+			return Rcf.getSparkModuleRl(namespace, RcfConstants.ANIMATIONS, path + "/" + path);
 		}
 	}
 }

@@ -47,11 +47,7 @@ public final class Rcf {
 		LOGGER.info("HELLO from server starting");
 	}
 
-	public static ResourceLocation getSparkModuleRl(ResourceLocation id, String typeName, ResourceLocation path) {
-		return getSparkModuleRl(id.getNamespace(), id.getPath(), path.getNamespace(), typeName, path.getPath());
-	}
-
-	public static ResourceLocation getSparkModuleRl(String id, String moduleName, String namespace, String typeName, String path) {
-		return ResourceLocation.fromNamespaceAndPath(id, "spark_modules/" + moduleName + "/" + namespace + "/" + typeName + "/" + path);
+	public static ResourceLocation getSparkModuleRl(String namespace, String typeName, String path) {
+		return ResourceLocation.fromNamespaceAndPath(namespace, "spark_modules/" + typeName + "/" + path);
 	}
 }
