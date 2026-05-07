@@ -48,10 +48,10 @@ public final class Rcf {
 	}
 
 	public static ResourceLocation getSparkModuleRl(ResourceLocation id, String typeName, ResourceLocation path) {
-		return getSparkModuleRl(id.getNamespace(), id.getPath(), typeName, path.getNamespace(), path.getPath());
+		return getSparkModuleRl(id.getNamespace(), id.getPath(), path.getNamespace(), typeName, path.getPath());
 	}
 
-	public static ResourceLocation getSparkModuleRl(String id, String moduleName, String typeName, String namespace, String path) {
-		return ResourceLocation.fromNamespaceAndPath(id, "spark_modules/" + moduleName + "/" + typeName + "/" + namespace + "/" + path);
+	public static ResourceLocation getSparkModuleRl(String id, String moduleName, String namespace, String typeName, String path) {
+		return ResourceLocation.fromNamespaceAndPath(id, "spark_modules/" + moduleName + "/" + namespace + "/" + typeName + "/" + path);
 	}
 }

@@ -94,11 +94,11 @@ public final class ModelUtil {
 		}
 
 		public ResourceLocation getModelsRl() {
-			return Rcf.getSparkModuleRl(id, moduleName, RcfConstants.MODELS, namespace, path);
+			return Rcf.getSparkModuleRl(id, moduleName, namespace, RcfConstants.MODELS, path);
 		}
 
 		public ResourceLocation getAnimationsRl() {
-			return Rcf.getSparkModuleRl(id, moduleName, RcfConstants.ANIMATIONS, namespace, path);
+			return Rcf.getSparkModuleRl(id, moduleName, namespace, RcfConstants.ANIMATIONS, path);
 		}
 	}
 }
