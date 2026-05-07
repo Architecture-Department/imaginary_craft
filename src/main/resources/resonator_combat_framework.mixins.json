@@ -3,7 +3,8 @@
 	"package": "architecture.resonator_combat_framework.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"GeckoLibCacheMixin"
+		"EntityMixin",
+		"gecko_lib.GeckoLibCacheMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

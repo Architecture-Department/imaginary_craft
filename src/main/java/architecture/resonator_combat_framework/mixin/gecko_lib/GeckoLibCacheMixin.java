@@ -1,4 +1,4 @@
-package architecture.resonator_combat_framework.mixin;
+package architecture.resonator_combat_framework.mixin.gecko_lib;
 
 import architecture.resonator_combat_framework.api.event.AddGeckoLibCachePathEvent;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;

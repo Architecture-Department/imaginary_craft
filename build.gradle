@@ -46,7 +46,7 @@ dependencies {
 		{
 			final def collection = files(file)
 			if (file.name.endsWith("-sources.jar")) {
-				jarJar(compileOnly(collection))
+				compileOnly(collection)
 				return
 			}
 			jarJar(implementation(collection))
