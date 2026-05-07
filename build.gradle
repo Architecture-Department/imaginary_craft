@@ -42,8 +42,22 @@ dependencies {
 	// Kotlin
 	implementation "thedarkcolour:kotlinforforge-neoforge:${kotlinforforge_version}"
 
-	compileOnly files(fileTree(dir: "../../libs", include: ["*-sources.jar"]))
-	implementation jarJar(files(fileTree(dir: "../../libs", include: ["*.jar"], exclude: ["*-sources.jar"])))
+	fileTree(dir: "libs", include: ["*.jar"]).forEach { file ->
+		{
+			final def collection = files(file)
+			if (file.name.endsWith("-sources.jar")) {
+				jarJar(compileOnly(collection))
+				return
+			}
+			jarJar(implementation(collection))
+			// 检查JAR文件中是否包含interfaces.json
+			zipTree(file).matching {
+				include 'META-INF/*interfaces.json'
+			}.each { jarEntry ->
+				interfaceInjectionData(files(jarEntry))
+			}
+		}
+	}
 }
 
 base {
@@ -58,6 +72,11 @@ neoForge {
 	parchment {
 		mappingsVersion = project.parchment_mappings_version
 		minecraftVersion = project.parchment_minecraft_version
+	}
+
+	interfaceInjectionData {
+		from "src/main/resources/META-INF/interfaces.json"
+		publish file("src/main/resources/META-INF/interfaces.json")
 	}
 
 	runs {
