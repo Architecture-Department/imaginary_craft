@@ -1,11 +1,10 @@
 # Resonator战斗框架(ResonatorCombatFramework)
 
 <!-- TOC -->
-
 * [Resonator战斗框架(ResonatorCombatFramework)](#resonator战斗框架resonatorcombatframework)
   * [文档](#文档)
+  * [资源脚本路径](#资源脚本路径)
   * [资源类型](#资源类型)
-
 <!-- TOC -->
 
 ## 文档
