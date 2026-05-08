@@ -1,6 +1,6 @@
 package architecture.resonator_combat_framework.gas;
 
-//import cn.solarmoon.spark_core.gas.GameplayTag;
+import cn.solarmoon.spark_core.gas.GameplayTag;
 
 import com.google.common.collect.ImmutableList;
 

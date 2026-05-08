@@ -9,10 +9,11 @@ import com.jme3.bullet.objects.PhysicsRigidBody
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.level.Level
 
-open class AppurtenanceInfo<T>(
-	val owner: T,
-	protected val physicsCollisions: LinkedHashMap<String, PhysicsCollisionObject>
-) where T : Entity, T : PhysicsHost {
+open class AppurtenanceInfo<O>(
+	val owner: O,
+) where O : Entity, O : PhysicsHost {
+	protected val physicsCollisions: LinkedHashMap<String, PhysicsCollisionObject> = linkedMapOf()
+
 	open fun tick() {
 
 	}

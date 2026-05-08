@@ -8,29 +8,29 @@ import cn.solarmoon.spark_core.event.BoneUpdateEvent
 import cn.solarmoon.spark_core.physics.PhysicsHost
 import cn.solarmoon.spark_core.physics.body.attachToBone
 import cn.solarmoon.spark_core.util.toRadians
-import com.jme3.bullet.collision.PhysicsCollisionObject
 import com.jme3.bullet.objects.PhysicsRigidBody
 import net.minecraft.world.entity.Entity
+import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.level.Level
 import org.joml.Matrix4f
 import kotlin.math.PI
 
-open class AnimAppurtenanceInfo<T>(
-	owner: T,
-	physicsCollisions: LinkedHashMap<String, PhysicsCollisionObject>,
+open class AnimAppurtenanceInfo<T, O>(
+	owner: O,
+	override val animatable: T,
 	override val defaultModelIndex: ModelIndex,
-	override val animController: AnimController,
-	override val modelController: ModelController,
-	override val variables: MutableMap<String, Any>
-) : AppurtenanceInfo<T>(owner, physicsCollisions),
-	IAnimatable<AnimAppurtenanceInfo<T>> where T : Entity, T : IAnimatable<*>, T : PhysicsHost {
+) : AppurtenanceInfo<O>(owner), IAnimatable<T>
+	where O : LivingEntity {
 
-	override val animatable: AnimAppurtenanceInfo<T> = this
-	override val animLevel: Level? = owner.animLevel
+	override var animController: AnimController = AnimController(this)
+	override var modelController: ModelController = ModelController(this)
+
+	override val variables: MutableMap<String, Any> = mutableMapOf()
+	override val animLevel: Level? = owner.level()
 
 	override fun addPhysicsCollision(name: String, body: PhysicsRigidBody) {
 		physicsCollisions[name] = body
-		body.attachToBone(animatable, name)
+		body.attachToBone(animatable as IAnimatable<*>, name)
 	}
 
 	override fun getWorldPositionMatrix(partialTicks: Number): Matrix4f {

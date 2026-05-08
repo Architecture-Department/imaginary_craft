@@ -13,10 +13,10 @@ import java.util.Map;
 @Mixin(Entity.class)
 public abstract class EntityMixin implements IEntity {
 	@Unique
-	private final Map<String, AppurtenanceInfo<?>> resonator_combat_framework$physicsBodies = new HashMap<>();
+	private final Map<String, AppurtenanceInfo<?>> resonator_combat_framework$appurtenanceInfoMap = new HashMap<>();
 
 	@Override
-	public @NotNull Map<@NotNull String, @NotNull AppurtenanceInfo<?>> getPhysicsBodies() {
-		return resonator_combat_framework$physicsBodies;
+	public @NotNull Map<@NotNull String, @NotNull AppurtenanceInfo<?>> getAppurtenanceInfoMap() {
+		return resonator_combat_framework$appurtenanceInfoMap;
 	}
 }
