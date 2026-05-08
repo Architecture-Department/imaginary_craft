@@ -1,17 +1,18 @@
 package architecture.resonator_combat_framework.api
 
-import net.minecraft.nbt.CompoundTag
 import net.minecraft.world.entity.Entity
 import net.minecraft.world.item.ItemStack
 
 interface IAppurtenanceExecute {
-	fun add(entity: Entity, itemStack: ItemStack, nbt: CompoundTag = CompoundTag())
+	fun add(entity: Entity, itemStack: ItemStack, map: Map<String, *>)
+
 	fun add(entity: Entity, itemStack: ItemStack) {
-		add(entity, itemStack, CompoundTag())
+		add(entity, itemStack, mapOf<String, Any>())
 	}
 
-	fun remove(entity: Entity, itemStack: ItemStack, nbt: CompoundTag = CompoundTag())
+	fun remove(entity: Entity, itemStack: ItemStack, map: Map<String, *>)
+
 	fun remove(entity: Entity, itemStack: ItemStack) {
-		remove(entity, itemStack, CompoundTag())
+		remove(entity, itemStack, mapOf<String, Any>())
 	}
 }
