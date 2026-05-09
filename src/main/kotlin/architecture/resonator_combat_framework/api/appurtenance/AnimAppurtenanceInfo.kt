@@ -5,17 +5,15 @@ import cn.solarmoon.spark_core.animation.anim.AnimController
 import cn.solarmoon.spark_core.animation.model.ModelController
 import cn.solarmoon.spark_core.animation.model.ModelIndex
 import cn.solarmoon.spark_core.event.BoneUpdateEvent
-import cn.solarmoon.spark_core.physics.PhysicsHost
 import cn.solarmoon.spark_core.physics.body.attachToBone
 import cn.solarmoon.spark_core.util.toRadians
 import com.jme3.bullet.objects.PhysicsRigidBody
-import net.minecraft.world.entity.Entity
 import net.minecraft.world.entity.LivingEntity
 import net.minecraft.world.level.Level
 import org.joml.Matrix4f
 import kotlin.math.PI
 
-open class AnimAppurtenanceInfo<T, O>(
+open class AnimatedAccessoryInfo<T, O>(
 	owner: O,
 	override val animatable: T,
 	override val defaultModelIndex: ModelIndex,
@@ -30,7 +28,7 @@ open class AnimAppurtenanceInfo<T, O>(
 
 	override fun addPhysicsCollision(name: String, body: PhysicsRigidBody) {
 		physicsCollisions[name] = body
-		body.attachToBone(animatable as IAnimatable<*>, name)
+		body.attachToBone(this, name)
 	}
 
 	override fun getWorldPositionMatrix(partialTicks: Number): Matrix4f {
