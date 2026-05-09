@@ -16,8 +16,6 @@ out/
 !**/src/**/out/
 
 .run/
-run/
-*/run/
 
 ### Eclipse ###
 .apt_generated
@@ -99,3 +97,4 @@ generated/
 /libs/daemon/
 /libs/jdks/
 /libs/native/
+/libs/wrapper/
