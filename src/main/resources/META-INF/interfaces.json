@@ -1,5 +1,0 @@
-{
-	"net/minecraft/world/entity/Entity": [
-		"architecture/resonator_combat_framework/mixed/IEntity"
-	]
-}

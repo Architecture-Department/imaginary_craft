@@ -3,6 +3,9 @@
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/**/build/
+gradle.properties
+**/gradle.properties
+!**/gradle.properties.example
 
 ### IntelliJ IDEA ###
 .idea/
@@ -13,6 +16,8 @@ out/
 !**/src/**/out/
 
 .run/
+run/
+*/run/
 
 ### Eclipse ###
 .apt_generated
@@ -79,3 +84,18 @@ generated/
 
 #vscode
 .history/
+/.continue/
+/.kotlin/sessions/kotlin-compiler-355775599759573623.salive
+
+.lingma/
+.proxyai/
+.kotlin/
+.lingma
+.proxyai
+.kotlin
+/libs/wrapper/
+/libs/.tmp/
+/libs/caches/
+/libs/daemon/
+/libs/jdks/
+/libs/native/
